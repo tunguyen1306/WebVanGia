@@ -1,0 +1,21 @@
+D:\Dropbox\Cong Ty\WebSite\WebVanGia\WebSiteVanGia\WebSiteVanGia\bin\WebSiteVanGia.dll
+D:\Dropbox\Cong Ty\WebSite\WebVanGia\WebSiteVanGia\WebSiteVanGia\bin\WebSiteVanGia.pdb
+D:\Dropbox\Cong Ty\WebSite\WebVanGia\WebSiteVanGia\WebSiteVanGia\obj\Release\WebSiteVanGia.dll
+D:\Dropbox\Cong Ty\WebSite\WebVanGia\WebSiteVanGia\WebSiteVanGia\obj\Release\WebSiteVanGia.pdb
+D:\Dropbox\Cong Ty\WebSite\WebVanGia\WebSiteVanGia\WebSiteVanGia\obj\Release\WebSiteVanGia.csprojResolveAssemblyReference.cache
+D:\Dropbox\Cong Ty\WebSite\WebVanGia\WebSiteVanGia\WebSiteVanGia\bin\css\template.css
+D:\Dropbox\Cong Ty\WebSite\WebVanGia\WebSiteVanGia\WebSiteVanGia\bin\WebSiteVanGia.dll.config
+D:\Dropbox\Cong Ty\WebSite\WebVanGia\VanGiaGithub\WebSiteVanGia\WebSiteVanGia\bin\css\template.css
+D:\Dropbox\Cong Ty\WebSite\WebVanGia\VanGiaGithub\WebSiteVanGia\WebSiteVanGia\bin\WebSiteVanGia.dll.config
+D:\Dropbox\Cong Ty\WebSite\WebVanGia\VanGiaGithub\WebSiteVanGia\WebSiteVanGia\bin\WebSiteVanGia.dll
+D:\Dropbox\Cong Ty\WebSite\WebVanGia\VanGiaGithub\WebSiteVanGia\WebSiteVanGia\bin\WebSiteVanGia.pdb
+D:\Dropbox\Cong Ty\WebSite\WebVanGia\VanGiaGithub\WebSiteVanGia\WebSiteVanGia\obj\Release\WebSiteVanGia.csprojResolveAssemblyReference.cache
+D:\Dropbox\Cong Ty\WebSite\WebVanGia\VanGiaGithub\WebSiteVanGia\WebSiteVanGia\obj\Release\WebSiteVanGia.dll
+D:\Dropbox\Cong Ty\WebSite\WebVanGia\VanGiaGithub\WebSiteVanGia\WebSiteVanGia\obj\Release\WebSiteVanGia.pdb
+D:\Company\WebSite\WebVanGia\VanGiaGithub\WebSiteVanGia\WebSiteVanGia\bin\css\template.css
+D:\Company\WebSite\WebVanGia\VanGiaGithub\WebSiteVanGia\WebSiteVanGia\bin\WebSiteVanGia.dll.config
+D:\Company\WebSite\WebVanGia\VanGiaGithub\WebSiteVanGia\WebSiteVanGia\bin\WebSiteVanGia.dll
+D:\Company\WebSite\WebVanGia\VanGiaGithub\WebSiteVanGia\WebSiteVanGia\bin\WebSiteVanGia.pdb
+D:\Company\WebSite\WebVanGia\VanGiaGithub\WebSiteVanGia\WebSiteVanGia\obj\Release\WebSiteVanGia.csprojResolveAssemblyReference.cache
+D:\Company\WebSite\WebVanGia\VanGiaGithub\WebSiteVanGia\WebSiteVanGia\obj\Release\WebSiteVanGia.dll
+D:\Company\WebSite\WebVanGia\VanGiaGithub\WebSiteVanGia\WebSiteVanGia\obj\Release\WebSiteVanGia.pdb

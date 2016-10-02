@@ -1,0 +1,720 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\TuNguyen\Desktop\PublishWeb\WebSiteVG28091255</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="About.aspx">
+      <publishTime>06/08/2016 11:37:35</publishTime>
+    </File>
+    <File Include="AllDuAnMau.aspx">
+      <publishTime>04/09/2016 23:26:49</publishTime>
+    </File>
+    <File Include="AllEmployee.aspx">
+      <publishTime>05/13/2015 09:37:49</publishTime>
+    </File>
+    <File Include="allProject.aspx">
+      <publishTime>06/08/2016 11:37:35</publishTime>
+    </File>
+    <File Include="AllProjectType.aspx">
+      <publishTime>05/13/2015 09:37:49</publishTime>
+    </File>
+    <File Include="App_GlobalResources/MenuEngLish.resx">
+      <publishTime>04/14/2015 22:57:36</publishTime>
+    </File>
+    <File Include="bin/css/template.css">
+      <publishTime>05/08/2016 14:03:33</publishTime>
+    </File>
+    <File Include="bin/WebSiteVanGia.dll">
+      <publishTime>09/28/2016 00:55:54</publishTime>
+    </File>
+    <File Include="Blog.aspx">
+      <publishTime>09/28/2016 00:47:51</publishTime>
+    </File>
+    <File Include="blog.html">
+      <publishTime>09/14/2016 00:31:25</publishTime>
+    </File>
+    <File Include="Contact.aspx">
+      <publishTime>07/18/2016 21:58:00</publishTime>
+    </File>
+    <File Include="css/bootstrap.min.css">
+      <publishTime>05/22/2015 09:46:43</publishTime>
+    </File>
+    <File Include="css/camera.css">
+      <publishTime>05/12/2015 17:33:32</publishTime>
+    </File>
+    <File Include="css/cbb092d6554938a9549cb716ffcb1f94.css">
+      <publishTime>05/13/2015 10:18:31</publishTime>
+    </File>
+    <File Include="css/css.css">
+      <publishTime>04/16/2015 16:19:34</publishTime>
+    </File>
+    <File Include="css/css_002.css">
+      <publishTime>04/16/2015 16:19:34</publishTime>
+    </File>
+    <File Include="css/CusWeb.css">
+      <publishTime>06/08/2016 11:28:18</publishTime>
+    </File>
+    <File Include="css/default_icemegamenu-reponsive.css">
+      <publishTime>04/16/2015 16:19:34</publishTime>
+    </File>
+    <File Include="css/default_icemegamenu.css">
+      <publishTime>04/14/2015 16:29:56</publishTime>
+    </File>
+    <File Include="css/demo.css">
+      <publishTime>05/11/2015 21:04:21</publishTime>
+    </File>
+    <File Include="css/demo/demo.css">
+      <publishTime>05/21/2015 14:38:32</publishTime>
+    </File>
+    <File Include="css/demo/easyui.css">
+      <publishTime>05/21/2015 14:43:07</publishTime>
+    </File>
+    <File Include="css/demo/icon.css">
+      <publishTime>05/21/2015 14:40:55</publishTime>
+    </File>
+    <File Include="css/demo/panel_tools.png">
+      <publishTime>05/21/2015 14:40:26</publishTime>
+    </File>
+    <File Include="css/font-awesome.css">
+      <publishTime>04/14/2015 21:04:26</publishTime>
+    </File>
+    <File Include="css/font-awesome.min.css">
+      <publishTime>04/14/2015 21:04:23</publishTime>
+    </File>
+    <File Include="css/font/DBCt-NXN57MTAFjitYxdrDAdhzWOYhqHvOZMRGaEyPo.woff2">
+      <publishTime>04/16/2015 16:16:18</publishTime>
+    </File>
+    <File Include="css/font/DBCt-NXN57MTAFjitYxdrFzqCfRpIA3W6ypxnPISCPA.woff">
+      <publishTime>04/16/2015 16:16:17</publishTime>
+    </File>
+    <File Include="css/font/fontawesome-webfont-0.eot">
+      <publishTime>04/14/2015 16:54:20</publishTime>
+    </File>
+    <File Include="css/font/fontawesome-webfont-62877.eot">
+      <publishTime>04/14/2015 16:54:20</publishTime>
+    </File>
+    <File Include="css/font/fontawesome-webfont-62877.ttf">
+      <publishTime>04/14/2015 16:54:20</publishTime>
+    </File>
+    <File Include="css/font/fontawesome-webfont-62877.woff">
+      <publishTime>04/14/2015 16:54:20</publishTime>
+    </File>
+    <File Include="css/font/fontawesome-webfont.eot">
+      <publishTime>04/14/2015 16:54:51</publishTime>
+    </File>
+    <File Include="css/font/fontawesome-webfont.svg">
+      <publishTime>04/14/2015 16:54:51</publishTime>
+    </File>
+    <File Include="css/font/fontawesome-webfont.ttf">
+      <publishTime>04/14/2015 16:54:51</publishTime>
+    </File>
+    <File Include="css/font/fontawesome-webfont.woff">
+      <publishTime>04/14/2015 16:54:51</publishTime>
+    </File>
+    <File Include="css/font/fontawesome-webfont.woff2">
+      <publishTime>04/14/2015 16:54:51</publishTime>
+    </File>
+    <File Include="css/font/FontAwesome.otf">
+      <publishTime>04/14/2015 16:54:51</publishTime>
+    </File>
+    <File Include="css/font/glyphicons-regular-0.eot">
+      <publishTime>04/14/2015 16:54:20</publishTime>
+    </File>
+    <File Include="css/font/glyphicons-regular.eot">
+      <publishTime>04/14/2015 16:54:20</publishTime>
+    </File>
+    <File Include="css/font/glyphicons-regular.svg">
+      <publishTime>04/14/2015 16:54:20</publishTime>
+    </File>
+    <File Include="css/font/glyphicons-regular.ttf">
+      <publishTime>04/14/2015 16:54:20</publishTime>
+    </File>
+    <File Include="css/font/glyphicons-regular.woff">
+      <publishTime>04/14/2015 16:54:20</publishTime>
+    </File>
+    <File Include="css/font/glyphiconshalflings-regular-0.eot">
+      <publishTime>04/14/2015 16:54:20</publishTime>
+    </File>
+    <File Include="css/font/glyphiconshalflings-regular.eot">
+      <publishTime>04/14/2015 16:54:20</publishTime>
+    </File>
+    <File Include="css/font/glyphiconshalflings-regular.svg">
+      <publishTime>04/14/2015 16:54:20</publishTime>
+    </File>
+    <File Include="css/font/glyphiconshalflings-regular.ttf">
+      <publishTime>04/14/2015 16:54:20</publishTime>
+    </File>
+    <File Include="css/font/glyphiconshalflings-regular.woff">
+      <publishTime>04/14/2015 16:54:20</publishTime>
+    </File>
+    <File Include="css/font/sDGTilo5QRsfWu6Yc11AXg.woff2">
+      <publishTime>04/16/2015 16:09:23</publishTime>
+    </File>
+    <File Include="css/font/_xyN3apAT_yRRDeqB3sPRg.woff">
+      <publishTime>04/16/2015 16:09:23</publishTime>
+    </File>
+    <File Include="css/jquery-ui.css">
+      <publishTime>05/22/2015 10:14:13</publishTime>
+    </File>
+    <File Include="css/jquery-ui.min.css">
+      <publishTime>05/22/2015 10:39:40</publishTime>
+    </File>
+    <File Include="css/jquery.css">
+      <publishTime>04/23/2015 10:45:29</publishTime>
+    </File>
+    <File Include="css/jquery.fancybox-buttons.css">
+      <publishTime>04/14/2015 16:43:42</publishTime>
+    </File>
+    <File Include="css/jquery.fancybox-thumbs.css">
+      <publishTime>04/14/2015 16:29:56</publishTime>
+    </File>
+    <File Include="css/jquery.fancybox.css">
+      <publishTime>04/14/2015 16:43:49</publishTime>
+    </File>
+    <File Include="css/jquery_002.css">
+      <publishTime>04/22/2015 15:15:05</publishTime>
+    </File>
+    <File Include="css/jquery_003.css">
+      <publishTime>04/16/2015 16:19:34</publishTime>
+    </File>
+    <File Include="css/lrstyle.css">
+      <publishTime>04/16/2015 16:19:34</publishTime>
+    </File>
+    <File Include="css/normalize.css">
+      <publishTime>05/11/2015 21:04:21</publishTime>
+    </File>
+    <File Include="css/style.css">
+      <publishTime>04/16/2015 16:21:34</publishTime>
+    </File>
+    <File Include="css/style5.css">
+      <publishTime>05/11/2015 21:48:20</publishTime>
+    </File>
+    <File Include="css/template.css">
+      <publishTime>05/08/2016 14:03:33</publishTime>
+    </File>
+    <File Include="ctr/ctr_contentrow.ascx">
+      <publishTime>05/13/2015 17:12:11</publishTime>
+    </File>
+    <File Include="ctr/ctr_footer.ascx">
+      <publishTime>05/08/2016 14:07:32</publishTime>
+    </File>
+    <File Include="ctr/ctr_headerrow.ascx">
+      <publishTime>05/20/2015 18:42:29</publishTime>
+    </File>
+    <File Include="ctr/ctr_mainbottomrow.ascx">
+      <publishTime>04/27/2016 23:38:17</publishTime>
+    </File>
+    <File Include="ctr/ctr_maintoprow.ascx">
+      <publishTime>04/27/2016 23:23:22</publishTime>
+    </File>
+    <File Include="ctr/ctr_post_fb_products.ascx">
+      <publishTime>06/29/2016 00:23:56</publishTime>
+    </File>
+    <File Include="ctr/ctr_post_fb_project.ascx">
+      <publishTime>06/29/2016 00:46:23</publishTime>
+    </File>
+    <File Include="ctr/ctr_showcaserow.ascx">
+      <publishTime>05/20/2015 23:02:55</publishTime>
+    </File>
+    <File Include="ctr/ctr_toprow.ascx">
+      <publishTime>04/30/2016 00:11:13</publishTime>
+    </File>
+    <File Include="DatabaseClasses.dbml">
+      <publishTime>04/20/2015 23:12:44</publishTime>
+    </File>
+    <File Include="DeatailEmployee.aspx">
+      <publishTime>04/23/2016 01:03:12</publishTime>
+    </File>
+    <File Include="DeatailTuyenDung.aspx">
+      <publishTime>05/29/2016 22:49:08</publishTime>
+    </File>
+    <File Include="DeatilProducts.aspx">
+      <publishTime>05/29/2016 22:54:07</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>07/14/2015 11:03:28</publishTime>
+    </File>
+    <File Include="DetailBlog.aspx">
+      <publishTime>09/28/2016 00:49:49</publishTime>
+    </File>
+    <File Include="DetailBlog.html">
+      <publishTime>09/27/2016 23:00:52</publishTime>
+    </File>
+    <File Include="DetailDoitac.aspx">
+      <publishTime>04/23/2016 01:03:37</publishTime>
+    </File>
+    <File Include="DetailDuAnMau.aspx">
+      <publishTime>05/29/2016 22:54:05</publishTime>
+    </File>
+    <File Include="DetailProject.aspx">
+      <publishTime>06/29/2016 00:37:20</publishTime>
+    </File>
+    <File Include="DetailSilde.aspx">
+      <publishTime>04/29/2016 22:38:34</publishTime>
+    </File>
+    <File Include="DetailTuyenDung.aspx">
+      <publishTime>05/11/2015 11:10:12</publishTime>
+    </File>
+    <File Include="DetailVanGia.aspx">
+      <publishTime>06/08/2016 11:37:28</publishTime>
+    </File>
+    <File Include="DichVu.aspx">
+      <publishTime>06/08/2016 11:37:35</publishTime>
+    </File>
+    <File Include="img/09.jpg">
+      <publishTime>04/29/2016 23:30:37</publishTime>
+    </File>
+    <File Include="img/09.png">
+      <publishTime>04/29/2016 23:52:58</publishTime>
+    </File>
+    <File Include="img/1.jpg">
+      <publishTime>05/07/2015 14:09:49</publishTime>
+    </File>
+    <File Include="img/arrow-right.png">
+      <publishTime>05/21/2015 11:45:26</publishTime>
+    </File>
+    <File Include="img/banner.jpg">
+      <publishTime>04/14/2015 16:35:11</publishTime>
+    </File>
+    <File Include="img/bgr.jpg">
+      <publishTime>06/04/2015 14:25:10</publishTime>
+    </File>
+    <File Include="img/bg_1.jpg">
+      <publishTime>04/14/2015 16:52:06</publishTime>
+    </File>
+    <File Include="img/bg_10.jpg">
+      <publishTime>05/13/2015 17:25:59</publishTime>
+    </File>
+    <File Include="img/bg_2.jpg">
+      <publishTime>04/14/2015 16:52:03</publishTime>
+    </File>
+    <File Include="img/bg_3.jpg">
+      <publishTime>04/14/2015 23:27:17</publishTime>
+    </File>
+    <File Include="img/bg_4.jpg">
+      <publishTime>04/14/2015 23:27:25</publishTime>
+    </File>
+    <File Include="img/blank.gif">
+      <publishTime>04/14/2015 23:26:49</publishTime>
+    </File>
+    <File Include="img/blockquote_icon.png">
+      <publishTime>04/15/2015 08:33:30</publishTime>
+    </File>
+    <File Include="img/bullet_con.png">
+      <publishTime>04/14/2015 23:41:54</publishTime>
+    </File>
+    <File Include="img/bullet_con_2.png">
+      <publishTime>05/08/2015 11:30:51</publishTime>
+    </File>
+    <File Include="img/buttons-light.png">
+      <publishTime>04/14/2015 16:52:12</publishTime>
+    </File>
+    <File Include="img/bxe.jpg">
+      <publishTime>04/17/2016 00:32:37</publishTime>
+    </File>
+    <File Include="img/camera-loader.gif">
+      <publishTime>04/14/2015 21:06:34</publishTime>
+    </File>
+    <File Include="img/camera_bord.png">
+      <publishTime>04/21/2015 14:17:59</publishTime>
+    </File>
+    <File Include="img/cdiAE.png">
+      <publishTime>04/23/2015 14:36:20</publishTime>
+    </File>
+    <File Include="img/chinhsach.jpg">
+      <publishTime>04/27/2016 22:54:06</publishTime>
+    </File>
+    <File Include="img/cs.jpg">
+      <publishTime>04/21/2016 22:36:50</publishTime>
+    </File>
+    <File Include="img/cuibap.png">
+      <publishTime>05/11/2015 10:16:37</publishTime>
+    </File>
+    <File Include="img/dichvu.jpg">
+      <publishTime>04/27/2016 23:17:10</publishTime>
+    </File>
+    <File Include="img/English-Language-Flag-1-icon.png">
+      <publishTime>04/15/2015 16:51:53</publishTime>
+    </File>
+    <File Include="img/event.jpg">
+      <publishTime>04/22/2016 23:39:16</publishTime>
+    </File>
+    <File Include="img/fancybox_overlay.png">
+      <publishTime>04/22/2015 15:05:23</publishTime>
+    </File>
+    <File Include="img/fancybox_sprite.png">
+      <publishTime>04/22/2015 15:08:01</publishTime>
+    </File>
+    <File Include="img/flag_us.png">
+      <publishTime>04/15/2015 16:50:39</publishTime>
+    </File>
+    <File Include="img/flag_vn.png">
+      <publishTime>04/15/2015 16:49:36</publishTime>
+    </File>
+    <File Include="img/hop-dong-lao-dong.jpeg.png">
+      <publishTime>05/11/2015 16:23:11</publishTime>
+    </File>
+    <File Include="img/icon.gif">
+      <publishTime>04/15/2015 16:43:48</publishTime>
+    </File>
+    <File Include="img/images.jpg">
+      <publishTime>04/17/2016 00:35:11</publishTime>
+    </File>
+    <File Include="img/loader.gif">
+      <publishTime>04/22/2015 15:02:13</publishTime>
+    </File>
+    <File Include="img/logo.png">
+      <publishTime>04/15/2015 10:11:47</publishTime>
+    </File>
+    <File Include="img/logo1.png">
+      <publishTime>04/14/2015 16:29:56</publishTime>
+    </File>
+    <File Include="img/logo2.png">
+      <publishTime>04/16/2015 09:35:44</publishTime>
+    </File>
+    <File Include="img/logo3.png">
+      <publishTime>04/16/2015 09:48:04</publishTime>
+    </File>
+    <File Include="img/logonew.png">
+      <publishTime>04/30/2016 00:10:22</publishTime>
+    </File>
+    <File Include="img/mui_ten1.jpg">
+      <publishTime>05/21/2015 11:44:18</publishTime>
+    </File>
+    <File Include="img/nhan-su-CatTuong.jpg">
+      <publishTime>05/14/2015 08:47:50</publishTime>
+    </File>
+    <File Include="img/page1_image1.jpg">
+      <publishTime>04/14/2015 16:35:11</publishTime>
+    </File>
+    <File Include="img/page1_image10.jpg">
+      <publishTime>04/14/2015 16:35:11</publishTime>
+    </File>
+    <File Include="img/page1_image11.jpg">
+      <publishTime>04/14/2015 16:35:11</publishTime>
+    </File>
+    <File Include="img/page1_image12.jpg">
+      <publishTime>04/14/2015 16:35:11</publishTime>
+    </File>
+    <File Include="img/page1_image13.jpg">
+      <publishTime>04/14/2015 16:35:11</publishTime>
+    </File>
+    <File Include="img/page1_image14.jpg">
+      <publishTime>04/14/2015 16:35:11</publishTime>
+    </File>
+    <File Include="img/page1_image15.jpg">
+      <publishTime>04/14/2015 16:35:11</publishTime>
+    </File>
+    <File Include="img/page1_image2.jpg">
+      <publishTime>04/14/2015 16:35:11</publishTime>
+    </File>
+    <File Include="img/page1_image3.jpg">
+      <publishTime>04/14/2015 16:35:11</publishTime>
+    </File>
+    <File Include="img/page1_image4.jpg">
+      <publishTime>04/14/2015 16:35:11</publishTime>
+    </File>
+    <File Include="img/page1_image5.jpg">
+      <publishTime>04/14/2015 16:35:11</publishTime>
+    </File>
+    <File Include="img/page1_image6.jpg">
+      <publishTime>04/14/2015 16:35:11</publishTime>
+    </File>
+    <File Include="img/page1_image7.jpg">
+      <publishTime>04/14/2015 16:35:11</publishTime>
+    </File>
+    <File Include="img/page1_image8.jpg">
+      <publishTime>04/14/2015 16:35:11</publishTime>
+    </File>
+    <File Include="img/page1_image9.jpg">
+      <publishTime>04/14/2015 16:35:11</publishTime>
+    </File>
+    <File Include="img/page2_image1.jpg">
+      <publishTime>04/14/2015 23:26:36</publishTime>
+    </File>
+    <File Include="img/project-thumb1.jpg">
+      <publishTime>04/21/2015 21:07:11</publishTime>
+    </File>
+    <File Include="img/project1.jpg">
+      <publishTime>04/21/2015 21:08:41</publishTime>
+    </File>
+    <File Include="img/Screenshot 2015-04-16 11.14.54.png">
+      <publishTime>04/16/2015 18:09:54</publishTime>
+    </File>
+    <File Include="img/service_icon.png">
+      <publishTime>05/11/2015 16:20:51</publishTime>
+    </File>
+    <File Include="img/slide-1.jpg">
+      <publishTime>04/14/2015 16:35:12</publishTime>
+    </File>
+    <File Include="img/slide-2.jpg">
+      <publishTime>04/14/2015 16:35:13</publishTime>
+    </File>
+    <File Include="img/slide-3.jpg">
+      <publishTime>04/14/2015 16:35:11</publishTime>
+    </File>
+    <File Include="img/slide2.jpg">
+      <publishTime>04/16/2015 19:12:10</publishTime>
+    </File>
+    <File Include="img/sodo.jpg">
+      <publishTime>05/21/2015 11:08:21</publishTime>
+    </File>
+    <File Include="img/sodo1.jpg">
+      <publishTime>05/21/2015 11:10:14</publishTime>
+    </File>
+    <File Include="img/team-1.jpg">
+      <publishTime>04/14/2015 23:39:32</publishTime>
+    </File>
+    <File Include="img/team-2.jpg">
+      <publishTime>04/14/2015 23:39:37</publishTime>
+    </File>
+    <File Include="img/team-3.jpg">
+      <publishTime>04/14/2015 23:39:42</publishTime>
+    </File>
+    <File Include="img/team-4.jpg">
+      <publishTime>04/14/2015 23:39:46</publishTime>
+    </File>
+    <File Include="img/thiet-ke-logo-xay-dung-long-nhat-2.jpg">
+      <publishTime>05/21/2015 09:33:54</publishTime>
+    </File>
+    <File Include="img/thongbao.jpg">
+      <publishTime>04/27/2016 22:54:06</publishTime>
+    </File>
+    <File Include="img/Thumbs.db">
+      <publishTime>04/14/2015 16:29:56</publishTime>
+    </File>
+    <File Include="img/thuongmai.jpg">
+      <publishTime>04/27/2016 23:18:11</publishTime>
+    </File>
+    <File Include="img/tuyen-dung-mien-trung.jpg">
+      <publishTime>05/11/2015 14:11:54</publishTime>
+    </File>
+    <File Include="img/tuyendung.jpg">
+      <publishTime>04/27/2016 22:54:06</publishTime>
+    </File>
+    <File Include="img/ui-bg_glass_20_555555_1x400.png">
+      <publishTime>05/22/2015 10:35:41</publishTime>
+    </File>
+    <File Include="img/ui-icons_cccccc_256x240.png">
+      <publishTime>05/22/2015 10:37:46</publishTime>
+    </File>
+    <File Include="img/update.jpg">
+      <publishTime>04/23/2016 02:14:15</publishTime>
+    </File>
+    <File Include="img/_318-11585.jpg">
+      <publishTime>05/11/2015 15:09:46</publishTime>
+    </File>
+    <File Include="js/additional-methods.min.js">
+      <publishTime>05/21/2015 11:31:03</publishTime>
+    </File>
+    <File Include="js/addthis_widget.js">
+      <publishTime>04/22/2015 15:10:31</publishTime>
+    </File>
+    <File Include="js/ajaxcaptcha.js">
+      <publishTime>04/14/2015 16:29:56</publishTime>
+    </File>
+    <File Include="js/ajaxsendmail.js">
+      <publishTime>04/14/2015 16:46:51</publishTime>
+    </File>
+    <File Include="js/application2.js">
+      <publishTime>05/13/2015 10:18:28</publishTime>
+    </File>
+    <File Include="js/bootstrap.js">
+      <publishTime>04/22/2015 15:10:31</publishTime>
+    </File>
+    <File Include="js/bootstrap.min.js">
+      <publishTime>05/22/2015 09:48:25</publishTime>
+    </File>
+    <File Include="js/camera.min.js">
+      <publishTime>04/14/2015 16:29:56</publishTime>
+    </File>
+    <File Include="js/caption.js">
+      <publishTime>04/14/2015 16:29:56</publishTime>
+    </File>
+    <File Include="js/cloudflare.js">
+      <publishTime>04/22/2015 15:10:32</publishTime>
+    </File>
+    <File Include="js/cus.js">
+      <publishTime>04/09/2016 18:30:00</publishTime>
+    </File>
+    <File Include="js/ga.js">
+      <publishTime>04/22/2015 15:10:32</publishTime>
+    </File>
+    <File Include="js/hi-res-css.js">
+      <publishTime>04/22/2015 15:10:33</publishTime>
+    </File>
+    <File Include="js/high-res-all-css.js">
+      <publishTime>04/22/2015 15:10:33</publishTime>
+    </File>
+    <File Include="js/jquery-migrate.js">
+      <publishTime>04/22/2015 15:10:33</publishTime>
+    </File>
+    <File Include="js/jquery-migrate.min.js">
+      <publishTime>04/14/2015 16:29:56</publishTime>
+    </File>
+    <File Include="js/jquery-noconflict.js">
+      <publishTime>04/14/2015 16:29:56</publishTime>
+    </File>
+    <File Include="js/jquery-ui.min.js">
+      <publishTime>05/22/2015 10:31:43</publishTime>
+    </File>
+    <File Include="js/jquery.BlackAndWhite.min.js">
+      <publishTime>04/14/2015 16:29:56</publishTime>
+    </File>
+    <File Include="js/jquery.centerIn.js">
+      <publishTime>04/14/2015 16:47:40</publishTime>
+    </File>
+    <File Include="js/jquery.easyui.min.js">
+      <publishTime>05/21/2015 14:34:31</publishTime>
+    </File>
+    <File Include="js/jquery.fancybox-buttons.js">
+      <publishTime>04/14/2015 16:29:56</publishTime>
+    </File>
+    <File Include="js/jquery.fancybox-media.js">
+      <publishTime>04/14/2015 16:29:56</publishTime>
+    </File>
+    <File Include="js/jquery.fancybox-thumbs.js">
+      <publishTime>04/14/2015 16:29:56</publishTime>
+    </File>
+    <File Include="js/jquery.fancybox.pack.js">
+      <publishTime>04/14/2015 16:29:56</publishTime>
+    </File>
+    <File Include="js/jquery.js">
+      <publishTime>04/22/2015 15:10:33</publishTime>
+    </File>
+    <File Include="js/jquery.min.js">
+      <publishTime>04/14/2015 16:29:56</publishTime>
+    </File>
+    <File Include="js/jquery.modernizr.min.js">
+      <publishTime>04/14/2015 16:39:58</publishTime>
+    </File>
+    <File Include="js/jquery.pep.js">
+      <publishTime>04/14/2015 16:29:56</publishTime>
+    </File>
+    <File Include="js/jquery.simplr.smoothscroll.min.js">
+      <publishTime>04/14/2015 16:29:56</publishTime>
+    </File>
+    <File Include="js/jquery.stellar.min.js">
+      <publishTime>04/14/2015 16:29:56</publishTime>
+    </File>
+    <File Include="js/jquery.validate.min.js">
+      <publishTime>04/14/2015 16:29:56</publishTime>
+    </File>
+    <File Include="js/jquery.vide.min.js">
+      <publishTime>04/14/2015 16:29:56</publishTime>
+    </File>
+    <File Include="js/jquery_002.js">
+      <publishTime>04/22/2015 15:10:33</publishTime>
+    </File>
+    <File Include="js/jquery_003.js">
+      <publishTime>04/22/2015 15:10:33</publishTime>
+    </File>
+    <File Include="js/jquery_004.js">
+      <publishTime>04/22/2015 15:10:33</publishTime>
+    </File>
+    <File Include="js/jquery_005.js">
+      <publishTime>04/22/2015 15:10:33</publishTime>
+    </File>
+    <File Include="js/jquery_006.js">
+      <publishTime>04/22/2015 15:10:33</publishTime>
+    </File>
+    <File Include="js/jquery_007.js">
+      <publishTime>04/22/2015 15:10:33</publishTime>
+    </File>
+    <File Include="js/jquery_008.js">
+      <publishTime>04/22/2015 15:10:33</publishTime>
+    </File>
+    <File Include="js/jquery_009.js">
+      <publishTime>04/22/2015 15:10:33</publishTime>
+    </File>
+    <File Include="js/jquery_010.js">
+      <publishTime>04/22/2015 15:10:33</publishTime>
+    </File>
+    <File Include="js/jquery_011.js">
+      <publishTime>04/22/2015 15:10:33</publishTime>
+    </File>
+    <File Include="js/jquery_012.js">
+      <publishTime>04/22/2015 15:10:33</publishTime>
+    </File>
+    <File Include="js/jscu/bootstrap.min.js">
+      <publishTime>05/22/2015 09:48:53</publishTime>
+    </File>
+    <File Include="js/jssor.slider-20.mini.js">
+      <publishTime>04/10/2016 00:41:05</publishTime>
+    </File>
+    <File Include="js/jssor.slider.min.js">
+      <publishTime>04/12/2016 22:00:47</publishTime>
+    </File>
+    <File Include="js/layers.js">
+      <publishTime>04/22/2015 15:10:34</publishTime>
+    </File>
+    <File Include="js/loader0.js">
+      <publishTime>04/14/2015 21:09:27</publishTime>
+    </File>
+    <File Include="js/menu.js">
+      <publishTime>04/22/2015 15:10:34</publishTime>
+    </File>
+    <File Include="js/modernizr.custom.72111.js">
+      <publishTime>05/11/2015 21:03:24</publishTime>
+    </File>
+    <File Include="js/nr-100.js">
+      <publishTime>04/22/2015 15:10:34</publishTime>
+    </File>
+    <File Include="js/scripts.js">
+      <publishTime>04/14/2015 16:29:56</publishTime>
+    </File>
+    <File Include="js/textEffect.jquery.js">
+      <publishTime>05/11/2015 22:31:47</publishTime>
+    </File>
+    <File Include="js/tmlazyload.js">
+      <publishTime>04/14/2015 16:29:56</publishTime>
+    </File>
+    <File Include="NewEvent.aspx">
+      <publishTime>05/08/2016 14:34:36</publishTime>
+    </File>
+    <File Include="NewProject.aspx">
+      <publishTime>05/08/2015 11:27:35</publishTime>
+    </File>
+    <File Include="Products.aspx">
+      <publishTime>04/12/2016 23:57:02</publishTime>
+    </File>
+    <File Include="Site1.Master">
+      <publishTime>09/14/2016 00:28:26</publishTime>
+    </File>
+    <File Include="ThuongMai.aspx">
+      <publishTime>06/20/2016 23:21:48</publishTime>
+    </File>
+    <File Include="TuyenDung.aspx">
+      <publishTime>06/08/2016 11:37:29</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>09/27/2016 00:24:17</publishTime>
+    </File>
+    <File Include="WebForm1.aspx">
+      <publishTime>05/12/2015 10:34:35</publishTime>
+    </File>
+    <File Include="WebForm3.aspx">
+      <publishTime>05/12/2015 11:18:09</publishTime>
+    </File>
+    <File Include="WebForm4.aspx">
+      <publishTime>05/19/2015 22:26:58</publishTime>
+    </File>
+    <File Include="WebForm5.aspx">
+      <publishTime>05/21/2015 14:47:50</publishTime>
+    </File>
+    <File Include="WebForm6.aspx">
+      <publishTime>05/21/2015 14:55:32</publishTime>
+    </File>
+    <File Include="WebLoadData.asmx">
+      <publishTime>04/16/2015 14:26:27</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

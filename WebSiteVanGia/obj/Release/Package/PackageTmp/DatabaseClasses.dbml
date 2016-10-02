@@ -1,0 +1,1031 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Vangia" Class="DatabaseClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=Vangia;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="VanGiaConnectString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ctr_in_form" Member="ctr_in_forms">
+    <Type Name="ctr_in_form">
+      <Column Name="id_ctr" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_form" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="order_ctr" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ctr_client_id" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ctr_store" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ctr_name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="id_ctr_in_form" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ctr_placeholder" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ctr_name_us" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ctr_placeholder_us" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ctr_parent_active" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ctr_effect_show" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ctr_query_data" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ctr_require_validate" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ctr_require_validate_rex" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ctr_require_validate_mess" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ctr_steel" Member="ctr_steels">
+    <Type Name="ctr_steel">
+      <Column Name="ctr_name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ctr_request_default" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ctr_page_name" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="ctr_type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_ctr" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ctr_client_id" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="id_project" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctr_des" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ctr_store_default" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ctr_placeholder" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ctr_placeholder_us" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ctr_name_us" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ctr_code_js" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ctr_img" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ctr_require_validate" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ctr_require_validate_rex" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ctr_require_validate_mess" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.form_steel" Member="form_steels">
+    <Type Name="form_steel">
+      <Column Name="id_form" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="form_name" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="id_project" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="form_grid_view" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="form_name_us" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="form_view_store" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="form_grid_chart" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="form_grid_form" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="form_db" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fs_table_name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="fs_store_c_u_d_s" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="fs_script_page_load" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.form_store" Member="form_stores">
+    <Type Name="form_store">
+      <Column Name="id_form_store" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="form_store_code" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="form_store_type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="form_store_admin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.store_com_ship" Member="store_com_ships">
+    <Type Name="store_com_ship">
+      <Column Name="id_store_com_ship" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.form_store_para" Member="form_store_paras">
+    <Type Name="form_store_para">
+      <Column Name="id_store_para" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="store_para_name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="store_para_type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_form_store" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.fs_auth" Member="fs_auths">
+    <Type Name="fs_auth">
+      <Column Name="auth_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="auth_name" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.fs_manga" Member="fs_mangas">
+    <Type Name="fs_manga">
+      <Column Name="manga_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="manga_name" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="manga_key" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="type_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="manga_des" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="manga_img" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="manga_view" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="manga_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="manga_create" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="auth_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.fs_manga_chap" Member="fs_manga_chaps">
+    <Type Name="fs_manga_chap">
+      <Column Name="chap_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="manga_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="chap_name" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="chap_orther" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="chap_create" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="chap_key" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.fs_manga_img" Member="fs_manga_imgs">
+    <Type Name="fs_manga_img">
+      <Column Name="chap_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="img_orther" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="img_link" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.fs_manga_tag" Member="fs_manga_tags">
+    <Type Name="fs_manga_tag">
+      <Column Name="tag_id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="manga_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="tag_view" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.fs_manga_type" Member="fs_manga_types">
+    <Type Name="fs_manga_type">
+      <Column Name="type_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="type_name" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="type_key" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="type_orther" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="type_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.grid_view_mapping" Member="grid_view_mappings">
+    <Type Name="grid_view_mapping">
+      <Column Name="id_mapped" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_ctr_name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="orther" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.log_store_prod" Member="log_store_prods">
+    <Type Name="log_store_prod">
+      <Column Name="id_store_prod" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="store_prod_name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="store_prod_code" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="store_prod_img" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="store_prod_count" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="store_prod_cost" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="store_prod_cost_sell" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="store_prod_shelf" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="log_sell" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="id_store_cate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="store_cate_name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="id_store_unit" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="store_unit_name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="id_store" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="store_name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="id_store_stock" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="store_stock_code" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="id_store_slot" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="store_slot_code" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mar_project" Member="mar_projects">
+    <Type Name="mar_project">
+      <Column Name="id_mar_project" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mar_project_name" Type="System.String" DbType="NVarChar(200) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="mar_project_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mar_project_begin" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mar_project_end" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mar_project_sell_off" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mar_project_sell_type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mar_project_detail" Member="mar_project_details">
+    <Type Name="mar_project_detail">
+      <Column Name="id_mar_project" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_store_prod" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="store_prod_sell_off" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.pct_department" Member="pct_departments">
+    <Type Name="pct_department">
+      <Column Name="id_department" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="department_name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.pct_employee" Member="pct_employees">
+    <Type Name="pct_employee">
+      <Column Name="id_employee" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_title" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="employee_name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="employee_address" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="employee_mobile" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.pct_ticket" Member="pct_tickets">
+    <Type Name="pct_ticket">
+      <Column Name="id_ticket" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_employee" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ticket_fromdate" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ticket_todate" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ticket_money" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ticket_add" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ticket_note" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.pct_title" Member="pct_titles">
+    <Type Name="pct_title">
+      <Column Name="id_title" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_department" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="title_name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.project_steel" Member="project_steels">
+    <Type Name="project_steel">
+      <Column Name="id_project" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="project_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="project_des" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.so_orther" Member="so_orthers">
+    <Type Name="so_orther">
+      <Column Name="so_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="so_code" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="so_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="so_user_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="so_sms_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_fullname" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="so_email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="so_phone_number" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="so_address" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.so_orther_detail" Member="so_orther_details">
+    <Type Name="so_orther_detail">
+      <Column Name="so_orther_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="so_prod_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="so_prod_count_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="so_prod_price" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.so_prod_image_detail" Member="so_prod_image_details">
+    <Type Name="so_prod_image_detail">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="so_image" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="so_orther" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_id_prod" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.store_" Member="store_s">
+    <Type Name="store_">
+      <Column Name="id_store" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="store_name" Type="System.String" DbType="NVarChar(200) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="store_ads" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="store_phone" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="store_des" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.store_cate" Member="store_cates">
+    <Type Name="store_cate">
+      <Column Name="id_store_cate" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="store_cate_name" Type="System.String" DbType="NVarChar(200) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="store_cate_order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="store_cate_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="store_cate_key" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="store_cate_img" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.web_vangia_project" Member="web_vangia_projects">
+    <Type Name="web_vangia_project">
+      <Column Name="vangia_id_project" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="vangia_img1_project" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="vangia_img2_project" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="vangia_img3_project" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="vangia_img_project" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="vangia_content_project" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="vangia_name_project" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="vangia_time_project" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="vangia_status_project" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vangia_order_project" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vangia_language_project" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.store_com_type" Member="store_com_types">
+    <Type Name="store_com_type">
+      <Column Name="id_store_com_type" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="type_name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.store_company" Member="store_companies">
+    <Type Name="store_company">
+      <Column Name="id_store_company" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="company_name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="company_code" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="company_address" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="company_phone" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="company_email" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="company_website" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="company_logo" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="company_des" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="id_store_com_type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="company_fax" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="company_bank" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="company_bank_ads" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.store_contact" Member="store_contacts">
+    <Type Name="store_contact">
+      <Column Name="id_store_contact" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_store_company" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="contact_full_name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="contact_chat" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="contact_mobile" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="contact_title" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="contact_ext" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="contact_email" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.store_exp" Member="store_exps">
+    <Type Name="store_exp">
+      <Column Name="id_store_exp" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="store_exp_name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="store_exp_list_data" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="store_exp_creater" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="store_exp_checker" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="store_exp_cost" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.store_exp_detail" Member="store_exp_details">
+    <Type Name="store_exp_detail">
+      <Column Name="id_store_exp" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_store_prod" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="store_prod_count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_store_slot" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="store_prod_cost" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="store_prod_shelf" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.store_imp" Member="store_imps">
+    <Type Name="store_imp">
+      <Column Name="id_store_imp" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="store_imp_name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="store_imp_checker" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="store_imp_creater" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="store_imp_list_data" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="store_imp_store" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.store_imp_detail" Member="store_imp_details">
+    <Type Name="store_imp_detail">
+      <Column Name="id_store_imp" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_store_prod" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="store_prod_count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_store_slot" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="store_prod_cost" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="store_prod_shelf" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.store_prod" Member="store_prods">
+    <Type Name="store_prod">
+      <Column Name="id_store_prod" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="store_prod_name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="id_store_unit" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="store_prod_img" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="store_prod_code" Type="System.String" DbType="NVarChar(200) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_store_cate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="store_prod_cost" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.store_prod_sku" Member="store_prod_skus">
+    <Type Name="store_prod_sku">
+      <Column Name="id_store_prod_sku" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_store_prod" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="sku_count" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_prod_sku" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.store_slot" Member="store_slots">
+    <Type Name="store_slot">
+      <Column Name="id_store_slot" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_store" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="store_slot_code" Type="System.String" DbType="NVarChar(200) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_store_stock" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="store_slot_contain" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.store_stock" Member="store_stocks">
+    <Type Name="store_stock">
+      <Column Name="id_store_stock" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="store_stock_code" Type="System.String" DbType="NVarChar(200) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="store_stock_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="store_stock_store" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.store_unit" Member="store_units">
+    <Type Name="store_unit">
+      <Column Name="id_store_unit" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="store_unit_name" Type="System.String" DbType="NVarChar(200) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sys_company" Member="sys_companies">
+    <Type Name="sys_company">
+      <Column Name="id_company" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="company_name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sys_data_fixed" Member="sys_data_fixeds">
+    <Type Name="sys_data_fixed">
+      <Column Name="ctr_client_id" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="record_order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="st_value" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="st_name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="st_parent" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ctr_key_query" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="id_form" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sys_fs_help" Member="sys_fs_helps">
+    <Type Name="sys_fs_help">
+      <Column Name="id_fs_help" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fs_help_name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="fs_help_content" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sys_gridview_control" Member="sys_gridview_controls">
+    <Type Name="sys_gridview_control">
+      <Column Name="table_name" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="column_name" Type="System.String" DbType="VarChar(250) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="column_caption" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="column_key" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="column_edit" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sys_group_page" Member="sys_group_pages">
+    <Type Name="sys_group_page">
+      <Column Name="id_group_page" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="group_page_name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="group_page_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="group_page_order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="group_page_icon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sys_info" Member="sys_infos">
+    <Type Name="sys_info">
+      <Column Name="id_sys_info" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sys_info_name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="sys_info_des" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="sys_info_key" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sys_mapped_col" Member="sys_mapped_cols">
+    <Type Name="sys_mapped_col">
+      <Column Name="id_mapped_col" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_mapped" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mapped_col_name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="mapped_col_type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mapped_col_key" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mapped_col_code" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="mapped_col_order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sys_mapped_form" Member="sys_mapped_forms">
+    <Type Name="sys_mapped_form">
+      <Column Name="ctr_client_id" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="id_form" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mapped_col_code" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="view_selected" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctr_name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sys_mapped_join" Member="sys_mapped_joins">
+    <Type Name="sys_mapped_join">
+      <Column Name="id_mapped_join" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mapped_table_parent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="referencedTableName" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ref_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="id_mapped_col_p" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_mapped_col_c" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sys_mapped_operators" Member="sys_mapped_operators">
+    <Type Name="sys_mapped_operator">
+      <Column Name="id_operators" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="operators_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="operators_label" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="operators_cardinality" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sys_mapped_table" Member="sys_mapped_tables">
+    <Type Name="sys_mapped_table">
+      <Column Name="id_mapped" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mapped_name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="mapped_code" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="type_other" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sys_mapped_ty_op" Member="sys_mapped_ty_ops">
+    <Type Name="sys_mapped_ty_op">
+      <Column Name="id_operators" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_operators_type" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="op_order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sys_mapped_type" Member="sys_mapped_types">
+    <Type Name="sys_mapped_type">
+      <Column Name="id_operators_type" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="operators_type_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="operators_type_editor" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sys_page" Member="sys_pages">
+    <Type Name="sys_page">
+      <Column Name="id_page" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="page_name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="id_form" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="page_order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_group_page" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sys_store_prod" Member="sys_store_prods">
+    <Type Name="sys_store_prod">
+      <Column Name="id_store_prod" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="store_prod_count" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_store_slot" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="store_prod_cost" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="store_prod_shelf" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblDomain" Member="tblDomains">
+    <Type Name="tblDomain">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="domain_name" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="id_company" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="domain_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSysCompany" Member="tblSysCompanies">
+    <Type Name="tblSysCompany">
+      <Column Name="id_company" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="company_name" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSysGroupPage" Member="tblSysGroupPages">
+    <Type Name="tblSysGroupPage">
+      <Column Name="id_group_page" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="group_page_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="group_page_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="group_page_create" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="id_company" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="group_page_order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="group_page_img" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSysGroupPageDetail" Member="tblSysGroupPageDetails">
+    <Type Name="tblSysGroupPageDetail">
+      <Column Name="id_page" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_group_page" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="page_name" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="page_status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="page_create" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="page_link" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="id_company" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="page_key" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="max_record" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="page_order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="page_type_role" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="page_icon" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="page_type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="page_type_chart" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSysUser_Page" Member="tblSysUser_Pages">
+    <Type Name="tblSysUser_Page">
+      <Column Name="id_user_page" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_page_name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="user_page_control" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="user_page_sexy" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="user_page_parent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_page_order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_vip" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSysUserGroupPage" Member="tblSysUserGroupPages">
+    <Type Name="tblSysUserGroupPage">
+      <Column Name="role_group_page_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="role_group_page_name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="role_group_page_des" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="create_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="update_by" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_by" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_company" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="role_group_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="role_page_view" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="role_page_create" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="role_page_del" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSysUserGroupPageDetail" Member="tblSysUserGroupPageDetails">
+    <Type Name="tblSysUserGroupPageDetail">
+      <Column Name="role_group_page_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_company" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_group_user_detail" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSysUserGroupPagePage" Member="tblSysUserGroupPagePages">
+    <Type Name="tblSysUserGroupPagePage">
+      <Column Name="role_group_page_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_page" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_company" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_group_page_detail" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSysUserListShareDetail" Member="tblSysUserListShareDetails">
+    <Type Name="tblSysUserListShareDetail">
+      <Column Name="group_role_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="id_company" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSysUserRoleGroup" Member="tblSysUserRoleGroups">
+    <Type Name="tblSysUserRoleGroup">
+      <Column Name="group_role_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="group_role_name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="group_role_description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="group_role_create" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="group_role_parent" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="group_role_type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="update_by" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="create_by" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="id_company" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="group_role_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_page" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSysUserRolePage" Member="tblSysUserRolePages">
+    <Type Name="tblSysUserRolePage">
+      <Column Name="id_page" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="role_page_view" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="role_page_create" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="role_page_del" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="role_page_config" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="role_page_role" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_company" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_user_role_page" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSysUserRoleRecord" Member="tblSysUserRoleRecords">
+    <Type Name="tblSysUserRoleRecord">
+      <Column Name="user_id_master" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="user_id_staff" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="role_type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_page" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_company" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblUser" Member="tblUsers">
+    <Type Name="tblUser">
+      <Column Name="user_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_email" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="user_pass" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="user_fullname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="user_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_create" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="user_update" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="id_group_user" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_img" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="user_vip" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_vip_end" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="user_role" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="forget_pass" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="user_money" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_avatar" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="user_online" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_company" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_disk" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_code" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="seri_number" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="user_birthday" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="user_code_country" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="user_gender" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="user_id_facebook" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="user_point" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblUserCloud" Member="tblUserClouds">
+    <Type Name="tblUserCloud">
+      <Column Name="user_cloud_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="user_birthday" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="user_code_country" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="user_gender" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="user_id_facebook" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="user_email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="user_fullname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="user_fname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="user_lname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="user_avatar" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="user_type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblUserFriends" Member="tblUserFriends">
+    <Type Name="tblUserFriend">
+      <Column Name="user_id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="social_id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="social_user" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="social_type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="social_name" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="social_picture" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblUserImg" Member="tblUserImgs">
+    <Type Name="tblUserImg">
+      <Column Name="id_user_img" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_img_name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="user_img_sexy_key" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="user_img_size" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="user_img_create" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="user_img_w" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="user_img_h" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="user_img_type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="admin_view" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TestAndroid" Member="TestAndroids">
+    <Type Name="TestAndroid">
+      <Column Name="studentNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.user_steel" Member="user_steels">
+    <Type Name="user_steel">
+      <Column Name="id_user" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_first_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="user_last_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="user_full_name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="user_email" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="user_status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="user_pass" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.wb_advertising" Member="wb_advertisings">
+    <Type Name="wb_advertising">
+      <Column Name="id_advertising" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_advertising" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="links_advertising" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="status_advertising" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="order_advertising" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="img_advertising" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.wb_banner" Member="wb_banners">
+    <Type Name="wb_banner">
+      <Column Name="id_banner" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_banner" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="links_banner" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="order_banner" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="image_banner" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="status_banner" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="type_banner" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.wb_comment" Member="wb_comments">
+    <Type Name="wb_comment">
+      <Column Name="id_comment" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="noidung_comment" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="id_products" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="phone" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="name_full" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.wb_mail" Member="wb_mails">
+    <Type Name="wb_mail">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mail_name" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.wb_menu" Member="wb_menus">
+    <Type Name="wb_menu">
+      <Column Name="id_menu" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="menu_name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="menu_key_url" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="menu_order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="menu_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="menu_title" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="menu_links" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.wb_menu_products" Member="wb_menu_products">
+    <Type Name="wb_menu_product">
+      <Column Name="id_menu_products" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="menu_products_name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="menu_products_key" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="menu_products_order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="img_products" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="menu_status" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="menu_tomtat" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.wb_products" Member="wb_products">
+    <Type Name="wb_product">
+      <Column Name="id_products" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_products" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="type_products" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="tomtat_products" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="noidung_products" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="price_products" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="giamgia_products" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="giasaugiam_products" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="status_products" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="img_main_products" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="order_products" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="img1_products" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="img2_products" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="img3_products" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="img4_products" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="tieubieu_products" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="img5_products" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="img0_products" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.web_banner" Member="web_banners">
+    <Type Name="web_banner">
+      <Column Name="id_banner" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="banner_name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="banner_order" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="banner_link" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="banner_img" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="banner_tiny" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="banner_status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.web_chater" Member="web_chaters">
+    <Type Name="web_chater">
+      <Column Name="id_chater" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="chater_name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="customer_logo" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="customer_prod" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="customer_idea" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="customer_order" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="customer_status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.web_chater_content" Member="web_chater_contents">
+    <Type Name="web_chater_content">
+      <Column Name="id_chater" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="id_employer" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="chater_content" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="chater_content_create" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="id_up" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.web_content" Member="web_contents">
+    <Type Name="web_content">
+      <Column Name="id_content" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="content_name" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="id_menu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.web_content_other" Member="web_content_others">
+    <Type Name="web_content_other">
+      <Column Name="id_content_other" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="content_other_title" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="content_other" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="id_menu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.web_customer" Member="web_customers">
+    <Type Name="web_customer">
+      <Column Name="id_customer" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="customer_name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="customer_logo" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="customer_prod" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="customer_idea" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="customer_order" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="customer_status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.web_department" Member="web_departments">
+    <Type Name="web_department">
+      <Column Name="id_department" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="department_name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.web_employer" Member="web_employers">
+    <Type Name="web_employer">
+      <Column Name="id_employer" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="employer_name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="id_title" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="employer_code" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="employer_ext" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="employer_mobile" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="employer_status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.web_list_product" Member="web_list_products">
+    <Type Name="web_list_product">
+      <Column Name="id_list_prod" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="list_prod_name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="list_prod_order" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="list_prod_link" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="list_prod_status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.web_menu_root" Member="web_menu_roots">
+    <Type Name="web_menu_root">
+      <Column Name="id_menu" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="menu_name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="menu_order" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="menu_code" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="banner_tiny" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="menu_status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.web_products" Member="web_products">
+    <Type Name="web_product">
+      <Column Name="id_prod" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="prod_name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="prod_order" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prod_status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prod_content" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.web_title" Member="web_titles">
+    <Type Name="web_title">
+      <Column Name="id_title" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="title_name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="id_department" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.web_tr_menu_product" Member="web_tr_menu_products">
+    <Type Name="web_tr_menu_product">
+      <Column Name="id_menu_products" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_menu_products" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="order_menu_products" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status_menu_products" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="img_menu_products" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="tomtat_menu_products" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.web_tr_menutop" Member="web_tr_menutops">
+    <Type Name="web_tr_menutop">
+      <Column Name="id_menu_top" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_menu_top" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="links_menu_top" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="key_links_menu_top" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="status_menu_top" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="order_menu_top" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.web_tr_products" Member="web_tr_products">
+    <Type Name="web_tr_product">
+      <Column Name="id_products_tr" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_product_tr" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="type_products_tr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status_products_tr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="order_products_tr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="img_main_products_tr" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="img1_main_products_tr" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Specials" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="price_products" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="tomtat_products" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="noidung_products" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="img_small_products" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="img2_main_products_tr" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="img3_main_products_tr" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="price_products1" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="phantram_products" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.web_tr_quangcao" Member="web_tr_quangcaos">
+    <Type Name="web_tr_quangcao">
+      <Column Name="id_quangcao" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_quangcao" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="links_quangcao" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="status_quangcao" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="order_quangcao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="img_quangcao" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="type_quangcao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.web_vangia_duanmau" Member="web_vangia_duanmaus">
+    <Type Name="web_vangia_duanmau">
+      <Column Name="vangia_id_duanmau" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="vangia_img_duanmau" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="vangia_name_duanmau" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="vangia_time_duanmau" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="vangia_img1_duanmau" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="vangia_img2_duanmau" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="vangia_img3_duanmau" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="vangia_status_duanmau" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vangia_order_duanmau" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vangia_language" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vangia_content_duanmau" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.web_vangia_language" Member="web_vangia_languages">
+    <Type Name="web_vangia_language">
+      <Column Name="vangia_id_language" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="vangia_name_language" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="vangia_code_langue" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="vangia_status_lague" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vangia_icon_language" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.web_vangia_menu" Member="web_vangia_menus">
+    <Type Name="web_vangia_menu">
+      <Column Name="vangia_id_menu" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="vangia_name_menu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="vangia_link_menu" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="vangia_status_menu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vangia_order_menu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vangia_id_language" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.web_vangia_config" Member="web_vangia_configs">
+    <Type Name="web_vangia_config">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_vg" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="key_word_vg" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="laguage_word_vg" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="order_word_vg" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
