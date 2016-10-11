@@ -81,6 +81,7 @@
     <Content Include="img\update.jpg" />
     <Content Include="img\logonew.png" />
     <Content Include="plan.aspx" />
+    <Content Include="plan.html" />
     <Content Include="ThuongMai.aspx" />
     <Content Include="allProject.aspx" />
     <Content Include="AllProjectType.aspx" />
