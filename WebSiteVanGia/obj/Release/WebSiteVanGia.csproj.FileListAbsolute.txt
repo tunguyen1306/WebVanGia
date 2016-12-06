@@ -19,3 +19,10 @@ D:\Company\WebSite\WebVanGia\VanGiaGithub\WebSiteVanGia\WebSiteVanGia\bin\WebSit
 D:\Company\WebSite\WebVanGia\VanGiaGithub\WebSiteVanGia\WebSiteVanGia\obj\Release\WebSiteVanGia.csprojResolveAssemblyReference.cache
 D:\Company\WebSite\WebVanGia\VanGiaGithub\WebSiteVanGia\WebSiteVanGia\obj\Release\WebSiteVanGia.dll
 D:\Company\WebSite\WebVanGia\VanGiaGithub\WebSiteVanGia\WebSiteVanGia\obj\Release\WebSiteVanGia.pdb
+D:\Company\WebSite\VanGiaCompany\WebSiteVanGia\bin\css\template.css
+D:\Company\WebSite\VanGiaCompany\WebSiteVanGia\bin\WebSiteVanGia.dll.config
+D:\Company\WebSite\VanGiaCompany\WebSiteVanGia\bin\WebSiteVanGia.dll
+D:\Company\WebSite\VanGiaCompany\WebSiteVanGia\bin\WebSiteVanGia.pdb
+D:\Company\WebSite\VanGiaCompany\WebSiteVanGia\obj\Release\WebSiteVanGia.csprojResolveAssemblyReference.cache
+D:\Company\WebSite\VanGiaCompany\WebSiteVanGia\obj\Release\WebSiteVanGia.dll
+D:\Company\WebSite\VanGiaCompany\WebSiteVanGia\obj\Release\WebSiteVanGia.pdb

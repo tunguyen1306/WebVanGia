@@ -24,16 +24,15 @@
     <%--  <uc1:ctr_showcaserow runat="server" ID="ctr_showcaserow" />--%>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="Content_MaintopRow" runat="server">
-    <uc1:ctr_maintoprow runat="server" ID="ctr_maintoprow" />
+  <%--  <uc1:ctr_maintoprow runat="server" ID="ctr_maintoprow" />--%>
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="Content_ContentRow" runat="server">
    <%-- <uc1:ctr_contentrow runat="server" ID="ctr_contentrow" />--%>
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="Content_MainBottomRow" runat="server">
-    <uc1:ctr_mainbottomrow runat="server" ID="ctr_mainbottomrow" />
+ <%--   <uc1:ctr_mainbottomrow runat="server" ID="ctr_mainbottomrow" />--%>
 </asp:Content>
 <asp:Content ID="Content7" ContentPlaceHolderID="ContentFooter" runat="server">
-
     <%-- <div id="footer-row" data-stellar-background-ratio="0.5">
         <div class="row-container">
             <div class="container">
@@ -114,5 +113,5 @@
         </div>
     </div>
     --%>
-    <uc1:ctr_footer runat="server" ID="ctr_footer" />
+   <%-- <uc1:ctr_footer runat="server" ID="ctr_footer" />--%>
 </asp:Content>

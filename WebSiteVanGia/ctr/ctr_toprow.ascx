@@ -1,17 +1,17 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctr_toprow.ascx.cs" Inherits="WebSiteVanGia.ctr.ctr_toprow" %>
-<div id="top-row">
+<div id="top-row" >
     <div class="row-container">
         <div class="container">
             <div id="top" class="row">
 
                 <div id="logo" class="span2">
                     <a href="/Default.aspx">
-                        <img src="img/logonew.png" class="logo" alt="vangia">
+                        <img src="img/VGLogo.jpg" class="logo" alt="vangia">
                         <h1>vangia</h1>
                     </a>
                 </div>
 
-                <nav class="moduletable   span10">
+                <nav class="moduletable   span10 clMenu" >
 
                     <div class="module_container">
                         <div class="icemegamenu">

@@ -46,7 +46,7 @@
             </div>
         </div>
     </div>
-    <asp:SqlDataSource ID="dsProject" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand="SELECT vangia_id_silde, vangia_noidung_silde, vangia_tomtat_silde, vangia_name_silde, vangia_img_silde, vangia_status_silde, vangia_order_silde, vangia_language_silde FROM web_vangia_silde WHERE (vangia_status_silde = 1) AND (vangia_language_silde = @vangia_language_silde) and vangia_id_silde=@vangia_id_silde  ORDER BY vangia_order_silde">
+    <asp:SqlDataSource ID="dsProject" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand="SELECT vangia_id_silde, vangia_noidung_silde, vangia_tomtat_silde, vangia_name_silde, vangia_img_silde, vangia_status_silde, vangia_order_silde, vangia_language_silde,vangia_type_slide FROM web_vangia_silde WHERE vangia_type_slide=1 and  (vangia_status_silde = 1) AND (vangia_language_silde = @vangia_language_silde) and vangia_id_silde=@vangia_id_silde  ORDER BY vangia_order_silde">
         <SelectParameters>
             <asp:CookieParameter CookieName="lang" DefaultValue="" Name="vangia_language_silde" />
             <asp:QueryStringParameter DefaultValue="0" Name="vangia_id_silde" QueryStringField="id" />

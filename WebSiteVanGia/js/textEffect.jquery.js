@@ -154,7 +154,7 @@ if ( typeof Object.create !== 'function' ) {
 	$.fn.textEffect.options = {
 		effect: 'random',
 		effectSpeed: 150,
-		completionSpeed: 6000,
+		completionSpeed: 2000,
 		jumbleColor: '#7f7f7f'
 	};
 })( jQuery, window, document );

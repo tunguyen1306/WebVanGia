@@ -2,9 +2,8 @@
 //click language
 jQuery(function ($) {
     ///
-    $('.item_content').hover(function ()
-    {
-        
+    $('.item_content').hover(function () {
+
         $(this).find('span').addClass("selected");
 
     }, function () {
@@ -13,7 +12,7 @@ jQuery(function ($) {
 
     });
 
-   (function ($, undefined) {
+    (function ($, undefined) {
         $.fn.BlackAndWhite_init = function () {
             var selector = $(this);
             selector.find('img').not(".slide-img").parent().BlackAndWhite({
@@ -30,7 +29,7 @@ jQuery(function ($) {
     //jQuery(window).load(function ($) {
     //    jQuery('.item_img a').find('img').not('.lazy').parent().BlackAndWhite_init();
     //});
-   
+
 
 
     //$(document).ready(function () {
@@ -42,7 +41,7 @@ jQuery(function ($) {
     //});
 
 
-    $('#language').click(function() {
+    $('#language').click(function () {
 
     });
     /////active menu 
@@ -50,11 +49,11 @@ jQuery(function ($) {
     if (t == "/")
         t = "Default.aspx";
     $('.iceMenuTitle[href*="' + t + '"]').css("background-color", "rgba(0, 0, 0, 0)");
-        
-        var lan=2;
-        if ($("[id*='lbtn_language'][rellan]").size()!=0) {
-            lan = $("[id*='lbtn_language'][rellan]").attr('rellan');
-        }
+   
+    var lan = 2;
+    if ($("[id*='lbtn_language'][rellan]").size() != 0) {
+        lan = $("[id*='lbtn_language'][rellan]").attr('rellan');
+    }
 
 
     //load lan
@@ -65,10 +64,10 @@ jQuery(function ($) {
         data: JSON.stringify({ lan: lan }),
         dataType: "json",
         contentType: "application/json;charset=utf-8",
-        success: function(data) {
+        success: function (data) {
 
 
-            $.each(data.d, function(i, o) {
+            $.each(data.d, function (i, o) {
                 if (o.key_word_vg.lastIndexOf("ip_") != -1)
                     $('.' + o.key_word_vg).val(o.name_vg);
                 else if (o.key_word_vg.lastIndexOf("pl_") != -1)
@@ -83,8 +82,238 @@ jQuery(function ($) {
     });
     //load lan end
 
+    var stringCity1 = "<option value=\"0\">Chọn Loại công trình</option>";
+    $.ajax
+({
+    type: "POST",
+    url: "WebLoadData.asmx/GetLoaiCongTrinh", //LyricsloadMore
+    data: JSON.stringify({ id: 1 }),
+    dataType: "json",
+    contentType: "application/json;charset=utf-8",
+    success: function (data) {
+        
+        $.each(data.d, function (i, o) {
+            stringCity1 += "<option value=" + o.ValueMath + ">" + o.NameMath + "</option>";
+        });
+        $('#dropLoaiCongTrinh').html(stringCity1);
+    }
+});
+
+    var stringCity2 = "<option value=\"0\">Chọn mặt tiền</option>";
+    $.ajax
+({
+    type: "POST",
+    url: "WebLoadData.asmx/GetLoaiCongTrinh", //LyricsloadMore
+    data: JSON.stringify({ id: 2 }),
+    dataType: "json",
+    contentType: "application/json;charset=utf-8",
+    success: function (data) {
+        
+        $.each(data.d, function (i, o) {
+            stringCity2 += "<option value=" + o.ValueMath + ">" + o.NameMath + "</option>";
+        });
+        $('#dropMatTien').html(stringCity2);
+    }
+});
+
+    var stringCity3 = "<option value=\"0\">Chọn mức đầu tư</option>";
+    $.ajax
+({
+    type: "POST",
+    url: "WebLoadData.asmx/GetLoaiCongTrinh", //LyricsloadMore
+    data: JSON.stringify({ id: 3 }),
+    dataType: "json",
+    contentType: "application/json;charset=utf-8",
+    success: function (data) {
+        
+        $.each(data.d, function (i, o) {
+            stringCity3 += "<option value=" + o.ValueMath + ">" + o.NameMath + "</option>";
+        });
+        $('#dropDauTu').html(stringCity3);
+    }
+});
+
+    var stringCity4 = "<option value=\"0\">Chọn loại móng</option>";
+    $.ajax
+({
+    type: "POST",
+    url: "WebLoadData.asmx/GetLoaiCongTrinh", //LyricsloadMore
+    data: JSON.stringify({ id: 4 }),
+    dataType: "json",
+    contentType: "application/json;charset=utf-8",
+    success: function (data) {
+        
+        $.each(data.d, function (i, o) {
+            stringCity4 += "<option value=" + o.ValueMath + ">" + o.NameMath + "</option>";
+        });
+        $('#dropLoaiMong').html(stringCity4);
+    }
+});
+
+    var stringCity5 = "<option value=\"0\">Chọn kiểu mái</option>";
+    $.ajax
+({
+    type: "POST",
+    url: "WebLoadData.asmx/GetLoaiCongTrinh", //LyricsloadMore
+    data: JSON.stringify({ id: 5 }),
+    dataType: "json",
+    contentType: "application/json;charset=utf-8",
+    success: function (data) {
+        
+        $.each(data.d, function (i, o) {
+            stringCity5 += "<option value=" + o.ValueMath + ">" + o.NameMath + "</option>";
+        });
+        $('#dropKieuMai').html(stringCity5);
+    }
+});
+
+    var stringCity6 = "<option value=\"0\">Chọn lộ giới</option>";
+    $.ajax
+({
+    type: "POST",
+    url: "WebLoadData.asmx/GetLoaiCongTrinh", //LyricsloadMore
+    data: JSON.stringify({ id: 6 }),
+    dataType: "json",
+    contentType: "application/json;charset=utf-8",
+    success: function (data) {
+        
+        $.each(data.d, function (i, o) {
+            stringCity6 += "<option value=" + o.ValueMath + ">" + o.NameMath + "</option>";
+        });
+        $('#dropLoGioi').html(stringCity6);
+    }
+});
+
+    var stringCity7 = "<option value=\"0\">Chọn loại tầng hầm</option>";
+    $.ajax
+({
+    type: "POST",
+    url: "WebLoadData.asmx/GetLoaiCongTrinh", //LyricsloadMore
+    data: JSON.stringify({ id: 7 }),
+    dataType: "json",
+    contentType: "application/json;charset=utf-8",
+    success: function (data) {
+        
+        $.each(data.d, function (i, o) {
+            stringCity7 += "<option value=" + o.ValueMath + ">" + o.NameMath + "</option>";
+        });
+        $('#dropTangHam').html(stringCity7);
+    }
+});
+    $.ajax
+({
+    type: "POST",
+    url: "WebLoadData.asmx/GetLoaiCongTrinh", //LyricsloadMore
+    data: JSON.stringify({ id: 8}),
+    dataType: "json",
+    contentType: "application/json;charset=utf-8",
+    success: function (data) {
+     
+        $.each(data.d, function (i, o) {
+            $('#txtSoTien').val(o.ValueMath);
+        });
+        
+    }
+});  
+    $.ajax
+({
+    type: "POST",
+    url: "WebLoadData.asmx/GetLoaiCongTrinh", //LyricsloadMore
+    data: JSON.stringify({ id: 9}),
+    dataType: "json",
+    contentType: "application/json;charset=utf-8",
+    success: function (data) {
+     
+        $.each(data.d, function (i, o) {
+            $("#txtTyLe").val(o.ValueMath);
+        });
+        
+    }
+});
+
+    $('.btnTinhTien').click(function () {
+        var t = 0;
+        var a = $("#dropLoaiCongTrinh option:selected").val();
+        var b = $("#dropMatTien option:selected").val();
+        var c = $("#dropDauTu option:selected").val();
+        var d = $("#dropLoaiMong option:selected").val();
+        var e = $("#dropKieuMai option:selected").val();
+        var f = $("#dropLoGioi option:selected").val();
+        var g = $("#dropTangHam option:selected").val();
+        var h = $('#txtSoTien').val();
+        var i = $("#txtChieuNgang").val();
+        var j = $("#txtChieuDoc").val();
+        var k = $("#txtSoTang").val();   
+        var w = $("#txtTyLe").val();
+        if (a == 0) {
+            alert('Chọn Loại công trình');
+            t++
+           
+        }
+       
+        if (b == 0) {
+            alert('Chọn Loại mặt tiền');
+            t++
+           
+        }
+        if (c == 0) {
+            alert('Chọn Loại đầu tư');
+            t++
+        }
+        if (d == 0) {
+            alert('Chọn Loại móng');
+            t++
+        }
+        if (e == 0) {
+            alert('Chọn kiểu mái');
+            t++
+        }
+        if (f == 0) {
+            alert('Chọn Lộ giới');
+            t++
+        }
+        if (g == 0) {
+            alert('Chọn tầng hầm');
+            t++
+        }
+        if (h == "") {
+            t++
+        }
+        if (i == "") {
+            alert('Chiều ngang không được rỗng');
+            t++
+        }
+        if (j == "") {
+            alert('Chiều dài không được rỗng');
+            t++
+        }
+        if (k == "") {
+            alert('Số tầng không được rỗng');
+            t++
+        }
+        if (t == 0) {
+           
+            var k1 = parseInt(k) + 1.5
+            var total = ((a * b * c * d * e * f * g * h * i * j * k1)/1000000).toFixed(0);
+            //var tu=0;
+            //if (total.length>6) {
+            //    tu= total.substr(0, total.length - 6)
+            //} else {
+            //    tu = total;
+            //}
+            
+            var y = total * 30 / 100
+            var totalall = tien(total);
+            $('.txtGiaThanh').html(totalall+',000,000đ');
+            //$('.txtNhanCong').html(tien(y));
+        }
+        
+    });
 
 });
+
+
+
 
 //jQuery(document).ready(function ($) {
 //    $(window).load(function () {
@@ -204,8 +433,9 @@ jQuery(function ($) {
 //    });
 //});
 jQuery(function ($) {
+   
     if ($('body').hasClass('desktop_mode') || ($('body').hasClass('mobile') && screen.width > 767)) {
-        $('.icemegamenu li>a').click(function() {
+        $('.icemegamenu li>a').click(function () {
             var link = $(this);
             if (link.closest('li').hasClass("parent")) {
                 if (link.closest('li').hasClass("hover")) {
@@ -222,16 +452,16 @@ jQuery(function ($) {
         });
     }
     else {
-        $('#icemegamenu li.parent[class^="iceMenuLiLevel"]').hover(function() {
-                $('#icemegamenu li.parent[class^="iceMenuLiLevel"]').not($(this).parents('li')).not($(this)).removeClass('hover');
-                $(this).addClass('hover').attr('data-hover', 'true');
-                $(this).find('>ul.icesubMenu').addClass('visible');
-            },
-            function() {
+        $('#icemegamenu li.parent[class^="iceMenuLiLevel"]').hover(function () {
+            $('#icemegamenu li.parent[class^="iceMenuLiLevel"]').not($(this).parents('li')).not($(this)).removeClass('hover');
+            $(this).addClass('hover').attr('data-hover', 'true');
+            $(this).find('>ul.icesubMenu').addClass('visible');
+        },
+            function () {
                 $(this).attr('data-hover', 'false');
-                $(this).delay(800).queue(function(n) {
+                $(this).delay(800).queue(function (n) {
                     if ($(this).attr('data-hover') == 'false') {
-                        $(this).removeClass('hover').delay(250).queue(function(n) {
+                        $(this).removeClass('hover').delay(250).queue(function (n) {
                             if ($(this).attr('data-hover') == 'false') {
                                 $(this).find('>ul.icesubMenu').removeClass('visible');
                             }
@@ -242,15 +472,46 @@ jQuery(function ($) {
                 });
             });
     }
-    // if(screen.width>767){
-    // 	$(window).load(function(){
-    // 		$('#icemegamenu').parents('[id*="-row"]').scrollToFixed({minWidth: 768});
-    // 	})
-    // }
+    
+
 });
-jQuery(document).ready(function() {
+
+jQuery(window).resize(function () {
+    var browser_width = screen.width;
+    console.log(screen.width);
+    if (browser_width < 569) {
+        jQuery('.divYoutube').removeClass('hidden');
+        jQuery('.divSlide').addClass('hidden');
+    }
+    if (browser_width >= 568 && browser_width <= 1024) {
+        jQuery('.divYoutube').addClass('hidden');
+        jQuery('.divSlide').removeClass('hidden');
+    }
+    if (browser_width >= 1024 && browser_width <= 1366) {
+        jQuery('.divYoutube').addClass('hidden');
+        jQuery('.divSlide').addClass('hidden');
+    }
+});
+jQuery(document).ready(function () {
+    var browser_width = screen.width;
+    console.log(screen.width);
+    if (browser_width < 569) {
+        jQuery('.divYoutube').removeClass('hidden');
+        jQuery('.divSlide').addClass('hidden');
+    }
+    if (browser_width >= 568 && browser_width <= 1024) {
+        jQuery('.divYoutube').addClass('hidden');
+        jQuery('.divSlide').removeClass('hidden');
+    }
+    if (browser_width >= 1024 && browser_width <= 1366) {
+        jQuery('.divYoutube').addClass('hidden');
+        jQuery('.divSlide').addClass('hidden');
+    }
+
+});
+jQuery(document).ready(function () {
     var browser_width1 = jQuery(window).width();
-    jQuery("#icemegamenu").find(".icesubMenu").each(function(index) {
+    jQuery("#icemegamenu").find(".icesubMenu").each(function (index) {
         var offset1 = jQuery(this).offset();
         var xwidth1 = offset1.left + jQuery(this).width();
         if (xwidth1 >= browser_width1) {
@@ -346,12 +607,25 @@ jQuery(function ($) {
             }, 100)
         },
         //onError: function (element) {
-            
+
         //    alert("fgfgfgf " + element.attr('src') + " not exist");
         //}
     });
 });
+function tien(val) {
 
+    if (val != null) {
+
+        while (/(\d+)(\d{3})/.test(val.toString())) {
+            val = val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+        }
+        return val;
+    }
+    else {
+        return '';
+    }
+
+}
 //jQuery(function ($) {
 //    var success = "Thank You! Your message has been sent.",
 //    error = "Something went wrong, please try again later.",

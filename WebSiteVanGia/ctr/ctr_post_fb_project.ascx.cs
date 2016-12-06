@@ -21,7 +21,7 @@ namespace WebSiteVanGia.ctr
             if (dv != null)
             {
                 Repeater rp = e.Item.FindControl("rpPicture") as Repeater;
-                hdProjectId.Value = dv.Row["vangia_id_project"].ToString();
+               // hdProjectId.Value = dv.Row["vangia_id_project"].ToString();
                 DataTable dt = (dsPicture.Select(DataSourceSelectArguments.Empty) as DataView).ToTable();
                 rp.DataSource = dt;
                 rp.DataBind();

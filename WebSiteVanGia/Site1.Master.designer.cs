@@ -22,6 +22,15 @@ namespace WebSiteVanGia {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ct_post_fb;
         
         /// <summary>
+        /// formWeb control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm formWeb;
+        
+        /// <summary>
         /// ScriptManager1 control.
         /// </summary>
         /// <remarks>
@@ -83,6 +92,24 @@ namespace WebSiteVanGia {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder Content_MainBottomRow;
+        
+        /// <summary>
+        /// dsProject1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource dsProject1;
+        
+        /// <summary>
+        /// rptShow control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptShow;
         
         /// <summary>
         /// ContentFooter control.

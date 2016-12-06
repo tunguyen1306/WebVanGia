@@ -142,11 +142,11 @@
     <asp:SqlDataSource ID="dsPicture" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand=" select * from tblSysPicture  where advert_id=@vangia_id_project">
                                             <SelectParameters>
 
-                                              <asp:ControlParameter ControlID="hdProjectId" DefaultValue="0" Name="vangia_id_project" PropertyName="Value" />
+                                              <asp:QueryStringParameter DefaultValue="0" Name="vangia_id_project" QueryStringField="id" />
                                             </SelectParameters>
 
                                         </asp:SqlDataSource>
-    <asp:HiddenField runat="server" ID="hdProjectId" />
+    <%--<asp:HiddenField runat="server" ID="hdProjectId" />--%>
     <script type="text/javascript" src="js/jssor.slider.min.js"></script>
     <!-- use jssor.slider.debug.js instead for debug -->
     <script>
@@ -345,5 +345,5 @@
 <asp:Content ID="Content6" ContentPlaceHolderID="Content_MainBottomRow" runat="server">
 </asp:Content>
 <asp:Content ID="Content7" ContentPlaceHolderID="ContentFooter" runat="server">
-    <uc1:ctr_footer runat="server" ID="ctr_footer" />
+   <%-- <uc1:ctr_footer runat="server" ID="ctr_footer" />--%>
 </asp:Content>

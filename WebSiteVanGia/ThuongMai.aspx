@@ -15,7 +15,7 @@
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="Content_ContentRow" runat="server">
 
-    <div style="padding-top: 10px; padding-bottom: 90px;" id="video-row">
+   <%-- <div style="padding-top: 10px; padding-bottom: 90px;" id="video-row">
         <div class="row-container visible visible-first">
             <div class="container">
                 <div id="bottom" class="row">
@@ -69,8 +69,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row-container visible visible-first">
+    </div>--%>
+    <div class="row-container visible visible-first" style="background-color:#ffffff;">
         <div class="container">
             <div class="content-inner row">
 
@@ -82,7 +82,7 @@
                         <section class="page-gallery page-gallery__">
                             <header class="page_header">
                                 <h2 class="visible-first visible"><span class="item_title_part0 item_title_part_odd item_title_part_first_half item_title_part_first">
-                                    <asp:Literal ID="lbrShow" runat="server"></asp:Literal></span>Sản Phẩm</h2>
+                                    <asp:Literal ID="lbrShow" runat="server"></asp:Literal><img src="img/VGtrade.jpg" width="20%" /></span></h2>
                             </header>
                             <%-- <div class="category_desc">
         <div class="clr"></div>
@@ -168,7 +168,7 @@
     </asp:SqlDataSource>
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="Content_MainBottomRow" runat="server">
-    <div style="background-position: 50% -7.5px;" id="mainbottom-row" data-stellar-background-ratio="0.5">
+   <%-- <div style="background-position: 50% -7.5px;" id="mainbottom-row" data-stellar-background-ratio="0.5">
         <div class="row-container visible-first visible">
             <div class="container">
                 <div id="mainbottom" class="row">
@@ -262,8 +262,8 @@
             <asp:CookieParameter CookieName="lang" DefaultValue="2" Name="vangia_language_project" />
         </SelectParameters>
 
-    </asp:SqlDataSource>
+    </asp:SqlDataSource>--%>
 </asp:Content>
 <asp:Content ID="Content7" ContentPlaceHolderID="ContentFooter" runat="server">
-    <uc1:ctr_footer runat="server" ID="ctr_footer" />
+    <%--<uc1:ctr_footer runat="server" ID="ctr_footer" />--%>
 </asp:Content>

@@ -596,5 +596,11 @@
         <elementListCompartment Id="1f6219d9-f749-494c-8722-9bc2864df16e" absoluteBounds="45.89, 24.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="a8c1b02f-4a80-470b-bb32-829a4ad1f061" absoluteBounds="6.875, 5.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DatabaseClassesDataContext/tblMath_vangia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dbc637f0-080d-4ff0-bb47-2479971ca860" absoluteBounds="6.89, 5.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

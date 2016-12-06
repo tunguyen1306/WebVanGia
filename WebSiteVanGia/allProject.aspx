@@ -15,7 +15,7 @@
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="Content_ContentRow" runat="server">
 
-    <div style="padding-top: 10px; padding-bottom: 90px;" id="video-row">
+  <%--  <div style="padding-top: 10px; padding-bottom: 90px;" id="video-row">
         <div class="row-container visible visible-first">
             <div class="container">
                 <div id="bottom" class="row">
@@ -28,8 +28,8 @@
                             </header>
                             <div class="mod-newsflash-adv mod-newsflash-adv__testimonials cols-1" id="module_105">
                                 <div style="font-size: 18px;" class="pretext slogon">VẠN GIA, VẠN NIỀM VUI &ndash; VẠN NỤ CƯỜI</div>
-                                <div  class="row-fluid">
-                                    <article  class="cusGioiThieu span4 item item_num0 item__module visible-first" id="item_49">
+                                <div class="row-fluid">
+                                    <article class="cusGioiThieu span4 item item_num0 item__module visible-first" id="item_49">
                                         <!-- Intro Image -->
                                         <figure class="item_img img-intro img-intro__left">
                                             <img width="30" height="33" src="img/blockquote_icon.png" alt="" class="">
@@ -53,7 +53,7 @@
 
 
 
-                                    <article  class="cusGioiThieu span4 item item_num2 item__module  lastItem visible-first" id="item_47">
+                                    <article class="cusGioiThieu span4 item item_num2 item__module  lastItem visible-first" id="item_47">
                                         <!-- Intro Image -->
                                         <figure class="item_img img-intro img-intro__left">
                                             <img width="30" height="33" src="/img/blockquote_icon.png" alt="" class="">
@@ -74,7 +74,7 @@
 
                                     </article>
 
-                                    <article  class=" cusGioiThieu span4 item item_num2 item__module  lastItem visible-first" id="Article3">
+                                    <article class=" cusGioiThieu span4 item item_num2 item__module  lastItem visible-first" id="Article3">
                                         <!-- Intro Image -->
                                         <figure class="item_img img-intro img-intro__left">
                                             <img width="30" height="33" src="/img/blockquote_icon.png" alt="" class="">
@@ -94,7 +94,7 @@
                                         <div class="clearfix"></div>
 
                                     </article>
-                                    <article  class=" cusGioiThieu span4 item item_num2 item__module  lastItem visible-first" id="Article4">
+                                    <article class=" cusGioiThieu span4 item item_num2 item__module  lastItem visible-first" id="Article4">
                                         <!-- Intro Image -->
                                         <figure class="item_img img-intro img-intro__left">
                                             <img width="30" height="33" src="/img/blockquote_icon.png" alt="" class="">
@@ -130,8 +130,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row-container visible visible-first">
+    </div>--%>
+    <div class="row-container visible visible-first" style="background-color:#ffffff;">
         <div class="container">
             <div class="content-inner row">
 
@@ -143,8 +143,13 @@
                         <section class="page-gallery page-gallery__">
                             <header class="page_header">
                                 <h2 class="visible-first visible"><span class="item_title_part0 item_title_part_odd item_title_part_first_half item_title_part_first">
-                                    <asp:Literal ID="lbrShow" runat="server"></asp:Literal></span>Sản Phẩm</h2>
+                                    <asp:Literal ID="lbrShow" runat="server"></asp:Literal><img src="img/VGconstruction.jpg" width="20%" /></span>
+                                    <a class="btn register" style="padding: 10px;margin: 10px 0;background: #54acc9 !important;font: 400 14px/14px 'Ubuntu Condensed', sans-serif; color: #ffffff;" href="plan.aspx" target="_self"><span>Chi phí dự kiến</span></a>
+                                </h2>
+                               
                             </header>
+                          
+                         
                             <%-- <div class="category_desc">
         <div class="clr"></div>
   </div>--%>
@@ -154,11 +159,11 @@
                                     <ItemTemplate>
                                         <li class="gallery-item mix mix_all gallery-grid   firstItem" style="display: inline-block; text-align: center; opacity: 1;">
                                             <!-- Image  -->
-                                            <figure class="item_img img-intro img-intro__none cusitem_img" >
+                                            <figure class="item_img img-intro img-intro__none cusitem_img">
                                                 <a href="/DetailProject.aspx?id=<%#Eval("vangia_id_project") %>">
 
                                                     <img src="<%#ConfigurationManager.AppSettings["domainvg"]+Eval("originalFilepath").ToString().Split('_')[0]+"/"+Eval("originalFilepath") %>" alt="" style="width: 288px; height: 192px !important;">
-                                                  <%--  <span class="lazy_preloader_inner" style="width: 170px; padding-top: 100%;"></span>--%>
+                                                    <%--  <span class="lazy_preloader_inner" style="width: 170px; padding-top: 100%;"></span>--%>
 
 
                                                 </a>
@@ -225,12 +230,12 @@
             <asp:CookieParameter CookieName="lang" DefaultValue="2" Name="vangia_language_project" />
         </SelectParameters>
 
-    </asp:SqlDataSource> 
-    
-   
+    </asp:SqlDataSource>
+
+
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="Content_MainBottomRow" runat="server">
-    <div style="background-position: 50% -7.5px;" id="mainbottom-row" data-stellar-background-ratio="0.5">
+   <%-- <div style="background-position: 50% -7.5px;" id="mainbottom-row" data-stellar-background-ratio="0.5">
         <div class="row-container visible-first visible">
             <div class="container">
                 <div id="mainbottom" class="row">
@@ -251,15 +256,15 @@
                                             <h4 style="font: 400 27px/31px 'Ubuntu Condensed', sans-serif;" class="item_title item_title__services kehoach  visible-first visible">Kế hoạch</h4>
                                             <!-- Introtext -->
                                             <div class="item_introtext">
-                                                <p  style="white-space: pre-line; font-size: 15px;">
-                                                     <asp:Repeater ID="Repeater1" DataSourceID="dsXayDungKeHoach" runat="server">
+                                                <p style="white-space: pre-line; font-size: 15px;">
+                                                    <asp:Repeater ID="Repeater1" DataSourceID="dsXayDungKeHoach" runat="server">
                                                         <ItemTemplate>
                                                             <a class="cusa" href="/DetailProject.aspx?id=<%#Eval("vangia_id_project") %>">
-                                                            <%#Eval("vangia_name_project") %></a>
-                                                                  </ItemTemplate>
+                                                                <%#Eval("vangia_name_project") %></a>
+                                                        </ItemTemplate>
 
-                                                     </asp:Repeater>
-                                                   
+                                                    </asp:Repeater>
+
                                                 </p>
 
 
@@ -284,8 +289,8 @@
                                                 <p style="white-space: pre-line; font-size: 15px;">
                                                     <asp:Repeater ID="kh" DataSourceID="dsXayDungThongTin" runat="server">
                                                         <ItemTemplate>
-                                                                    <a class="cusa" href="/DetailProject.aspx?id=<%#Eval("vangia_id_project") %>">
-                                                            <%#Eval("vangia_name_project") %></a>
+                                                            <a class="cusa" href="/DetailProject.aspx?id=<%#Eval("vangia_id_project") %>">
+                                                                <%#Eval("vangia_name_project") %></a>
                                                         </ItemTemplate>
 
                                                     </asp:Repeater>
@@ -324,8 +329,8 @@
             <asp:CookieParameter CookieName="lang" DefaultValue="2" Name="vangia_language_project" />
         </SelectParameters>
 
-    </asp:SqlDataSource>
+    </asp:SqlDataSource>--%>
 </asp:Content>
 <asp:Content ID="Content7" ContentPlaceHolderID="ContentFooter" runat="server">
-    <uc1:ctr_footer runat="server" ID="ctr_footer" />
+   <%-- <uc1:ctr_footer runat="server" ID="ctr_footer" />--%>
 </asp:Content>

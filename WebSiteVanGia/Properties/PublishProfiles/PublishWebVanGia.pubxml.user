@@ -8,7 +8,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
     <LastUsedPlatform>Any CPU</LastUsedPlatform>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Users\TuNguyen\Desktop\PublishWeb\WebSiteVG28091255</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\TuNguyen\Desktop\PublishWeb\WebSiteVG06122143</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="About.aspx">
@@ -21,7 +21,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/13/2015 09:37:49</publishTime>
     </File>
     <File Include="allProject.aspx">
-      <publishTime>06/08/2016 11:37:35</publishTime>
+      <publishTime>12/04/2016 23:26:38</publishTime>
     </File>
     <File Include="AllProjectType.aspx">
       <publishTime>05/13/2015 09:37:49</publishTime>
@@ -30,10 +30,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/14/2015 22:57:36</publishTime>
     </File>
     <File Include="bin/css/template.css">
-      <publishTime>05/08/2016 14:03:33</publishTime>
+      <publishTime>12/05/2016 20:21:53</publishTime>
     </File>
     <File Include="bin/WebSiteVanGia.dll">
-      <publishTime>09/28/2016 00:55:54</publishTime>
+      <publishTime>12/06/2016 21:43:31</publishTime>
     </File>
     <File Include="Blog.aspx">
       <publishTime>09/28/2016 00:47:51</publishTime>
@@ -185,6 +185,15 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="css/jquery_003.css">
       <publishTime>04/16/2015 16:19:34</publishTime>
     </File>
+    <File Include="css/kunena.20-min.css">
+      <publishTime>11/22/2016 22:53:15</publishTime>
+    </File>
+    <File Include="css/kunena.forum-min.css">
+      <publishTime>11/22/2016 22:53:15</publishTime>
+    </File>
+    <File Include="css/kunena.responsive-min.css">
+      <publishTime>11/22/2016 22:53:15</publishTime>
+    </File>
     <File Include="css/lrstyle.css">
       <publishTime>04/16/2015 16:19:34</publishTime>
     </File>
@@ -198,16 +207,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/11/2015 21:48:20</publishTime>
     </File>
     <File Include="css/template.css">
-      <publishTime>05/08/2016 14:03:33</publishTime>
+      <publishTime>12/05/2016 20:21:53</publishTime>
     </File>
     <File Include="ctr/ctr_contentrow.ascx">
       <publishTime>05/13/2015 17:12:11</publishTime>
     </File>
     <File Include="ctr/ctr_footer.ascx">
-      <publishTime>05/08/2016 14:07:32</publishTime>
+      <publishTime>11/26/2016 18:43:16</publishTime>
     </File>
     <File Include="ctr/ctr_headerrow.ascx">
-      <publishTime>05/20/2015 18:42:29</publishTime>
+      <publishTime>12/06/2016 21:42:34</publishTime>
     </File>
     <File Include="ctr/ctr_mainbottomrow.ascx">
       <publishTime>04/27/2016 23:38:17</publishTime>
@@ -219,16 +228,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/29/2016 00:23:56</publishTime>
     </File>
     <File Include="ctr/ctr_post_fb_project.ascx">
-      <publishTime>06/29/2016 00:46:23</publishTime>
+      <publishTime>11/27/2016 21:42:08</publishTime>
     </File>
     <File Include="ctr/ctr_showcaserow.ascx">
       <publishTime>05/20/2015 23:02:55</publishTime>
     </File>
     <File Include="ctr/ctr_toprow.ascx">
-      <publishTime>04/30/2016 00:11:13</publishTime>
+      <publishTime>11/27/2016 21:49:36</publishTime>
     </File>
     <File Include="DatabaseClasses.dbml">
-      <publishTime>04/20/2015 23:12:44</publishTime>
+      <publishTime>11/22/2016 23:41:13</publishTime>
     </File>
     <File Include="DeatailEmployee.aspx">
       <publishTime>04/23/2016 01:03:12</publishTime>
@@ -240,7 +249,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/29/2016 22:54:07</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>07/14/2015 11:03:28</publishTime>
+      <publishTime>11/26/2016 20:15:27</publishTime>
     </File>
     <File Include="DetailBlog.aspx">
       <publishTime>09/28/2016 00:49:49</publishTime>
@@ -255,10 +264,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/29/2016 22:54:05</publishTime>
     </File>
     <File Include="DetailProject.aspx">
-      <publishTime>06/29/2016 00:37:20</publishTime>
+      <publishTime>11/27/2016 21:44:37</publishTime>
     </File>
     <File Include="DetailSilde.aspx">
-      <publishTime>04/29/2016 22:38:34</publishTime>
+      <publishTime>12/06/2016 21:40:23</publishTime>
     </File>
     <File Include="DetailTuyenDung.aspx">
       <publishTime>05/11/2015 11:10:12</publishTime>
@@ -367,6 +376,81 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="img/images.jpg">
       <publishTime>04/17/2016 00:35:11</publishTime>
+    </File>
+    <File Include="img/img/005.jpg">
+      <publishTime>12/04/2016 22:03:40</publishTime>
+    </File>
+    <File Include="img/img/006.jpg">
+      <publishTime>12/04/2016 22:03:40</publishTime>
+    </File>
+    <File Include="img/img/011.jpg">
+      <publishTime>12/04/2016 22:03:40</publishTime>
+    </File>
+    <File Include="img/img/013.jpg">
+      <publishTime>12/04/2016 22:03:40</publishTime>
+    </File>
+    <File Include="img/img/014.jpg">
+      <publishTime>12/04/2016 22:03:40</publishTime>
+    </File>
+    <File Include="img/img/019.jpg">
+      <publishTime>12/04/2016 22:03:40</publishTime>
+    </File>
+    <File Include="img/img/020.jpg">
+      <publishTime>12/04/2016 22:03:40</publishTime>
+    </File>
+    <File Include="img/img/021.jpg">
+      <publishTime>12/04/2016 22:03:40</publishTime>
+    </File>
+    <File Include="img/img/022.jpg">
+      <publishTime>12/04/2016 22:03:40</publishTime>
+    </File>
+    <File Include="img/img/024.jpg">
+      <publishTime>12/04/2016 22:03:40</publishTime>
+    </File>
+    <File Include="img/img/025.jpg">
+      <publishTime>12/04/2016 22:03:40</publishTime>
+    </File>
+    <File Include="img/img/027.jpg">
+      <publishTime>12/04/2016 22:03:40</publishTime>
+    </File>
+    <File Include="img/img/029.jpg">
+      <publishTime>12/04/2016 22:03:40</publishTime>
+    </File>
+    <File Include="img/img/030.jpg">
+      <publishTime>12/04/2016 22:03:40</publishTime>
+    </File>
+    <File Include="img/img/031.jpg">
+      <publishTime>12/04/2016 22:03:40</publishTime>
+    </File>
+    <File Include="img/img/034.jpg">
+      <publishTime>12/04/2016 22:03:40</publishTime>
+    </File>
+    <File Include="img/img/038.jpg">
+      <publishTime>12/04/2016 22:03:40</publishTime>
+    </File>
+    <File Include="img/img/039.jpg">
+      <publishTime>12/04/2016 22:03:40</publishTime>
+    </File>
+    <File Include="img/img/043.jpg">
+      <publishTime>12/04/2016 22:03:40</publishTime>
+    </File>
+    <File Include="img/img/044.jpg">
+      <publishTime>12/04/2016 22:03:40</publishTime>
+    </File>
+    <File Include="img/img/047.jpg">
+      <publishTime>12/04/2016 22:03:40</publishTime>
+    </File>
+    <File Include="img/img/050.jpg">
+      <publishTime>12/04/2016 22:03:40</publishTime>
+    </File>
+    <File Include="img/img/a03.png">
+      <publishTime>12/04/2016 22:03:40</publishTime>
+    </File>
+    <File Include="img/img/b03.png">
+      <publishTime>12/04/2016 22:03:40</publishTime>
+    </File>
+    <File Include="img/img/loading.gif">
+      <publishTime>12/04/2016 22:03:40</publishTime>
     </File>
     <File Include="img/loader.gif">
       <publishTime>04/22/2015 15:02:13</publishTime>
@@ -509,6 +593,15 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="img/update.jpg">
       <publishTime>04/23/2016 02:14:15</publishTime>
     </File>
+    <File Include="img/VGconstruction.jpg">
+      <publishTime>11/26/2016 20:26:47</publishTime>
+    </File>
+    <File Include="img/VGLogo.jpg">
+      <publishTime>11/26/2016 18:14:00</publishTime>
+    </File>
+    <File Include="img/VGtrade.jpg">
+      <publishTime>11/26/2016 20:35:22</publishTime>
+    </File>
     <File Include="img/_318-11585.jpg">
       <publishTime>05/11/2015 15:09:46</publishTime>
     </File>
@@ -543,7 +636,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/22/2015 15:10:32</publishTime>
     </File>
     <File Include="js/cus.js">
-      <publishTime>04/09/2016 18:30:00</publishTime>
+      <publishTime>12/05/2016 23:24:00</publishTime>
     </File>
     <File Include="js/ga.js">
       <publishTime>04/22/2015 15:10:32</publishTime>
@@ -650,8 +743,14 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="js/jssor.slider-20.mini.js">
       <publishTime>04/10/2016 00:41:05</publishTime>
     </File>
+    <File Include="js/jssor.slider-21.1.6.min.js">
+      <publishTime>12/04/2016 22:05:46</publishTime>
+    </File>
     <File Include="js/jssor.slider.min.js">
       <publishTime>04/12/2016 22:00:47</publishTime>
+    </File>
+    <File Include="js/jssor.slider.mini.js">
+      <publishTime>12/02/2016 22:04:54</publishTime>
     </File>
     <File Include="js/layers.js">
       <publishTime>04/22/2015 15:10:34</publishTime>
@@ -672,7 +771,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/14/2015 16:29:56</publishTime>
     </File>
     <File Include="js/textEffect.jquery.js">
-      <publishTime>05/11/2015 22:31:47</publishTime>
+      <publishTime>12/04/2016 23:49:35</publishTime>
     </File>
     <File Include="js/tmlazyload.js">
       <publishTime>04/14/2015 16:29:56</publishTime>
@@ -683,20 +782,26 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="NewProject.aspx">
       <publishTime>05/08/2015 11:27:35</publishTime>
     </File>
+    <File Include="plan.aspx">
+      <publishTime>12/05/2016 20:23:02</publishTime>
+    </File>
+    <File Include="plan.html">
+      <publishTime>10/03/2016 00:06:55</publishTime>
+    </File>
     <File Include="Products.aspx">
       <publishTime>04/12/2016 23:57:02</publishTime>
     </File>
     <File Include="Site1.Master">
-      <publishTime>09/14/2016 00:28:26</publishTime>
+      <publishTime>12/06/2016 21:42:33</publishTime>
     </File>
     <File Include="ThuongMai.aspx">
-      <publishTime>06/20/2016 23:21:48</publishTime>
+      <publishTime>11/26/2016 20:39:55</publishTime>
     </File>
     <File Include="TuyenDung.aspx">
       <publishTime>06/08/2016 11:37:29</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>09/27/2016 00:24:17</publishTime>
+      <publishTime>11/23/2016 21:45:03</publishTime>
     </File>
     <File Include="WebForm1.aspx">
       <publishTime>05/12/2015 10:34:35</publishTime>

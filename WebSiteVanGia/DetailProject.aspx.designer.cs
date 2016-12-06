@@ -56,23 +56,5 @@ namespace WebSiteVanGia {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource dsPicture;
-        
-        /// <summary>
-        /// hdProjectId control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hdProjectId;
-        
-        /// <summary>
-        /// ctr_footer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::WebSiteVanGia.ctr.ctr_footer ctr_footer;
     }
 }

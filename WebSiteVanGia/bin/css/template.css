@@ -9,7 +9,7 @@
   color: #303334;
 }
 .logo {
-max-width:10%;
+max-width:13%;
 position:fixed;
 top:15px;
 }
@@ -4521,6 +4521,7 @@ a.badge:focus {
   }
 }
 @media (max-width: 767px) {
+ 
   .hidden-desktop {
     display: inherit !important;
   }
@@ -6288,7 +6289,7 @@ input[type="color"],
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  height: 65px;
+  height: 40px;
   color: #838383;
   padding: 10px;
 }
@@ -9719,7 +9720,7 @@ nav.moduletable {
 }
 .icemegamenu {
   float: right;
-  margin-top: 17px;
+  /*margin-top: 17px;*/
   position: inherit;
 }
 .icemegamenu ul,
