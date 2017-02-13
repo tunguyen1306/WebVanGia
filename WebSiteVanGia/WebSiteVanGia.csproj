@@ -72,6 +72,7 @@
     <Content Include="DichVu.aspx" />
     <Content Include="img\09.jpg" />
     <Content Include="img\09.png" />
+    <Content Include="img\bkDichVu.jpg" />
     <Content Include="img\chinhsach.jpg" />
     <Content Include="img\dichvu.jpg" />
     <Content Include="img\event.jpg" />
