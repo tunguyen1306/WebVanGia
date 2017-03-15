@@ -22,13 +22,31 @@ namespace WebSiteVanGia {
         protected global::WebSiteVanGia.ctr.ctr_toprow ctr_toprow;
         
         /// <summary>
-        /// ListView1 control.
+        /// rpVideo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView ListView1;
+        protected global::System.Web.UI.WebControls.Repeater rpVideo;
+        
+        /// <summary>
+        /// dsVideo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource dsVideo;
+        
+        /// <summary>
+        /// repSlide1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater repSlide1;
         
         /// <summary>
         /// dsProject control.
@@ -40,31 +58,13 @@ namespace WebSiteVanGia {
         protected global::System.Web.UI.WebControls.SqlDataSource dsProject;
         
         /// <summary>
-        /// Repeater1 control.
+        /// dsSlider control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater1;
-        
-        /// <summary>
-        /// dsXayDungKeHoach control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource dsXayDungKeHoach;
-        
-        /// <summary>
-        /// dsXayDungThongTin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource dsXayDungThongTin;
+        protected global::System.Web.UI.WebControls.SqlDataSource dsSlider;
         
         /// <summary>
         /// ctr_footer control.

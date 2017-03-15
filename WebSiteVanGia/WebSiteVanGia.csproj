@@ -70,8 +70,16 @@
     <Content Include="DetailBlog.aspx" />
     <Content Include="DetailBlog.html" />
     <Content Include="DichVu.aspx" />
+    <Content Include="img\01.jpg" />
+    <Content Include="img\02.jpg" />
+    <Content Include="img\03.jpg" />
+    <Content Include="img\04.jpg" />
     <Content Include="img\09.jpg" />
     <Content Include="img\09.png" />
+    <Content Include="img\a17.png" />
+    <Content Include="img\a22.png" />
+    <Content Include="img\android.jpg" />
+    <Content Include="img\b05.png" />
     <Content Include="img\bkDichVu.jpg" />
     <Content Include="img\chinhsach.jpg" />
     <Content Include="img\dichvu.jpg" />
@@ -79,6 +87,16 @@
     <Content Include="img\bxe.jpg" />
     <Content Include="img\images.jpg" />
     <Content Include="img\cs.jpg" />
+    <Content Include="img\001.jpg" />
+    <Content Include="img\004.jpg" />
+    <Content Include="img\05.jpg" />
+    <Content Include="img\b03.png" />
+    <Content Include="img\landscape.jpg" />
+    <Content Include="img\loading.gif" />
+    <Content Include="img\mac.jpg" />
+    <Content Include="img\motor.jpg" />
+    <Content Include="img\oval.svg" />
+    <Content Include="img\photography.jpg" />
     <Content Include="img\img\005.jpg" />
     <Content Include="img\img\006.jpg" />
     <Content Include="img\img\011.jpg" />
@@ -112,7 +130,11 @@
     <Content Include="img\VGtrade.jpg" />
     <Content Include="img\VGconstruction.jpg" />
     <Content Include="img\VGLogo.jpg" />
+    <Content Include="img\windows.jpg" />
     <Content Include="js\jssor.slider-21.1.6.min.js" />
+    <Content Include="js\jssor.slider-22.2.11.debug.js" />
+    <Content Include="js\jssor.slider-22.2.11.min.js" />
+    <Content Include="js\jssor.slider-22.2.11.mini.js" />
     <Content Include="js\jssor.slider.mini.js" />
     <Content Include="plan.aspx" />
     <Content Include="plan.html" />
@@ -615,6 +637,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="cv\" />
+    <Folder Include="img\imgSlide\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

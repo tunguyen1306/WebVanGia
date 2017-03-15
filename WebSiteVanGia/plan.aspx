@@ -310,6 +310,235 @@ td.text-right {
 }
 
     </style>
+    <script>
+        var stringCity1 = "<option value=\"0\">Chọn Loại công trình</option>";
+        $.ajax
+    ({
+        type: "POST",
+        url: "WebLoadData.asmx/GetLoaiCongTrinh", //LyricsloadMore
+        data: JSON.stringify({ id: 1 }),
+        dataType: "json",
+        contentType: "application/json;charset=utf-8",
+        success: function (data) {
+
+            $.each(data.d, function (i, o) {
+                stringCity1 += "<option value=" + o.ValueMath + ">" + o.NameMath + "</option>";
+            });
+            $('#dropLoaiCongTrinh').html(stringCity1);
+        }
+    });
+
+        var stringCity2 = "<option value=\"0\">Chọn mặt tiền</option>";
+        $.ajax
+    ({
+        type: "POST",
+        url: "WebLoadData.asmx/GetLoaiCongTrinh", //LyricsloadMore
+        data: JSON.stringify({ id: 2 }),
+        dataType: "json",
+        contentType: "application/json;charset=utf-8",
+        success: function (data) {
+
+            $.each(data.d, function (i, o) {
+                stringCity2 += "<option value=" + o.ValueMath + ">" + o.NameMath + "</option>";
+            });
+            $('#dropMatTien').html(stringCity2);
+        }
+    });
+
+        var stringCity3 = "<option value=\"0\">Chọn mức đầu tư</option>";
+        $.ajax
+    ({
+        type: "POST",
+        url: "WebLoadData.asmx/GetLoaiCongTrinh", //LyricsloadMore
+        data: JSON.stringify({ id: 3 }),
+        dataType: "json",
+        contentType: "application/json;charset=utf-8",
+        success: function (data) {
+
+            $.each(data.d, function (i, o) {
+                stringCity3 += "<option value=" + o.ValueMath + ">" + o.NameMath + "</option>";
+            });
+            $('#dropDauTu').html(stringCity3);
+        }
+    });
+
+        var stringCity4 = "<option value=\"0\">Chọn loại móng</option>";
+        $.ajax
+    ({
+        type: "POST",
+        url: "WebLoadData.asmx/GetLoaiCongTrinh", //LyricsloadMore
+        data: JSON.stringify({ id: 4 }),
+        dataType: "json",
+        contentType: "application/json;charset=utf-8",
+        success: function (data) {
+
+            $.each(data.d, function (i, o) {
+                stringCity4 += "<option value=" + o.ValueMath + ">" + o.NameMath + "</option>";
+            });
+            $('#dropLoaiMong').html(stringCity4);
+        }
+    });
+
+        var stringCity5 = "<option value=\"0\">Chọn kiểu mái</option>";
+        $.ajax
+    ({
+        type: "POST",
+        url: "WebLoadData.asmx/GetLoaiCongTrinh", //LyricsloadMore
+        data: JSON.stringify({ id: 5 }),
+        dataType: "json",
+        contentType: "application/json;charset=utf-8",
+        success: function (data) {
+
+            $.each(data.d, function (i, o) {
+                stringCity5 += "<option value=" + o.ValueMath + ">" + o.NameMath + "</option>";
+            });
+            $('#dropKieuMai').html(stringCity5);
+        }
+    });
+
+        var stringCity6 = "<option value=\"0\">Chọn lộ giới</option>";
+        $.ajax
+    ({
+        type: "POST",
+        url: "WebLoadData.asmx/GetLoaiCongTrinh", //LyricsloadMore
+        data: JSON.stringify({ id: 6 }),
+        dataType: "json",
+        contentType: "application/json;charset=utf-8",
+        success: function (data) {
+
+            $.each(data.d, function (i, o) {
+                stringCity6 += "<option value=" + o.ValueMath + ">" + o.NameMath + "</option>";
+            });
+            $('#dropLoGioi').html(stringCity6);
+        }
+    });
+
+        var stringCity7 = "<option value=\"0\">Chọn loại tầng hầm</option>";
+        $.ajax
+    ({
+        type: "POST",
+        url: "WebLoadData.asmx/GetLoaiCongTrinh", //LyricsloadMore
+        data: JSON.stringify({ id: 7 }),
+        dataType: "json",
+        contentType: "application/json;charset=utf-8",
+        success: function (data) {
+
+            $.each(data.d, function (i, o) {
+                stringCity7 += "<option value=" + o.ValueMath + ">" + o.NameMath + "</option>";
+            });
+            $('#dropTangHam').html(stringCity7);
+        }
+    });
+        $.ajax
+    ({
+        type: "POST",
+        url: "WebLoadData.asmx/GetLoaiCongTrinh", //LyricsloadMore
+        data: JSON.stringify({ id: 8 }),
+        dataType: "json",
+        contentType: "application/json;charset=utf-8",
+        success: function (data) {
+
+            $.each(data.d, function (i, o) {
+                $('#txtSoTien').val(o.ValueMath);
+            });
+
+        }
+    });
+        $.ajax
+    ({
+        type: "POST",
+        url: "WebLoadData.asmx/GetLoaiCongTrinh", //LyricsloadMore
+        data: JSON.stringify({ id: 9 }),
+        dataType: "json",
+        contentType: "application/json;charset=utf-8",
+        success: function (data) {
+
+            $.each(data.d, function (i, o) {
+                $("#txtTyLe").val(o.ValueMath);
+            });
+
+        }
+    });
+
+        $('.btnTinhTien').click(function () {
+            var t = 0;
+            var a = $("#dropLoaiCongTrinh option:selected").val();
+            var b = $("#dropMatTien option:selected").val();
+            var c = $("#dropDauTu option:selected").val();
+            var d = $("#dropLoaiMong option:selected").val();
+            var e = $("#dropKieuMai option:selected").val();
+            var f = $("#dropLoGioi option:selected").val();
+            var g = $("#dropTangHam option:selected").val();
+            var h = $('#txtSoTien').val();
+            var i = $("#txtChieuNgang").val();
+            var j = $("#txtChieuDoc").val();
+            var k = $("#txtSoTang").val();
+            var w = $("#txtTyLe").val();
+            if (a == 0) {
+                alert('Chọn Loại công trình');
+                t++
+
+            }
+
+            if (b == 0) {
+                alert('Chọn Loại mặt tiền');
+                t++
+
+            }
+            if (c == 0) {
+                alert('Chọn Loại đầu tư');
+                t++
+            }
+            if (d == 0) {
+                alert('Chọn Loại móng');
+                t++
+            }
+            if (e == 0) {
+                alert('Chọn kiểu mái');
+                t++
+            }
+            if (f == 0) {
+                alert('Chọn Lộ giới');
+                t++
+            }
+            if (g == 0) {
+                alert('Chọn tầng hầm');
+                t++
+            }
+            if (h == "") {
+                t++
+            }
+            if (i == "") {
+                alert('Chiều ngang không được rỗng');
+                t++
+            }
+            if (j == "") {
+                alert('Chiều dài không được rỗng');
+                t++
+            }
+            if (k == "") {
+                alert('Số tầng không được rỗng');
+                t++
+            }
+            if (t == 0) {
+
+                var k1 = parseInt(k) + 1.5
+                var total = ((a * b * c * d * e * f * g * h * i * j * k1) / 1000000).toFixed(0);
+                //var tu=0;
+                //if (total.length>6) {
+                //    tu= total.substr(0, total.length - 6)
+                //} else {
+                //    tu = total;
+                //}
+
+                var y = total * 30 / 100
+                var totalall = tien(total);
+                $('.txtGiaThanh').html(totalall + ',000,000đ');
+                //$('.txtNhanCong').html(tien(y));
+            }
+
+        });
+    </script>
    
 </asp:Content>
 <asp:Content ID="Content7" ContentPlaceHolderID="Content_MainBottomRow" runat="server">
