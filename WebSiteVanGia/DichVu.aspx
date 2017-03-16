@@ -45,7 +45,7 @@
     </div>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="Content_MaintopRow" runat="server">
-   <%-- <div class="maintop-row">
+    <%-- <div class="maintop-row">
          <div class="moduletable best_projects">
         <div class="module_container">
             <div class="mod-newsflash-adv custom2 mod-newsflash-adv__best_projects cols-3" id="module_143">
@@ -57,10 +57,9 @@
         </div>
     </div>
     </div>--%>
-   
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="Content_ContentRow" runat="server">
-<%--     <div class="maintop-row">
+    <%--     <div class="maintop-row">
          <div class="moduletable best_projects">
         <div class="module_container">
             <div class="mod-newsflash-adv custom2 mod-newsflash-adv__best_projects cols-3" id="module_143">
@@ -73,7 +72,7 @@
     </div>
     </div>--%>
     <%--style="padding-top: 10px; padding-bottom: 90px;"--%>
-    <div  class="video-rowdv" id="video-row">
+    <div class="video-rowdv" id="video-row">
         <div class="row-container visible visible-first">
             <div class="container">
                 <div id="bottom" class="row">
@@ -85,305 +84,179 @@
 
                             </header>
                             <div class="mod-newsflash-adv mod-newsflash-adv__testimonials cols-3" id="module_143">
-                                 
-                                 <div class="row-fluid">
-                    <article class="span4 item item_num0 item__module  " style="height:225px !important;padding-left:0;" id="item_115">
-                        <!-- Intro Image -->
-                   <asp:Repeater ID="repSlide1" runat="server" DataSourceID="dsSlider">
-                       <ItemTemplate>
-                             <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden; visibility: hidden;">
-                                <!-- Loading Screen -->
-                                <div data-u="loading" style="position: absolute; top: 0px; left: 0px; background-color: rgba(0,0,0,0.7);">
-                                    <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-                                    <div style="position: absolute; display: block; background: url('img/loading.gif') no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+
+                                <div class="row-fluid">
+                                    <article class="span4 item item_num0 item__module  " style="height: 225px !important; padding-left: 0;" id="item_115">
+                                        <!-- Intro Image -->
+                                        <asp:Repeater ID="repSlide1" runat="server"  DataSourceID="dsSlider" OnItemDataBound="repSlide1_ItemDataBound">
+                                            <ItemTemplate>
+                                                <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden; visibility: hidden;">
+                                                    <!-- Loading Screen -->
+                                                    <div data-u="loading" style="position: absolute; top: 0px; left: 0px; background-color: rgba(0,0,0,0.7);">
+                                                        <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                                                        <div style="position: absolute; display: block; background: url('img/loading.gif') no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                                                    </div>
+                                                    <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden;">
+                                                        
+                                                        <a data-u="any" href="http://www.jssor.com" style="display: none">Banner Slider</a>
+                                                        <asp:Repeater ID="rpPicture" runat="server">
+                                                            <ItemTemplate>
+                                                                <div>
+                                                                    <img data-u="image" src="<%#ConfigurationManager.AppSettings["domainvg"]+Eval("originalFilepath").ToString().Split('_')[0] +"/"+Eval("originalFilepath")%>" />
+                                                                    <div data-u="thumb">Do you notice it is draggable by mouse/finger?</div>
+                                                                </div>
+
+                                                            </ItemTemplate>
+                                                        </asp:Repeater>
+                                                    </div>
+                                                    <!-- Thumbnail Navigator -->
+                                                    <div data-u="thumbnavigator" class="jssort09-600-45" style="position: absolute; bottom: 0px; left: 0px; width: 600px; height: 45px;">
+                                                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; filter: alpha(opacity=40.0); opacity: 0.4;"></div>
+                                                        <!-- Thumbnail Item Skin Begin -->
+                                                        <div data-u="slides" style="cursor: default;">
+                                                            <div data-u="prototype" class="p">
+                                                                <div data-u="thumbnailtemplate" class="t"></div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Thumbnail Item Skin End -->
+                                                    </div>
+                                                    <!-- Bullet Navigator -->
+                                                    <div data-u="navigator" class="jssorb01" style="bottom: 16px; right: 16px;">
+                                                        <div data-u="prototype" style="width: 12px; height: 12px;"></div>
+                                                    </div>
+                                                    <!-- Arrow Navigator -->
+                                                    <span data-u="arrowleft" class="jssora05l" style="top: 0px; left: 8px; width: 40px; height: 40px;" data-autocenter="2"></span>
+                                                    <span data-u="arrowright" class="jssora05r" style="top: 0px; right: 8px; width: 40px; height: 40px;" data-autocenter="2"></span>
+                                                </div>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+
+                                        <!-- #endregion Jssor Slider End -->
+
+
+                                        <div class="clearfix"></div>
+                                    </article>
+                                    <article class="span4 item item_num1 item__module  " id="item_116" style="height: 225px !important; padding-left: 0;">
+                                        <!-- Intro Image -->
+                                        <asp:Repeater ID="Repeater1" runat="server" OnItemDataBound="Repeater1_ItemDataBound" DataSourceID="dsSlider2">
+                                            <ItemTemplate>
+                                                <div id="jssor_3" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden; visibility: hidden;">
+                                                    <!-- Loading Screen -->
+                                                    <div data-u="loading" style="position: absolute; top: 0px; left: 0px; background-color: rgba(0,0,0,0.7);">
+                                                        <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                                                        <div style="position: absolute; display: block; background: url('img/loading.gif') no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                                                    </div>
+                                                    <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden;">
+                                                         <asp:Repeater ID="rpPicture1" runat="server">
+                                                            <ItemTemplate>
+                                                                <div>
+                                                                    <img data-u="image" src="<%#ConfigurationManager.AppSettings["domainvg"]+Eval("originalFilepath").ToString().Split('_')[0] +"/"+Eval("originalFilepath")%>" />
+                                                                   
+                                                                </div>
+
+                                                            </ItemTemplate>
+                                                        </asp:Repeater>
+                                                        
+                                                        
+                                                    </div>
+                                                    <!-- Bullet Navigator -->
+                                                    <div data-u="navigator" class="jssorb01" style="bottom: 16px; right: 16px;">
+                                                        <div data-u="prototype" style="width: 12px; height: 12px;"></div>
+                                                    </div>
+                                                    <!-- Arrow Navigator -->
+                                                    <span data-u="arrowleft" class="jssora05l" style="top: 0px; left: 8px; width: 40px; height: 40px;" data-autocenter="2"></span>
+                                                    <span data-u="arrowright" class="jssora05r" style="top: 0px; right: 8px; width: 40px; height: 40px;" data-autocenter="2"></span>
+                                                </div>
+                                                <!-- #endregion Jssor Slider End -->
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+
+
+                                        <div class="clearfix"></div>
+                                    </article>
+                                    <article class="span4 item item_num2 item__module  " id="item_117" style="height: 225px !important; padding-left: 0;">
+                                        <!-- Intro Image -->
+                                        <asp:Repeater ID="Repeater2" OnItemDataBound="Repeater2_ItemDataBound" runat="server"  DataSourceID="dsSlider3">
+                                            <ItemTemplate>
+                                                <div id="jssor_4" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden; visibility: hidden;">
+                                                    <!-- Loading Screen -->
+                                                    <div data-u="loading" style="position: absolute; top: 0px; left: 0px; background-color: rgba(0,0,0,0.7);">
+                                                        <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                                                        <div style="position: absolute; display: block; background: url('img/loading.gif') no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                                                    </div>
+                                                    <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden;">
+                                                        <a data-u="any" href="http://www.jssor.com" style="display: none">Simple Fade Slideshow</a>
+                                                        <asp:Repeater ID="rpPicture2" runat="server">
+                                                            <ItemTemplate>
+                                                                <div>
+                                                                    <img data-u="image" src="<%#ConfigurationManager.AppSettings["domainvg"]+Eval("originalFilepath").ToString().Split('_')[0] +"/"+Eval("originalFilepath")%>" />
+                                                                   
+                                                                </div>
+
+                                                            </ItemTemplate>
+                                                        </asp:Repeater>
+                                                    </div>
+                                                    <!-- Bullet Navigator -->
+                                                    <div data-u="navigator" class="jssorb05" style="bottom: 16px; right: 16px;" data-autocenter="1">
+                                                        <!-- bullet navigator item prototype -->
+                                                        <div data-u="prototype" style="width: 16px; height: 16px;"></div>
+                                                    </div>
+                                                    <!-- Arrow Navigator -->
+                                                    <span data-u="arrowleft" class="jssora12l" style="top: 0px; left: 0px; width: 30px; height: 46px;" data-autocenter="2"></span>
+                                                    <span data-u="arrowright" class="jssora12r" style="top: 0px; right: 0px; width: 30px; height: 46px;" data-autocenter="2"></span>
+                                                </div>
+                                                <!-- #endregion Jssor Slider End -->
+
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                        <div class="clearfix"></div>
+                                    </article>
                                 </div>
-                                <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden;">
-                                    <a data-u="any" href="http://www.jssor.com" style="display: none">Banner Slider</a>
-                                    <div>
-                                        <img data-u="image" src="img/01.jpg" />
-                                        <div data-u="thumb">Do you notice it is draggable by mouse/finger?</div>
-                                    </div>
-                                    <div>
-                                        <img data-u="image" src="img/02.jpg" />
-                                        <div data-u="thumb">Did you drag by either horizontal or vertical?</div>
-                                    </div>
-                                    <div>
-                                        <img data-u="image" src="img/03.jpg" />
-                                        <div data-u="thumb">Do you notice navigator responses when drag?</div>
-                                    </div>
-                                    <div>
-                                        <img data-u="image" src="img/04.jpg" />
-                                        <div data-u="thumb">Do you notice arrow responses when click?</div>
-                                    </div>
-                                </div>
-                                <!-- Thumbnail Navigator -->
-                                <div data-u="thumbnavigator" class="jssort09-600-45" style="position: absolute; bottom: 0px; left: 0px; width: 600px; height: 45px;">
-                                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; filter: alpha(opacity=40.0); opacity: 0.4;"></div>
-                                    <!-- Thumbnail Item Skin Begin -->
-                                    <div data-u="slides" style="cursor: default;">
-                                        <div data-u="prototype" class="p">
-                                            <div data-u="thumbnailtemplate" class="t"></div>
-                                        </div>
-                                    </div>
-                                    <!-- Thumbnail Item Skin End -->
-                                </div>
-                                <!-- Bullet Navigator -->
-                                <div data-u="navigator" class="jssorb01" style="bottom: 16px; right: 16px;">
-                                    <div data-u="prototype" style="width: 12px; height: 12px;"></div>
-                                </div>
-                                <!-- Arrow Navigator -->
-                                <span data-u="arrowleft" class="jssora05l" style="top: 0px; left: 8px; width: 40px; height: 40px;" data-autocenter="2"></span>
-                                <span data-u="arrowright" class="jssora05r" style="top: 0px; right: 8px; width: 40px; height: 40px;" data-autocenter="2"></span>
-                            </div>
-                       </ItemTemplate>
-                   </asp:Repeater>
-                          
-                            <!-- #endregion Jssor Slider End -->
-              
 
-                        <div class="clearfix"></div>
-                    </article>
-                    <article class="span4 item item_num1 item__module  " id="item_116"  style="height:225px !important;padding-left:0;">
-                        <!-- Intro Image -->
-                       
-                            <div id="jssor_3" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden; visibility: hidden;">
-                                <!-- Loading Screen -->
-                                <div data-u="loading" style="position: absolute; top: 0px; left: 0px; background-color: rgba(0,0,0,0.7);">
-                                    <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-                                    <div style="position: absolute; display: block; background: url('img/loading.gif') no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-                                </div>
-                                <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden;">
-                                    <div>
-                                        <img data-u="image" src="img/01.jpg" />
-                                    </div>
-                                    <a data-u="any" href="http://www.jssor.com" style="display: none">Banner Rotator</a>
-                                    <div>
-                                        <img data-u="image" src="img/02.jpg" />
-                                    </div>
-                                    <div>
-                                        <img data-u="image" src="img/03.jpg" />
-                                    </div>
-                                    <div>
-                                        <img data-u="image" src="img/04.jpg" />
-                                    </div>
-                                </div>
-                                <!-- Bullet Navigator -->
-                                <div data-u="navigator" class="jssorb01" style="bottom: 16px; right: 16px;">
-                                    <div data-u="prototype" style="width: 12px; height: 12px;"></div>
-                                </div>
-                                <!-- Arrow Navigator -->
-                                <span data-u="arrowleft" class="jssora05l" style="top: 0px; left: 8px; width: 40px; height: 40px;" data-autocenter="2"></span>
-                                <span data-u="arrowright" class="jssora05r" style="top: 0px; right: 8px; width: 40px; height: 40px;" data-autocenter="2"></span>
-                            </div>
-                            <!-- #endregion Jssor Slider End -->
-                  
+                                <div class="row-fluid">
+                                   
 
-                        <div class="clearfix"></div>
-                    </article>
-                    <article class="span4 item item_num2 item__module  " id="item_117"  style="height:225px !important;padding-left:0;">
-                        <!-- Intro Image -->
-                     
-                            <div id="jssor_4" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden; visibility: hidden;">
-                                <!-- Loading Screen -->
-                                <div data-u="loading" style="position: absolute; top: 0px; left: 0px; background-color: rgba(0,0,0,0.7);">
-                                    <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-                                    <div style="position: absolute; display: block; background: url('img/loading.gif') no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-                                </div>
-                                <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden;">
-                                    <a data-u="any" href="http://www.jssor.com" style="display: none">Simple Fade Slideshow</a>
-                                    <div>
-                                        <img data-u="image" src="img/02.jpg" />
-                                    </div>
-                                    <div>
-                                        <img data-u="image" src="img/04.jpg" />
-                                    </div>
-                                    <div>
-                                        <img data-u="image" src="img/05.jpg" />
-                                    </div>
-                                    <div>
-                                        <img data-u="image" src="img/09.jpg" />
-                                    </div>
-                                </div>
-                                <!-- Bullet Navigator -->
-                                <div data-u="navigator" class="jssorb05" style="bottom: 16px; right: 16px;" data-autocenter="1">
-                                    <!-- bullet navigator item prototype -->
-                                    <div data-u="prototype" style="width: 16px; height: 16px;"></div>
-                                </div>
-                                <!-- Arrow Navigator -->
-                                <span data-u="arrowleft" class="jssora12l" style="top: 0px; left: 0px; width: 30px; height: 46px;" data-autocenter="2"></span>
-                                <span data-u="arrowright" class="jssora12r" style="top: 0px; right: 0px; width: 30px; height: 46px;" data-autocenter="2"></span>
-                            </div>
-                            <!-- #endregion Jssor Slider End -->
-                        
+                                    <asp:Repeater ID="Repeater3" OnItemDataBound="Repeater3_ItemDataBound" runat="server" DataSourceID="dsSlider4">
+                                        <ItemTemplate>
+                                            <div id="jssor_6" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1500px; height: 600px; overflow: hidden; visibility: hidden;">
+                                                <!-- Loading Screen -->
+                                                <div data-u="loading" class="jssorl-oval" style="position: absolute; top: 0px; left: 0px; text-align: center; background-color: rgba(0,0,0,0.7);">
+                                                    <img style="margin-top: -19.0px; position: relative; top: 50%; width: 38px; height: 38px;" src="img/oval.svg" />
+                                                </div>
+                                                <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1500px; height: 600px; overflow: hidden;">
+                                                    <a data-u="any" href="http://www.jssor.com" style="display: none">Full Width Slider</a>
+                                                    
+                                                    <asp:Repeater ID="rpPicture3" runat="server">
+                                                            <ItemTemplate>
+                                                                  <div>
+                                                        <img data-u="image" src="<%#ConfigurationManager.AppSettings["domainvg"]+Eval("originalFilepath").ToString().Split('_')[0] +"/"+Eval("originalFilepath")%>" />
+                                                        <div style="position: absolute; top: 85px; left: 100px; width: 600px; height: 120px; z-index: 0; background-color: rgba(0,0,0,0.5);">
+                                                            <div style="position: absolute; top: 15px; left: 15px; width: 500px; height: 40px; z-index: 0; font-size: 30px; color: #ffffff; line-height: 40px;">Build slider with anything</div>
+                                                            <div style="position: absolute; top: 60px; left: 15px; width: 570px; height: 40px; z-index: 0; font-size: 22px; color: #ffffff; line-height: 38px;">image, text, html, svg, content, photo, picture, graphic</div>
+                                                        </div>
+                                                        <div style="position: absolute; top: 370px; left: 100px; width: 600px; height: 120px; z-index: 0; background-color: rgba(255,255,255,0.5);">
+                                                            <div style="position: absolute; top: 15px; left: 15px; width: 500px; height: 40px; z-index: 0; font-size: 30px; color: #000000; line-height: 40px;">Run slider on any device</div>
+                                                            <div style="position: absolute; top: 60px; left: 15px; width: 500px; height: 40px; z-index: 0; font-size: 22px; color: #000000; line-height: 38px;">windows, android, mac</div>
+                                                        </div>
+                                                    </div>
+                                                             
 
-                        <div class="clearfix"></div>
-                    </article>
-                </div>
-
-                                  <div class="row-fluid">
-                                   <script type="text/javascript">
-        jQuery(document).ready(function ($) {
-
-            var jssor_6_options = {
-              $AutoPlay: true,
-              $SlideDuration: 800,
-              $SlideEasing: $Jease$.$OutQuint,
-              $ArrowNavigatorOptions: {
-                $Class: $JssorArrowNavigator$
-              },
-              $BulletNavigatorOptions: {
-                $Class: $JssorBulletNavigator$
-              }
-            };
-
-            var jssor_6_slider = new $JssorSlider$("jssor_6", jssor_6_options);
-
-            /*responsive code begin*/
-            /*you can remove responsive code if you don't want the slider scales while window resizing*/
-            function ScaleSlider() {
-                var refSize = jssor_6_slider.$Elmt.parentNode.clientWidth;
-                if (refSize) {
-                    refSize = Math.min(refSize, 1920);
-                    jssor_6_slider.$ScaleWidth(refSize);
-                }
-                else {
-                    window.setTimeout(ScaleSlider, 30);
-                }
-            }
-            ScaleSlider();
-            $(window).bind("load", ScaleSlider);
-            $(window).bind("resize", ScaleSlider);
-            $(window).bind("orientationchange", ScaleSlider);
-            /*responsive code end*/
-        });
-    </script>
-    <style>
-        /* jssor slider loading skin oval css */
-
-        .jssorl-oval img {
-            animation-name: jssorl-oval;
-            animation-duration: 1.2s;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
-        }
-
-        @keyframes jssorl-oval {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-
-        /* jssor slider bullet navigator skin 05 css */
-        /*
-        .jssorb05 div           (normal)
-        .jssorb05 div:hover     (normal mouseover)
-        .jssorb05 .av           (active)
-        .jssorb05 .av:hover     (active mouseover)
-        .jssorb05 .dn           (mousedown)
-        */
-        .jssorb05 {
-            position: absolute;
-        }
-        .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
-            position: absolute;
-            /* size of bullet elment */
-            width: 16px;
-            height: 16px;
-            background: url('img/b05.png') no-repeat;
-            overflow: hidden;
-            cursor: pointer;
-        }
-        .jssorb05 div { background-position: -7px -7px; }
-        .jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
-        .jssorb05 .av { background-position: -67px -7px; }
-        .jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
-
-        /* jssor slider arrow navigator skin 22 css */
-        /*
-        .jssora22l                  (normal)
-        .jssora22r                  (normal)
-        .jssora22l:hover            (normal mouseover)
-        .jssora22r:hover            (normal mouseover)
-        .jssora22l.jssora22ldn      (mousedown)
-        .jssora22r.jssora22rdn      (mousedown)
-        .jssora22l.jssora22lds      (disabled)
-        .jssora22r.jssora22rds      (disabled)
-        */
-        .jssora22l, .jssora22r {
-            display: block;
-            position: absolute;
-            /* size of arrow element */
-            width: 40px;
-            height: 58px;
-            cursor: pointer;
-            background: url('img/a22.png') center center no-repeat;
-            overflow: hidden;
-        }
-        .jssora22l { background-position: -10px -31px; }
-        .jssora22r { background-position: -70px -31px; }
-        .jssora22l:hover { background-position: -130px -31px; }
-        .jssora22r:hover { background-position: -190px -31px; }
-        .jssora22l.jssora22ldn { background-position: -250px -31px; }
-        .jssora22r.jssora22rdn { background-position: -310px -31px; }
-        .jssora22l.jssora22lds { background-position: -10px -31px; opacity: .3; pointer-events: none; }
-        .jssora22r.jssora22rds { background-position: -70px -31px; opacity: .3; pointer-events: none; }
-    </style>
-    <div id="jssor_6" style="position:relative;margin:0 auto;top:0px;left:0px;width:1500px;height:600px;overflow:hidden;visibility:hidden;">
-        <!-- Loading Screen -->
-        <div data-u="loading" class="jssorl-oval" style="position:absolute;top:0px;left:0px;text-align:center;background-color:rgba(0,0,0,0.7);">
-            <img style="margin-top:-19.0px;position:relative;top:50%;width:38px;height:38px;" src="img/oval.svg" />
-        </div>
-        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1500px;height:600px;overflow:hidden;">
-            <div>
-                <img data-u="image" src="img/android.jpg" />
-                <div style="position:absolute;top:85px;left:100px;width:600px;height:120px;z-index:0;background-color:rgba(0,0,0,0.5);">
-                    <div style="position:absolute;top:15px;left:15px;width:500px;height:40px;z-index:0;font-size:30px;color:#ffffff;line-height:40px;">Build slider with anything</div>
-                    <div style="position:absolute;top:60px;left:15px;width:570px;height:40px;z-index:0;font-size:22px;color:#ffffff;line-height:38px;">image, text, html, svg, content, photo, picture, graphic</div>
-                </div>
-                <div style="position:absolute;top:370px;left:100px;width:600px;height:120px;z-index:0;background-color:rgba(255,255,255,0.5);">
-                    <div style="position:absolute;top:15px;left:15px;width:500px;height:40px;z-index:0;font-size:30px;color:#000000;line-height:40px;">Run slider on any device</div>
-                    <div style="position:absolute;top:60px;left:15px;width:500px;height:40px;z-index:0;font-size:22px;color:#000000;line-height:38px;">windows, android, mac</div>
-                </div>
-            </div>
-            <a data-u="any" href="http://www.jssor.com" style="display:none">Full Width Slider</a>
-            <div>
-                <img data-u="image" src="img/windows.jpg" />
-                <div style="position:absolute;top:85px;left:100px;width:600px;height:120px;z-index:0;background-color:rgba(0,0,0,0.5);">
-                    <div style="position:absolute;top:15px;left:15px;width:500px;height:40px;z-index:0;font-size:30px;color:#ffffff;line-height:40px;">Build slider with anything</div>
-                    <div style="position:absolute;top:60px;left:15px;width:570px;height:40px;z-index:0;font-size:22px;color:#ffffff;line-height:38px;">image, text, html, svg, content, photo, picture, graphic</div>
-                </div>
-                <div style="position:absolute;top:370px;left:100px;width:600px;height:120px;z-index:0;background-color:rgba(255,255,255,0.5);">
-                    <div style="position:absolute;top:15px;left:15px;width:500px;height:40px;z-index:0;font-size:30px;color:#000000;line-height:40px;">Run slider on any device</div>
-                    <div style="position:absolute;top:60px;left:15px;width:500px;height:40px;z-index:0;font-size:22px;color:#000000;line-height:38px;">windows, android, mac</div>
-                </div>
-            </div>
-            <div>
-                <img data-u="image" src="img/mac.jpg" />
-                <div style="position:absolute;top:85px;left:100px;width:600px;height:120px;z-index:0;background-color:rgba(0,0,0,0.5);">
-                    <div style="position:absolute;top:15px;left:15px;width:500px;height:40px;z-index:0;font-size:30px;color:#ffffff;line-height:40px;">Build slider with anything</div>
-                    <div style="position:absolute;top:60px;left:15px;width:570px;height:40px;z-index:0;font-size:22px;color:#ffffff;line-height:38px;">image, text, html, svg, content, photo, picture, graphic</div>
-                </div>
-                <div style="position:absolute;top:370px;left:100px;width:600px;height:120px;z-index:0;background-color:rgba(255,255,255,0.5);">
-                    <div style="position:absolute;top:15px;left:15px;width:500px;height:40px;z-index:0;font-size:30px;color:#000000;line-height:40px;">Run slider on any device</div>
-                    <div style="position:absolute;top:60px;left:15px;width:500px;height:40px;z-index:0;font-size:22px;color:#000000;line-height:38px;">windows, android, mac</div>
-                </div>
-            </div>
-        </div>
-        <!-- Bullet Navigator -->
-        <div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
-            <!-- bullet navigator item prototype -->
-            <div data-u="prototype" style="width:16px;height:16px;"></div>
-        </div>
-        <!-- Arrow Navigator -->
-        <span data-u="arrowleft" class="jssora22l" style="top:0px;left:8px;width:40px;height:58px;" data-autocenter="2"></span>
-        <span data-u="arrowright" class="jssora22r" style="top:0px;right:8px;width:40px;height:58px;" data-autocenter="2"></span>
-    </div>
-    <!-- #endregion Jssor Slider End -->
+                                                            </ItemTemplate>
+                                                        </asp:Repeater>
+                                                    
+                                                </div>
+                                                <!-- Bullet Navigator -->
+                                                <div data-u="navigator" class="jssorb05" style="bottom: 16px; right: 16px;" data-autocenter="1">
+                                                    <!-- bullet navigator item prototype -->
+                                                    <div data-u="prototype" style="width: 16px; height: 16px;"></div>
+                                                </div>
+                                                <!-- Arrow Navigator -->
+                                                <span data-u="arrowleft" class="jssora22l" style="top: 0px; left: 8px; width: 40px; height: 58px;" data-autocenter="2"></span>
+                                                <span data-u="arrowright" class="jssora22r" style="top: 0px; right: 8px; width: 40px; height: 58px;" data-autocenter="2"></span>
+                                            </div>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                    <!-- #endregion Jssor Slider End -->
 
                                 </div>
                                 <div class="clearfix"></div>
@@ -396,14 +269,39 @@
             </div>
         </div>
     </div>
+     <asp:HiddenField runat="server" ID="hdSlide1"/>
+     <asp:SqlDataSource ID="dsPicture" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand=" select * from tblSysPicture  where advert_id=@vangia_id_project">
+                                            <SelectParameters>
 
+                                                <asp:ControlParameter ControlID="hdSlide1" DefaultValue="0" Name="vangia_id_project" PropertyName="Value" />
+                                            </SelectParameters>
+
+                                        </asp:SqlDataSource>
     <asp:SqlDataSource ID="dsProject" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand="SELECT * FROM web_vangia_project WHERE (vangia_status_project = 1) and vangia_typeid_project=3 AND (vangia_language_project = @vangia_language_project ) order by vangia_order_project ">
         <SelectParameters>
             <asp:CookieParameter CookieName="lang" DefaultValue="2" Name="vangia_language_project" />
         </SelectParameters>
 
     </asp:SqlDataSource>
-    <asp:SqlDataSource ID="dsSlider" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand="SELECT * FROM web_vangia_project WHERE (vangia_status_project = 1) and vangia_typeid_project=31 AND (vangia_language_project = @vangia_language_project ) order by vangia_order_project ">
+    <asp:SqlDataSource ID="dsSlider" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand="SELECT * FROM    (SELECT ROW_NUMBER () OVER (ORDER BY web_vangia_project.vangia_id_project desc) AS RowNum,* FROM web_vangia_project where   (vangia_status_project = 1) and vangia_typeid_project=31 AND (vangia_language_project = @vangia_language_project ) ) sub	WHERE RowNum = 1">
+        <SelectParameters>
+            <asp:CookieParameter CookieName="lang" DefaultValue="2" Name="vangia_language_project" />
+        </SelectParameters>
+
+    </asp:SqlDataSource>
+    <asp:SqlDataSource ID="dsSlider2" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand="SELECT * FROM    (SELECT ROW_NUMBER () OVER (ORDER BY web_vangia_project.vangia_id_project desc) AS RowNum,* FROM web_vangia_project where   (vangia_status_project = 1) and vangia_typeid_project=31 AND (vangia_language_project = @vangia_language_project ) ) sub	WHERE RowNum = 2">
+        <SelectParameters>
+            <asp:CookieParameter CookieName="lang" DefaultValue="2" Name="vangia_language_project" />
+        </SelectParameters>
+
+    </asp:SqlDataSource>
+    <asp:SqlDataSource ID="dsSlider3" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand="SELECT * FROM    (SELECT ROW_NUMBER () OVER (ORDER BY web_vangia_project.vangia_id_project desc) AS RowNum,* FROM web_vangia_project where   (vangia_status_project = 1) and vangia_typeid_project=31 AND (vangia_language_project = @vangia_language_project ) ) sub	WHERE RowNum = 3">
+        <SelectParameters>
+            <asp:CookieParameter CookieName="lang" DefaultValue="2" Name="vangia_language_project" />
+        </SelectParameters>
+
+    </asp:SqlDataSource>
+    <asp:SqlDataSource ID="dsSlider4" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand="SELECT * FROM    (SELECT ROW_NUMBER () OVER (ORDER BY web_vangia_project.vangia_id_project desc) AS RowNum,* FROM web_vangia_project where   (vangia_status_project = 1) and vangia_typeid_project=31 AND (vangia_language_project = @vangia_language_project ) ) sub	WHERE RowNum = 4">
         <SelectParameters>
             <asp:CookieParameter CookieName="lang" DefaultValue="2" Name="vangia_language_project" />
         </SelectParameters>
@@ -426,7 +324,159 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> <script type="text/javascript">
+                                        jQuery(document).ready(function ($) {
+
+                                            var jssor_6_options = {
+                                                $AutoPlay: true,
+                                                $SlideDuration: 800,
+                                                $SlideEasing: $Jease$.$OutQuint,
+                                                $ArrowNavigatorOptions: {
+                                                    $Class: $JssorArrowNavigator$
+                                                },
+                                                $BulletNavigatorOptions: {
+                                                    $Class: $JssorBulletNavigator$
+                                                }
+                                            };
+
+                                            var jssor_6_slider = new $JssorSlider$("jssor_6", jssor_6_options);
+
+                                            /*responsive code begin*/
+                                            /*you can remove responsive code if you don't want the slider scales while window resizing*/
+                                            function ScaleSlider() {
+                                                var refSize = jssor_6_slider.$Elmt.parentNode.clientWidth;
+                                                if (refSize) {
+                                                    refSize = Math.min(refSize, 1920);
+                                                    jssor_6_slider.$ScaleWidth(refSize);
+                                                }
+                                                else {
+                                                    window.setTimeout(ScaleSlider, 30);
+                                                }
+                                            }
+                                            ScaleSlider();
+                                            $(window).bind("load", ScaleSlider);
+                                            $(window).bind("resize", ScaleSlider);
+                                            $(window).bind("orientationchange", ScaleSlider);
+                                            /*responsive code end*/
+                                        });
+                                    </script>
+                                    <style>
+                                        /* jssor slider loading skin oval css */
+
+                                        .jssorl-oval img {
+                                            animation-name: jssorl-oval;
+                                            animation-duration: 1.2s;
+                                            animation-iteration-count: infinite;
+                                            animation-timing-function: linear;
+                                        }
+
+                                        @keyframes jssorl-oval {
+                                            from {
+                                                transform: rotate(0deg);
+                                            }
+
+                                            to {
+                                                transform: rotate(360deg);
+                                            }
+                                        }
+
+
+                                        /* jssor slider bullet navigator skin 05 css */
+                                        /*
+        .jssorb05 div           (normal)
+        .jssorb05 div:hover     (normal mouseover)
+        .jssorb05 .av           (active)
+        .jssorb05 .av:hover     (active mouseover)
+        .jssorb05 .dn           (mousedown)
+        */
+                                        .jssorb05 {
+                                            position: absolute;
+                                        }
+
+                                            .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+                                                position: absolute;
+                                                /* size of bullet elment */
+                                                width: 16px;
+                                                height: 16px;
+                                                background: url('img/b05.png') no-repeat;
+                                                overflow: hidden;
+                                                cursor: pointer;
+                                            }
+
+                                            .jssorb05 div {
+                                                background-position: -7px -7px;
+                                            }
+
+                                                .jssorb05 div:hover, .jssorb05 .av:hover {
+                                                    background-position: -37px -7px;
+                                                }
+
+                                            .jssorb05 .av {
+                                                background-position: -67px -7px;
+                                            }
+
+                                            .jssorb05 .dn, .jssorb05 .dn:hover {
+                                                background-position: -97px -7px;
+                                            }
+
+                                        /* jssor slider arrow navigator skin 22 css */
+                                        /*
+        .jssora22l                  (normal)
+        .jssora22r                  (normal)
+        .jssora22l:hover            (normal mouseover)
+        .jssora22r:hover            (normal mouseover)
+        .jssora22l.jssora22ldn      (mousedown)
+        .jssora22r.jssora22rdn      (mousedown)
+        .jssora22l.jssora22lds      (disabled)
+        .jssora22r.jssora22rds      (disabled)
+        */
+                                        .jssora22l, .jssora22r {
+                                            display: block;
+                                            position: absolute;
+                                            /* size of arrow element */
+                                            width: 40px;
+                                            height: 58px;
+                                            cursor: pointer;
+                                            background: url('img/a22.png') center center no-repeat;
+                                            overflow: hidden;
+                                        }
+
+                                        .jssora22l {
+                                            background-position: -10px -31px;
+                                        }
+
+                                        .jssora22r {
+                                            background-position: -70px -31px;
+                                        }
+
+                                        .jssora22l:hover {
+                                            background-position: -130px -31px;
+                                        }
+
+                                        .jssora22r:hover {
+                                            background-position: -190px -31px;
+                                        }
+
+                                        .jssora22l.jssora22ldn {
+                                            background-position: -250px -31px;
+                                        }
+
+                                        .jssora22r.jssora22rdn {
+                                            background-position: -310px -31px;
+                                        }
+
+                                        .jssora22l.jssora22lds {
+                                            background-position: -10px -31px;
+                                            opacity: .3;
+                                            pointer-events: none;
+                                        }
+
+                                        .jssora22r.jssora22rds {
+                                            background-position: -70px -31px;
+                                            opacity: .3;
+                                            pointer-events: none;
+                                        }
+                                    </style>
     <script type="text/javascript">
         jQuery(document).ready(function ($) {
 

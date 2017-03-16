@@ -26,3 +26,9 @@ D:\Company\WebSite\VanGiaCompany\WebSiteVanGia\bin\WebSiteVanGia.pdb
 D:\Company\WebSite\VanGiaCompany\WebSiteVanGia\obj\Debug\WebSiteVanGia.csprojResolveAssemblyReference.cache
 D:\Company\WebSite\VanGiaCompany\WebSiteVanGia\obj\Debug\WebSiteVanGia.dll
 D:\Company\WebSite\VanGiaCompany\WebSiteVanGia\obj\Debug\WebSiteVanGia.pdb
+C:\Company\Web\Vangia\WebSiteVanGia\bin\css\template.css
+C:\Company\Web\Vangia\WebSiteVanGia\bin\WebSiteVanGia.dll
+C:\Company\Web\Vangia\WebSiteVanGia\bin\WebSiteVanGia.pdb
+C:\Company\Web\Vangia\WebSiteVanGia\obj\Debug\WebSiteVanGia.csprojResolveAssemblyReference.cache
+C:\Company\Web\Vangia\WebSiteVanGia\obj\Debug\WebSiteVanGia.dll
+C:\Company\Web\Vangia\WebSiteVanGia\obj\Debug\WebSiteVanGia.pdb

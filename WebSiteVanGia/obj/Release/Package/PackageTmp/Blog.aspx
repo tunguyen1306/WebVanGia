@@ -74,7 +74,11 @@
                                                 <!-- info BOTTOM -->
                                                 <!-- Tags -->
                                                 <!-- More -->
-                                                <a class="btn btn-info" href="DetailBlog.aspx?id=<%#Eval("id_blog_tra") %>">
+                                                <a class="btn btn-info" style="    padding: 10px;
+    margin: 10px 0;
+    background: #54acc9 !important;
+    font: 400 14px/14px 'Ubuntu Condensed', sans-serif;
+    color: #ffffff;" href="DetailBlog.aspx?id=<%#Eval("id_blog_tra") %>">
                                                     <span>Chi tiết
                                                     </span>
                                                 </a>
@@ -102,7 +106,7 @@
                                     </li>
                                      </ul>
                             </footer>
-                            <asp:SqlDataSource ID="dsProject" runat="server" ConnectionString="<%$ ConnectionStrings:adminGoldConnectionString %>" SelectCommand="SELECT * FROM [tbl_blog_tra] WHERE (([id_company] = @id_company) AND ([status_blog_tra] = @status_blog_tra))">
+                            <asp:SqlDataSource ID="dsProject" runat="server" ConnectionString="<%$ ConnectionStrings:adminGoldConnectionString %>" SelectCommand="SELECT * FROM [tbl_blog_tra] WHERE (([id_company] = @id_company) AND ([status_blog_tra] = @status_blog_tra)) order by id_blog_tra desc">
                                 <SelectParameters>
                                     <asp:Parameter DefaultValue="2" Name="id_company" Type="Int32" />
                                     <asp:Parameter DefaultValue="1" Name="status_blog_tra" Type="Int32" />

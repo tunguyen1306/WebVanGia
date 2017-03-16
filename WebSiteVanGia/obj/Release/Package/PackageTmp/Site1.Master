@@ -108,9 +108,9 @@
             <div class="divSlide hidden">
                 <script src="js/jssor.slider-21.1.6.min.js" type="text/javascript"></script>
                 <script type="text/javascript">
-                    jssor_1_slider_init = function () {
+                    jssor_2_slider_init = function () {
 
-                        var jssor_1_options = {
+                        var jssor_2_options = {
                             $AutoPlay: true,
                             $AutoPlaySteps: 4,
                             $SlideDuration: 160,
@@ -128,15 +128,15 @@
                             }
                         };
 
-                        var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+                        var jssor_2_slider = new $JssorSlider$("jssor_2", jssor_2_options);
 
                         /*responsive code begin*/
                         /*you can remove responsive code if you don't want the slider scales while window resizing*/
                         function ScaleSlider() {
-                            var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                            var refSize = jssor_2_slider.$Elmt.parentNode.clientWidth;
                             if (refSize) {
                                 refSize = Math.min(refSize, 1000);
-                                jssor_1_slider.$ScaleWidth(refSize);
+                                jssor_2_slider.$ScaleWidth(refSize);
                             }
                             else {
                                 window.setTimeout(ScaleSlider, 30);
@@ -250,13 +250,13 @@
                         pointer-events: none;
                     }
                 </style>
-                <asp:SqlDataSource ID="dsProject" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand="SELECT vangia_link_silde,vangia_id_silde, vangia_noidung_silde, vangia_tomtat_silde, vangia_name_silde, vangia_img_silde, vangia_status_silde, vangia_order_silde, vangia_language_silde,vangia_type_slide FROM web_vangia_silde WHERE vangia_type_slide=2 and  (vangia_status_silde = 1) AND (vangia_language_silde = @vangia_language_silde) ORDER BY vangia_order_silde">
+                <asp:SqlDataSource ID="dsProject1" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand="SELECT vangia_link_silde,vangia_id_silde, vangia_noidung_silde, vangia_tomtat_silde, vangia_name_silde, vangia_img_silde, vangia_status_silde, vangia_order_silde, vangia_language_silde,vangia_type_slide FROM web_vangia_silde WHERE vangia_type_slide=2 and  (vangia_status_silde = 1) AND (vangia_language_silde = @vangia_language_silde) ORDER BY vangia_order_silde">
                     <SelectParameters>
                         <asp:CookieParameter CookieName="lang" DefaultValue="2" Name="vangia_language_silde" />
                     </SelectParameters>
 
                 </asp:SqlDataSource>
-                <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1000px; height: 100px; overflow: hidden; visibility: hidden;">
+                <div id="jssor_2" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1000px; height: 100px; overflow: hidden; visibility: hidden;">
                     <!-- Loading Screen -->
                     <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
                         <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
@@ -264,9 +264,8 @@
                     </div>
                     <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1000px; height: 100px; overflow: hidden;">
 
-                        <asp:Repeater ID="rptShow" runat="server" DataSourceID="dsProject">
+                        <asp:Repeater ID="rptShow" runat="server" DataSourceID="dsProject1">
                             <ItemTemplate>
-
                                 <div>
                                     <img data-u="image" src="<%#ConfigurationManager.AppSettings["domain"]+Eval("vangia_img_silde").ToString().Split('_')[0]+"/"+Eval("vangia_img_silde") %>" />
                                 </div>
@@ -286,7 +285,7 @@
                     <span data-u="arrowleft" class="jssora03l" style="top: 0px; left: 8px; width: 55px; height: 55px;" data-autocenter="2"></span>
                     <span data-u="arrowright" class="jssora03r" style="top: 0px; right: 8px; width: 55px; height: 55px;" data-autocenter="2"></span>
                 </div>
-                <script type="text/javascript">jssor_1_slider_init();</script>
+                <script type="text/javascript">jssor_2_slider_init();</script>
             </div>
         </div>
         <%-- Footer--%>
@@ -297,18 +296,31 @@
             <a href="#"><span></span></a>
         </div>
         <div id="demo1" style="top: 80px; font-weight: bold; font-size: 20px; color: #fff; padding: 10px; position: fixed; right: 0;">
-            Liên hệ:0866 811 816
+            Hot Line: 0988 115 130 - 0866 811 816
         </div>
         <script>
+            var colors = ["#ff3322", "blue", "red", "green", "yellow"];
+
+           
             jQuery(document).ready(function ($) {
                 $('#demo1').textEffect({
                     effect: 'dropdown', // the type of the text aniamtion. fade, glow, jumble, slide, dropdown and random (default) 
                     effectSpeed: 150, // the speed in ms at which new letters begin to animate. 
                     completionSpeed: 2000, // the speed in ms of the text aniamtion. 
-                    jumbleColor: '#7f7f7f' // the color of the jumbled letters. 
+                    jumbleColor: colors // the color of the jumbled letters. 
                 });
+               
+
+                //$('#demo1').html(function (i, text) {
+                //    return $.map(text.split(' '), function (word) {
+                //        return '<span style="color:'
+                //            + colors[Math.floor(Math.random() * colors.length)]
+                //            + '">' + word + '</span>';
+                //    }).join(' ');
+                //});
             });
         </script>
+
         <script src="js/jquery.BlackAndWhite.min.js"></script>
         <script src="js/jquery.fancybox.pack.js"></script>
         <script src="js/jquery.fancybox-buttons.js"></script>
