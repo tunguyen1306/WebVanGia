@@ -152,3 +152,14 @@
 .cuspadin{
     padding-left: 170px!important;
 }
+/*.cusTopRow{
+        position: fixed;
+    margin-left: 60px;
+    padding-right: 30px;
+}*/
+.textonslider{
+       position: absolute;
+    z-index: 2;
+    font-size: 35px;
+    padding: 25px;
+}

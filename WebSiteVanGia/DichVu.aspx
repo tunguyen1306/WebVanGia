@@ -26,7 +26,7 @@
                                             <iframe width="100%" height="500" src="https://www.youtube.com/embed/<%#Eval("vangia_link_video_project") %>" frameborder="0" allowfullscreen></iframe>
                                         </ItemTemplate>
                                     </asp:Repeater>
-                                    <asp:SqlDataSource ID="dsVideo" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand="SELECT top 1 * FROM web_vangia_project WHERE (vangia_status_project = 1) and vangia_typeid_project=3 AND (vangia_language_project = @vangia_language_project ) order by vangia_order_project ">
+                                    <asp:SqlDataSource ID="dsVideo" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand="SELECT  top 1* FROM web_vangia_project WHERE (vangia_status_project = 1) and vangia_typeid_project=3 order by vangia_id_project desc">
                                         <SelectParameters>
                                             <asp:CookieParameter CookieName="lang" DefaultValue="2" Name="vangia_language_project" />
                                         </SelectParameters>
@@ -88,22 +88,24 @@
                                 <div class="row-fluid">
                                     <article class="span4 item item_num0 item__module  " style="height: 225px !important; padding-left: 0;" id="item_115">
                                         <!-- Intro Image -->
-                                        <asp:Repeater ID="repSlide1" runat="server"  DataSourceID="dsSlider" OnItemDataBound="repSlide1_ItemDataBound">
+                                       
+                                        <asp:Repeater ID="repSlide1" runat="server" DataSourceID="dsSlider" OnItemDataBound="repSlide1_ItemDataBound">
                                             <ItemTemplate>
+                                                 
                                                 <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden; visibility: hidden;">
                                                     <!-- Loading Screen -->
-                                                    <div data-u="loading" style="position: absolute; top: 0px; left: 0px; background-color: rgba(0,0,0,0.7);">
+                                                 
+                                                   <a href="DetailSlider.aspx?id=<%# Eval("vangia_id_project") %>">      <div data-u="loading" style="position: absolute; top: 0px; left: 0px; background-color: rgba(0,0,0,0.7);">
                                                         <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
                                                         <div style="position: absolute; display: block; background: url('img/loading.gif') no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
                                                     </div>
+                                                   <div class="textonslider"><%# Eval("vangia_name_project") %></div>
                                                     <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden;">
-                                                        
-                                                        <a data-u="any" href="http://www.jssor.com" style="display: none">Banner Slider</a>
                                                         <asp:Repeater ID="rpPicture" runat="server">
                                                             <ItemTemplate>
                                                                 <div>
-                                                                    <img data-u="image" src="<%#ConfigurationManager.AppSettings["domainvg"]+Eval("originalFilepath").ToString().Split('_')[0] +"/"+Eval("originalFilepath")%>" />
-                                                                    <div data-u="thumb">Do you notice it is draggable by mouse/finger?</div>
+                                                                    <img data-u="image" src="<%#ConfigurationManager.AppSettings["domainvg"]+Eval("originalFilepath").ToString().Split('_')[0] +"/"+Eval("originalFilepath").ToString().Replace("_1","_3")%>" />
+                                                                    <div data-u="thumb"> </div>
                                                                 </div>
 
                                                             </ItemTemplate>
@@ -127,10 +129,13 @@
                                                     <!-- Arrow Navigator -->
                                                     <span data-u="arrowleft" class="jssora05l" style="top: 0px; left: 8px; width: 40px; height: 40px;" data-autocenter="2"></span>
                                                     <span data-u="arrowright" class="jssora05r" style="top: 0px; right: 8px; width: 40px; height: 40px;" data-autocenter="2"></span>
+                                                </a>  
+
                                                 </div>
+                                                     
                                             </ItemTemplate>
                                         </asp:Repeater>
-
+                                 
                                         <!-- #endregion Jssor Slider End -->
 
 
@@ -146,18 +151,19 @@
                                                         <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
                                                         <div style="position: absolute; display: block; background: url('img/loading.gif') no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
                                                     </div>
+                                                     <div class="textonslider"><%# Eval("vangia_name_project") %></div>
                                                     <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden;">
-                                                         <asp:Repeater ID="rpPicture1" runat="server">
+                                                        <asp:Repeater ID="rpPicture1" runat="server">
                                                             <ItemTemplate>
                                                                 <div>
-                                                                    <img data-u="image" src="<%#ConfigurationManager.AppSettings["domainvg"]+Eval("originalFilepath").ToString().Split('_')[0] +"/"+Eval("originalFilepath")%>" />
-                                                                   
+                                                                    <img data-u="image" src="<%#ConfigurationManager.AppSettings["domainvg"]+Eval("originalFilepath").ToString().Split('_')[0] +"/"+Eval("originalFilepath").ToString().Replace("_1","_3")%>" />
+
                                                                 </div>
 
                                                             </ItemTemplate>
                                                         </asp:Repeater>
-                                                        
-                                                        
+
+
                                                     </div>
                                                     <!-- Bullet Navigator -->
                                                     <div data-u="navigator" class="jssorb01" style="bottom: 16px; right: 16px;">
@@ -176,7 +182,7 @@
                                     </article>
                                     <article class="span4 item item_num2 item__module  " id="item_117" style="height: 225px !important; padding-left: 0;">
                                         <!-- Intro Image -->
-                                        <asp:Repeater ID="Repeater2" OnItemDataBound="Repeater2_ItemDataBound" runat="server"  DataSourceID="dsSlider3">
+                                        <asp:Repeater ID="Repeater2" OnItemDataBound="Repeater2_ItemDataBound" runat="server" DataSourceID="dsSlider3">
                                             <ItemTemplate>
                                                 <div id="jssor_4" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden; visibility: hidden;">
                                                     <!-- Loading Screen -->
@@ -184,13 +190,14 @@
                                                         <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
                                                         <div style="position: absolute; display: block; background: url('img/loading.gif') no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
                                                     </div>
+                                                     <div class="textonslider"><%# Eval("vangia_name_project") %></div>
                                                     <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden;">
                                                         <a data-u="any" href="http://www.jssor.com" style="display: none">Simple Fade Slideshow</a>
                                                         <asp:Repeater ID="rpPicture2" runat="server">
                                                             <ItemTemplate>
                                                                 <div>
-                                                                    <img data-u="image" src="<%#ConfigurationManager.AppSettings["domainvg"]+Eval("originalFilepath").ToString().Split('_')[0] +"/"+Eval("originalFilepath")%>" />
-                                                                   
+                                                                    <img data-u="image" src="<%#ConfigurationManager.AppSettings["domainvg"]+Eval("originalFilepath").ToString().Split('_')[0] +"/"+Eval("originalFilepath").ToString().Replace("_1","_3")%>" />
+
                                                                 </div>
 
                                                             </ItemTemplate>
@@ -214,7 +221,7 @@
                                 </div>
 
                                 <div class="row-fluid">
-                                   
+
 
                                     <asp:Repeater ID="Repeater3" OnItemDataBound="Repeater3_ItemDataBound" runat="server" DataSourceID="dsSlider4">
                                         <ItemTemplate>
@@ -223,27 +230,20 @@
                                                 <div data-u="loading" class="jssorl-oval" style="position: absolute; top: 0px; left: 0px; text-align: center; background-color: rgba(0,0,0,0.7);">
                                                     <img style="margin-top: -19.0px; position: relative; top: 50%; width: 38px; height: 38px;" src="img/oval.svg" />
                                                 </div>
+                                                 <div class="textonslider"><%# Eval("vangia_name_project") %></div>
                                                 <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1500px; height: 600px; overflow: hidden;">
-                                                    <a data-u="any" href="http://www.jssor.com" style="display: none">Full Width Slider</a>
-                                                    
+                                                   
                                                     <asp:Repeater ID="rpPicture3" runat="server">
-                                                            <ItemTemplate>
-                                                                  <div>
-                                                        <img data-u="image" src="<%#ConfigurationManager.AppSettings["domainvg"]+Eval("originalFilepath").ToString().Split('_')[0] +"/"+Eval("originalFilepath")%>" />
-                                                        <div style="position: absolute; top: 85px; left: 100px; width: 600px; height: 120px; z-index: 0; background-color: rgba(0,0,0,0.5);">
-                                                            <div style="position: absolute; top: 15px; left: 15px; width: 500px; height: 40px; z-index: 0; font-size: 30px; color: #ffffff; line-height: 40px;">Build slider with anything</div>
-                                                            <div style="position: absolute; top: 60px; left: 15px; width: 570px; height: 40px; z-index: 0; font-size: 22px; color: #ffffff; line-height: 38px;">image, text, html, svg, content, photo, picture, graphic</div>
-                                                        </div>
-                                                        <div style="position: absolute; top: 370px; left: 100px; width: 600px; height: 120px; z-index: 0; background-color: rgba(255,255,255,0.5);">
-                                                            <div style="position: absolute; top: 15px; left: 15px; width: 500px; height: 40px; z-index: 0; font-size: 30px; color: #000000; line-height: 40px;">Run slider on any device</div>
-                                                            <div style="position: absolute; top: 60px; left: 15px; width: 500px; height: 40px; z-index: 0; font-size: 22px; color: #000000; line-height: 38px;">windows, android, mac</div>
-                                                        </div>
-                                                    </div>
-                                                             
+                                                        <ItemTemplate>
+                                                            <div>
+                                                                <img data-u="image" src="<%#ConfigurationManager.AppSettings["domainvg"]+Eval("originalFilepath").ToString().Split('_')[0] +"/"+Eval("originalFilepath").ToString().Replace("_1","_4")%>" />
+                                                               
+                                                            </div>
 
-                                                            </ItemTemplate>
-                                                        </asp:Repeater>
-                                                    
+
+                                                        </ItemTemplate>
+                                                    </asp:Repeater>
+
                                                 </div>
                                                 <!-- Bullet Navigator -->
                                                 <div data-u="navigator" class="jssorb05" style="bottom: 16px; right: 16px;" data-autocenter="1">
@@ -269,39 +269,39 @@
             </div>
         </div>
     </div>
-     <asp:HiddenField runat="server" ID="hdSlide1"/>
-     <asp:SqlDataSource ID="dsPicture" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand=" select * from tblSysPicture  where advert_id=@vangia_id_project">
-                                            <SelectParameters>
+    <asp:HiddenField runat="server" ID="hdSlide1" />
+    <asp:SqlDataSource ID="dsPicture" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand=" select * from tblSysPicture  where advert_id=@vangia_id_project">
+        <SelectParameters>
 
-                                                <asp:ControlParameter ControlID="hdSlide1" DefaultValue="0" Name="vangia_id_project" PropertyName="Value" />
-                                            </SelectParameters>
+            <asp:ControlParameter ControlID="hdSlide1" DefaultValue="0" Name="vangia_id_project" PropertyName="Value" />
+        </SelectParameters>
 
-                                        </asp:SqlDataSource>
+    </asp:SqlDataSource>
     <asp:SqlDataSource ID="dsProject" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand="SELECT * FROM web_vangia_project WHERE (vangia_status_project = 1) and vangia_typeid_project=3 AND (vangia_language_project = @vangia_language_project ) order by vangia_order_project ">
         <SelectParameters>
             <asp:CookieParameter CookieName="lang" DefaultValue="2" Name="vangia_language_project" />
         </SelectParameters>
 
     </asp:SqlDataSource>
-    <asp:SqlDataSource ID="dsSlider" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand="SELECT * FROM    (SELECT ROW_NUMBER () OVER (ORDER BY web_vangia_project.vangia_id_project desc) AS RowNum,* FROM web_vangia_project where   (vangia_status_project = 1) and vangia_typeid_project=31 AND (vangia_language_project = @vangia_language_project ) ) sub	WHERE RowNum = 1">
+    <asp:SqlDataSource ID="dsSlider" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand="SELECT * FROM    (SELECT ROW_NUMBER () OVER (ORDER BY web_vangia_project.vangia_id_project desc) AS RowNum,* FROM web_vangia_project where   (vangia_status_project = 1) and vangia_typeid_project=31 ) sub	WHERE RowNum = 1">
         <SelectParameters>
             <asp:CookieParameter CookieName="lang" DefaultValue="2" Name="vangia_language_project" />
         </SelectParameters>
 
     </asp:SqlDataSource>
-    <asp:SqlDataSource ID="dsSlider2" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand="SELECT * FROM    (SELECT ROW_NUMBER () OVER (ORDER BY web_vangia_project.vangia_id_project desc) AS RowNum,* FROM web_vangia_project where   (vangia_status_project = 1) and vangia_typeid_project=31 AND (vangia_language_project = @vangia_language_project ) ) sub	WHERE RowNum = 2">
+    <asp:SqlDataSource ID="dsSlider2" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand="SELECT * FROM    (SELECT ROW_NUMBER () OVER (ORDER BY web_vangia_project.vangia_id_project desc) AS RowNum,* FROM web_vangia_project where   (vangia_status_project = 1) and vangia_typeid_project=31 ) sub	WHERE RowNum = 2">
         <SelectParameters>
             <asp:CookieParameter CookieName="lang" DefaultValue="2" Name="vangia_language_project" />
         </SelectParameters>
 
     </asp:SqlDataSource>
-    <asp:SqlDataSource ID="dsSlider3" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand="SELECT * FROM    (SELECT ROW_NUMBER () OVER (ORDER BY web_vangia_project.vangia_id_project desc) AS RowNum,* FROM web_vangia_project where   (vangia_status_project = 1) and vangia_typeid_project=31 AND (vangia_language_project = @vangia_language_project ) ) sub	WHERE RowNum = 3">
+    <asp:SqlDataSource ID="dsSlider3" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand="SELECT * FROM    (SELECT ROW_NUMBER () OVER (ORDER BY web_vangia_project.vangia_id_project desc) AS RowNum,* FROM web_vangia_project where   (vangia_status_project = 1) and vangia_typeid_project=31 ) sub	WHERE RowNum = 3">
         <SelectParameters>
             <asp:CookieParameter CookieName="lang" DefaultValue="2" Name="vangia_language_project" />
         </SelectParameters>
 
     </asp:SqlDataSource>
-    <asp:SqlDataSource ID="dsSlider4" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand="SELECT * FROM    (SELECT ROW_NUMBER () OVER (ORDER BY web_vangia_project.vangia_id_project desc) AS RowNum,* FROM web_vangia_project where   (vangia_status_project = 1) and vangia_typeid_project=31 AND (vangia_language_project = @vangia_language_project ) ) sub	WHERE RowNum = 4">
+    <asp:SqlDataSource ID="dsSlider4" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand="SELECT * FROM    (SELECT ROW_NUMBER () OVER (ORDER BY web_vangia_project.vangia_id_project desc) AS RowNum,* FROM web_vangia_project where   (vangia_status_project = 1) and vangia_typeid_project=31  ) sub	WHERE RowNum = 4">
         <SelectParameters>
             <asp:CookieParameter CookieName="lang" DefaultValue="2" Name="vangia_language_project" />
         </SelectParameters>
@@ -324,103 +324,108 @@
                 </div>
             </div>
         </div>
-    </div> <script type="text/javascript">
-                                        jQuery(document).ready(function ($) {
+    </div>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            try {
+                var jssor_6_options = {
+                    $AutoPlay: true,
+                    $SlideDuration: 800,
+                    $SlideEasing: $Jease$.$OutQuint,
+                    $ArrowNavigatorOptions: {
+                        $Class: $JssorArrowNavigator$
+                    },
+                    $BulletNavigatorOptions: {
+                        $Class: $JssorBulletNavigator$
+                    }
+                };
 
-                                            var jssor_6_options = {
-                                                $AutoPlay: true,
-                                                $SlideDuration: 800,
-                                                $SlideEasing: $Jease$.$OutQuint,
-                                                $ArrowNavigatorOptions: {
-                                                    $Class: $JssorArrowNavigator$
-                                                },
-                                                $BulletNavigatorOptions: {
-                                                    $Class: $JssorBulletNavigator$
-                                                }
-                                            };
+                var jssor_6_slider = new $JssorSlider$("jssor_6", jssor_6_options);
 
-                                            var jssor_6_slider = new $JssorSlider$("jssor_6", jssor_6_options);
+                /*responsive code begin*/
+                /*you can remove responsive code if you don't want the slider scales while window resizing*/
+                function ScaleSlider() {
+                    var refSize = jssor_6_slider.$Elmt.parentNode.clientWidth;
+                    if (refSize) {
+                        refSize = Math.min(refSize, 1920);
+                        jssor_6_slider.$ScaleWidth(refSize);
+                    }
+                    else {
+                        window.setTimeout(ScaleSlider, 30);
+                    }
+                }
+                ScaleSlider();
+                $(window).bind("load", ScaleSlider);
+                $(window).bind("resize", ScaleSlider);
+                $(window).bind("orientationchange", ScaleSlider);
+                /*responsive code end*/
+            } catch (e) {
 
-                                            /*responsive code begin*/
-                                            /*you can remove responsive code if you don't want the slider scales while window resizing*/
-                                            function ScaleSlider() {
-                                                var refSize = jssor_6_slider.$Elmt.parentNode.clientWidth;
-                                                if (refSize) {
-                                                    refSize = Math.min(refSize, 1920);
-                                                    jssor_6_slider.$ScaleWidth(refSize);
-                                                }
-                                                else {
-                                                    window.setTimeout(ScaleSlider, 30);
-                                                }
-                                            }
-                                            ScaleSlider();
-                                            $(window).bind("load", ScaleSlider);
-                                            $(window).bind("resize", ScaleSlider);
-                                            $(window).bind("orientationchange", ScaleSlider);
-                                            /*responsive code end*/
-                                        });
-                                    </script>
-                                    <style>
-                                        /* jssor slider loading skin oval css */
+            }
+            
+        });
+    </script>
+    <style>
+        /* jssor slider loading skin oval css */
 
-                                        .jssorl-oval img {
-                                            animation-name: jssorl-oval;
-                                            animation-duration: 1.2s;
-                                            animation-iteration-count: infinite;
-                                            animation-timing-function: linear;
-                                        }
+        .jssorl-oval img {
+            animation-name: jssorl-oval;
+            animation-duration: 1.2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
 
-                                        @keyframes jssorl-oval {
-                                            from {
-                                                transform: rotate(0deg);
-                                            }
+        @keyframes jssorl-oval {
+            from {
+                transform: rotate(0deg);
+            }
 
-                                            to {
-                                                transform: rotate(360deg);
-                                            }
-                                        }
+            to {
+                transform: rotate(360deg);
+            }
+        }
 
 
-                                        /* jssor slider bullet navigator skin 05 css */
-                                        /*
+        /* jssor slider bullet navigator skin 05 css */
+        /*
         .jssorb05 div           (normal)
         .jssorb05 div:hover     (normal mouseover)
         .jssorb05 .av           (active)
         .jssorb05 .av:hover     (active mouseover)
         .jssorb05 .dn           (mousedown)
         */
-                                        .jssorb05 {
-                                            position: absolute;
-                                        }
+        .jssorb05 {
+            position: absolute;
+        }
 
-                                            .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
-                                                position: absolute;
-                                                /* size of bullet elment */
-                                                width: 16px;
-                                                height: 16px;
-                                                background: url('img/b05.png') no-repeat;
-                                                overflow: hidden;
-                                                cursor: pointer;
-                                            }
+            .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+                position: absolute;
+                /* size of bullet elment */
+                width: 16px;
+                height: 16px;
+                background: url('img/b05.png') no-repeat;
+                overflow: hidden;
+                cursor: pointer;
+            }
 
-                                            .jssorb05 div {
-                                                background-position: -7px -7px;
-                                            }
+            .jssorb05 div {
+                background-position: -7px -7px;
+            }
 
-                                                .jssorb05 div:hover, .jssorb05 .av:hover {
-                                                    background-position: -37px -7px;
-                                                }
+                .jssorb05 div:hover, .jssorb05 .av:hover {
+                    background-position: -37px -7px;
+                }
 
-                                            .jssorb05 .av {
-                                                background-position: -67px -7px;
-                                            }
+            .jssorb05 .av {
+                background-position: -67px -7px;
+            }
 
-                                            .jssorb05 .dn, .jssorb05 .dn:hover {
-                                                background-position: -97px -7px;
-                                            }
+            .jssorb05 .dn, .jssorb05 .dn:hover {
+                background-position: -97px -7px;
+            }
 
-                                        /* jssor slider arrow navigator skin 22 css */
-                                        /*
+        /* jssor slider arrow navigator skin 22 css */
+        /*
         .jssora22l                  (normal)
         .jssora22r                  (normal)
         .jssora22l:hover            (normal mouseover)
@@ -430,94 +435,98 @@
         .jssora22l.jssora22lds      (disabled)
         .jssora22r.jssora22rds      (disabled)
         */
-                                        .jssora22l, .jssora22r {
-                                            display: block;
-                                            position: absolute;
-                                            /* size of arrow element */
-                                            width: 40px;
-                                            height: 58px;
-                                            cursor: pointer;
-                                            background: url('img/a22.png') center center no-repeat;
-                                            overflow: hidden;
-                                        }
+        .jssora22l, .jssora22r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 40px;
+            height: 58px;
+            cursor: pointer;
+            background: url('img/a22.png') center center no-repeat;
+            overflow: hidden;
+        }
 
-                                        .jssora22l {
-                                            background-position: -10px -31px;
-                                        }
+        .jssora22l {
+            background-position: -10px -31px;
+        }
 
-                                        .jssora22r {
-                                            background-position: -70px -31px;
-                                        }
+        .jssora22r {
+            background-position: -70px -31px;
+        }
 
-                                        .jssora22l:hover {
-                                            background-position: -130px -31px;
-                                        }
+        .jssora22l:hover {
+            background-position: -130px -31px;
+        }
 
-                                        .jssora22r:hover {
-                                            background-position: -190px -31px;
-                                        }
+        .jssora22r:hover {
+            background-position: -190px -31px;
+        }
 
-                                        .jssora22l.jssora22ldn {
-                                            background-position: -250px -31px;
-                                        }
+        .jssora22l.jssora22ldn {
+            background-position: -250px -31px;
+        }
 
-                                        .jssora22r.jssora22rdn {
-                                            background-position: -310px -31px;
-                                        }
+        .jssora22r.jssora22rdn {
+            background-position: -310px -31px;
+        }
 
-                                        .jssora22l.jssora22lds {
-                                            background-position: -10px -31px;
-                                            opacity: .3;
-                                            pointer-events: none;
-                                        }
+        .jssora22l.jssora22lds {
+            background-position: -10px -31px;
+            opacity: .3;
+            pointer-events: none;
+        }
 
-                                        .jssora22r.jssora22rds {
-                                            background-position: -70px -31px;
-                                            opacity: .3;
-                                            pointer-events: none;
-                                        }
-                                    </style>
+        .jssora22r.jssora22rds {
+            background-position: -70px -31px;
+            opacity: .3;
+            pointer-events: none;
+        }
+    </style>
     <script type="text/javascript">
         jQuery(document).ready(function ($) {
-
-            var jssor_4_SlideshowTransitions = [
+            try {
+                var jssor_4_SlideshowTransitions = [
               { $Duration: 1200, $Opacity: 2 }
-            ];
+                ];
 
-            var jssor_4_options = {
-                $AutoPlay: true,
-                $SlideshowOptions: {
-                    $Class: $JssorSlideshowRunner$,
-                    $Transitions: jssor_4_SlideshowTransitions,
-                    $TransitionsOrder: 1
-                },
-                $ArrowNavigatorOptions: {
-                    $Class: $JssorArrowNavigator$
-                },
-                $BulletNavigatorOptions: {
-                    $Class: $JssorBulletNavigator$
-                }
-            };
+                var jssor_4_options = {
+                    $AutoPlay: true,
+                    $SlideshowOptions: {
+                        $Class: $JssorSlideshowRunner$,
+                        $Transitions: jssor_4_SlideshowTransitions,
+                        $TransitionsOrder: 1
+                    },
+                    $ArrowNavigatorOptions: {
+                        $Class: $JssorArrowNavigator$
+                    },
+                    $BulletNavigatorOptions: {
+                        $Class: $JssorBulletNavigator$
+                    }
+                };
 
-            var jssor_4_slider = new $JssorSlider$("jssor_4", jssor_4_options);
+                var jssor_4_slider = new $JssorSlider$("jssor_4", jssor_4_options);
 
-            /*responsive code begin*/
-            /*you can remove responsive code if you don't want the slider scales while window resizing*/
-            function ScaleSlider() {
-                var refSize = jssor_4_slider.$Elmt.parentNode.clientWidth;
-                if (refSize) {
-                    refSize = Math.min(refSize, 700);
-                    jssor_4_slider.$ScaleWidth(refSize);
+                /*responsive code begin*/
+                /*you can remove responsive code if you don't want the slider scales while window resizing*/
+                function ScaleSlider() {
+                    var refSize = jssor_4_slider.$Elmt.parentNode.clientWidth;
+                    if (refSize) {
+                        refSize = Math.min(refSize, 700);
+                        jssor_4_slider.$ScaleWidth(refSize);
+                    }
+                    else {
+                        window.setTimeout(ScaleSlider, 30);
+                    }
                 }
-                else {
-                    window.setTimeout(ScaleSlider, 30);
-                }
+                ScaleSlider();
+                $(window).bind("load", ScaleSlider);
+                $(window).bind("resize", ScaleSlider);
+                $(window).bind("orientationchange", ScaleSlider);
+                /*responsive code end*/
+            } catch (e) {
+
             }
-            ScaleSlider();
-            $(window).bind("load", ScaleSlider);
-            $(window).bind("resize", ScaleSlider);
-            $(window).bind("orientationchange", ScaleSlider);
-            /*responsive code end*/
+            
         });
     </script>
     <style>
@@ -608,53 +617,57 @@
     <script type="text/javascript">
         jQuery(document).ready(function ($) {
 
-            var jssor_3_SlideshowTransitions = [
-              { $Duration: 1200, x: 0.2, y: -0.1, $Delay: 20, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 260, $Easing: { $Left: $Jease$.$InWave, $Top: $Jease$.$InWave, $Clip: $Jease$.$OutQuad }, $Outside: true, $Round: { $Left: 1.3, $Top: 2.5 } },
-              { $Duration: 1500, x: 0.3, y: -0.3, $Delay: 20, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.1, 0.9], $Top: [0.1, 0.9] }, $SlideOut: true, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 260, $Easing: { $Left: $Jease$.$InJump, $Top: $Jease$.$InJump, $Clip: $Jease$.$OutQuad }, $Outside: true, $Round: { $Left: 0.8, $Top: 2.5 } },
-              { $Duration: 1500, x: 0.2, y: -0.1, $Delay: 20, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 260, $Easing: { $Left: $Jease$.$InWave, $Top: $Jease$.$InWave, $Clip: $Jease$.$OutQuad }, $Outside: true, $Round: { $Left: 0.8, $Top: 2.5 } },
-              { $Duration: 1500, x: 0.3, y: -0.3, $Delay: 80, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Easing: { $Left: $Jease$.$InJump, $Top: $Jease$.$InJump, $Clip: $Jease$.$OutQuad }, $Outside: true, $Round: { $Left: 0.8, $Top: 2.5 } },
-              { $Duration: 1800, x: 1, y: 0.2, $Delay: 30, $Cols: 10, $Rows: 5, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $SlideOut: true, $Reverse: true, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 2050, $Easing: { $Left: $Jease$.$InOutSine, $Top: $Jease$.$OutWave, $Clip: $Jease$.$InOutQuad }, $Outside: true, $Round: { $Top: 1.3 } },
-              { $Duration: 1000, $Delay: 30, $Cols: 8, $Rows: 4, $Clip: 15, $SlideOut: true, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 2049, $Easing: $Jease$.$OutQuad },
-              { $Duration: 1000, $Delay: 80, $Cols: 8, $Rows: 4, $Clip: 15, $SlideOut: true, $Easing: $Jease$.$OutQuad },
-              { $Duration: 1000, y: -1, $Cols: 12, $Formation: $JssorSlideshowFormations$.$FormationStraight, $ChessMode: { $Column: 12 } },
-              { $Duration: 1000, x: -0.2, $Delay: 40, $Cols: 12, $SlideOut: true, $Formation: $JssorSlideshowFormations$.$FormationStraight, $Assembly: 260, $Easing: { $Left: $Jease$.$InOutExpo, $Opacity: $Jease$.$InOutQuad }, $Opacity: 2, $Outside: true, $Round: { $Top: 0.5 } },
-              { $Duration: 2000, y: -1, $Delay: 60, $Cols: 15, $SlideOut: true, $Formation: $JssorSlideshowFormations$.$FormationStraight, $Easing: $Jease$.$OutJump, $Round: { $Top: 1.5 } }
-            ];
+            try {
+                var jssor_3_SlideshowTransitions = [
+                              { $Duration: 1200, x: 0.2, y: -0.1, $Delay: 20, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 260, $Easing: { $Left: $Jease$.$InWave, $Top: $Jease$.$InWave, $Clip: $Jease$.$OutQuad }, $Outside: true, $Round: { $Left: 1.3, $Top: 2.5 } },
+                              { $Duration: 1500, x: 0.3, y: -0.3, $Delay: 20, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.1, 0.9], $Top: [0.1, 0.9] }, $SlideOut: true, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 260, $Easing: { $Left: $Jease$.$InJump, $Top: $Jease$.$InJump, $Clip: $Jease$.$OutQuad }, $Outside: true, $Round: { $Left: 0.8, $Top: 2.5 } },
+                              { $Duration: 1500, x: 0.2, y: -0.1, $Delay: 20, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 260, $Easing: { $Left: $Jease$.$InWave, $Top: $Jease$.$InWave, $Clip: $Jease$.$OutQuad }, $Outside: true, $Round: { $Left: 0.8, $Top: 2.5 } },
+                              { $Duration: 1500, x: 0.3, y: -0.3, $Delay: 80, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Easing: { $Left: $Jease$.$InJump, $Top: $Jease$.$InJump, $Clip: $Jease$.$OutQuad }, $Outside: true, $Round: { $Left: 0.8, $Top: 2.5 } },
+                              { $Duration: 1800, x: 1, y: 0.2, $Delay: 30, $Cols: 10, $Rows: 5, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $SlideOut: true, $Reverse: true, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 2050, $Easing: { $Left: $Jease$.$InOutSine, $Top: $Jease$.$OutWave, $Clip: $Jease$.$InOutQuad }, $Outside: true, $Round: { $Top: 1.3 } },
+                              { $Duration: 1000, $Delay: 30, $Cols: 8, $Rows: 4, $Clip: 15, $SlideOut: true, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 2049, $Easing: $Jease$.$OutQuad },
+                              { $Duration: 1000, $Delay: 80, $Cols: 8, $Rows: 4, $Clip: 15, $SlideOut: true, $Easing: $Jease$.$OutQuad },
+                              { $Duration: 1000, y: -1, $Cols: 12, $Formation: $JssorSlideshowFormations$.$FormationStraight, $ChessMode: { $Column: 12 } },
+                              { $Duration: 1000, x: -0.2, $Delay: 40, $Cols: 12, $SlideOut: true, $Formation: $JssorSlideshowFormations$.$FormationStraight, $Assembly: 260, $Easing: { $Left: $Jease$.$InOutExpo, $Opacity: $Jease$.$InOutQuad }, $Opacity: 2, $Outside: true, $Round: { $Top: 0.5 } },
+                              { $Duration: 2000, y: -1, $Delay: 60, $Cols: 15, $SlideOut: true, $Formation: $JssorSlideshowFormations$.$FormationStraight, $Easing: $Jease$.$OutJump, $Round: { $Top: 1.5 } }
+                ];
 
-            var jssor_3_options = {
-                $AutoPlay: true,
-                $SlideshowOptions: {
-                    $Class: $JssorSlideshowRunner$,
-                    $Transitions: jssor_3_SlideshowTransitions,
-                    $TransitionsOrder: 1
-                },
-                $ArrowNavigatorOptions: {
-                    $Class: $JssorArrowNavigator$
-                },
-                $BulletNavigatorOptions: {
-                    $Class: $JssorBulletNavigator$
-                }
-            };
+                var jssor_3_options = {
+                    $AutoPlay: true,
+                    $SlideshowOptions: {
+                        $Class: $JssorSlideshowRunner$,
+                        $Transitions: jssor_3_SlideshowTransitions,
+                        $TransitionsOrder: 1
+                    },
+                    $ArrowNavigatorOptions: {
+                        $Class: $JssorArrowNavigator$
+                    },
+                    $BulletNavigatorOptions: {
+                        $Class: $JssorBulletNavigator$
+                    }
+                };
 
-            var jssor_3_slider = new $JssorSlider$("jssor_3", jssor_3_options);
+                var jssor_3_slider = new $JssorSlider$("jssor_3", jssor_3_options);
 
-            /*responsive code begin*/
-            /*you can remove responsive code if you don't want the slider scales while window resizing*/
-            function ScaleSlider() {
-                var refSize = jssor_3_slider.$Elmt.parentNode.clientWidth;
-                if (refSize) {
-                    refSize = Math.min(refSize, 700);
-                    jssor_3_slider.$ScaleWidth(refSize);
+                /*responsive code begin*/
+                /*you can remove responsive code if you don't want the slider scales while window resizing*/
+                function ScaleSlider() {
+                    var refSize = jssor_3_slider.$Elmt.parentNode.clientWidth;
+                    if (refSize) {
+                        refSize = Math.min(refSize, 700);
+                        jssor_3_slider.$ScaleWidth(refSize);
+                    }
+                    else {
+                        window.setTimeout(ScaleSlider, 30);
+                    }
                 }
-                else {
-                    window.setTimeout(ScaleSlider, 30);
-                }
+                ScaleSlider();
+                $(window).bind("load", ScaleSlider);
+                $(window).bind("resize", ScaleSlider);
+                $(window).bind("orientationchange", ScaleSlider);
+                /*responsive code end*/
+            } catch (e) {
+
             }
-            ScaleSlider();
-            $(window).bind("load", ScaleSlider);
-            $(window).bind("resize", ScaleSlider);
-            $(window).bind("orientationchange", ScaleSlider);
-            /*responsive code end*/
         });
     </script>
     <style>
@@ -759,52 +772,56 @@
 
     <script type="text/javascript">
         jQuery(document).ready(function ($) {
-
-            var jssor_1_SlideshowTransitions = [
+            try {
+                var jssor_1_SlideshowTransitions = [
               { $Duration: 1200, x: -0.3, $During: { $Left: [0.3, 0.7] }, $Easing: { $Left: $Jease$.$InCubic, $Opacity: $Jease$.$Linear }, $Opacity: 2 },
               { $Duration: 1200, x: 0.3, $SlideOut: true, $Easing: { $Left: $Jease$.$InCubic, $Opacity: $Jease$.$Linear }, $Opacity: 2 }
-            ];
+                ];
 
-            var jssor_1_options = {
-                $AutoPlay: true,
-                $SlideshowOptions: {
-                    $Class: $JssorSlideshowRunner$,
-                    $Transitions: jssor_1_SlideshowTransitions,
-                    $TransitionsOrder: 1
-                },
-                $ArrowNavigatorOptions: {
-                    $Class: $JssorArrowNavigator$
-                },
-                $BulletNavigatorOptions: {
-                    $Class: $JssorBulletNavigator$
-                },
-                $ThumbnailNavigatorOptions: {
-                    $Class: $JssorThumbnailNavigator$,
-                    $Cols: 1,
-                    $Align: 0,
-                    $NoDrag: true
-                }
-            };
+                var jssor_1_options = {
+                    $AutoPlay: true,
+                    $SlideshowOptions: {
+                        $Class: $JssorSlideshowRunner$,
+                        $Transitions: jssor_1_SlideshowTransitions,
+                        $TransitionsOrder: 1
+                    },
+                    $ArrowNavigatorOptions: {
+                        $Class: $JssorArrowNavigator$
+                    },
+                    $BulletNavigatorOptions: {
+                        $Class: $JssorBulletNavigator$
+                    },
+                    $ThumbnailNavigatorOptions: {
+                        $Class: $JssorThumbnailNavigator$,
+                        $Cols: 1,
+                        $Align: 0,
+                        $NoDrag: true
+                    }
+                };
 
-            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+                var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
 
-            /*responsive code begin*/
-            /*you can remove responsive code if you don't want the slider scales while window resizing*/
-            function ScaleSlider() {
-                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
-                if (refSize) {
-                    refSize = Math.min(refSize, 700);
-                    jssor_1_slider.$ScaleWidth(refSize);
+                /*responsive code begin*/
+                /*you can remove responsive code if you don't want the slider scales while window resizing*/
+                function ScaleSlider() {
+                    var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                    if (refSize) {
+                        refSize = Math.min(refSize, 700);
+                        jssor_1_slider.$ScaleWidth(refSize);
+                    }
+                    else {
+                        window.setTimeout(ScaleSlider, 30);
+                    }
                 }
-                else {
-                    window.setTimeout(ScaleSlider, 30);
-                }
+                ScaleSlider();
+                $(window).bind("load", ScaleSlider);
+                $(window).bind("resize", ScaleSlider);
+                $(window).bind("orientationchange", ScaleSlider);
+                /*responsive code end*/
+            } catch (e) {
+
             }
-            ScaleSlider();
-            $(window).bind("load", ScaleSlider);
-            $(window).bind("resize", ScaleSlider);
-            $(window).bind("orientationchange", ScaleSlider);
-            /*responsive code end*/
+            
         });
     </script>
     <style>

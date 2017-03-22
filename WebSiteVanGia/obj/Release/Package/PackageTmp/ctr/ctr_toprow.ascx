@@ -1,8 +1,8 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctr_toprow.ascx.cs" Inherits="WebSiteVanGia.ctr.ctr_toprow" %>
-<div id="top-row" >
+<div id="top-row" class="cusTopRow">
     <div class="row-container">
         <div class="container">
-            <div id="top" class="row">
+            <div id="top" class="row" >
 
                 <div id="logo" class="span2">
                     <a href="/Default.aspx">

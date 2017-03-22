@@ -69,6 +69,7 @@
     <Content Include="css\kunena.responsive-min.css" />
     <Content Include="DetailBlog.aspx" />
     <Content Include="DetailBlog.html" />
+    <Content Include="DetailSlider.aspx" />
     <Content Include="DichVu.aspx" />
     <Content Include="img\01.jpg" />
     <Content Include="img\02.jpg" />
@@ -135,6 +136,7 @@
     <Content Include="js\jssor.slider-22.2.11.debug.js" />
     <Content Include="js\jssor.slider-22.2.11.min.js" />
     <Content Include="js\jssor.slider-22.2.11.mini.js" />
+    <Content Include="js\jssor.slider-22.2.16.min.js" />
     <Content Include="js\jssor.slider.mini.js" />
     <Content Include="plan.aspx" />
     <Content Include="plan.html" />
@@ -362,6 +364,13 @@
     </Compile>
     <Compile Include="DetailBlog.aspx.designer.cs">
       <DependentUpon>DetailBlog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetailSlider.aspx.cs">
+      <DependentUpon>DetailSlider.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetailSlider.aspx.designer.cs">
+      <DependentUpon>DetailSlider.aspx</DependentUpon>
     </Compile>
     <Compile Include="DichVu.aspx.cs">
       <DependentUpon>DichVu.aspx</DependentUpon>
