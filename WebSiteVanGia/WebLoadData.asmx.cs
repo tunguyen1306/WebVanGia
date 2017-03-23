@@ -16,54 +16,54 @@ namespace WebSiteVanGia
     [System.Web.Script.Services.ScriptService]
     public class WebLoadData : System.Web.Services.WebService
     {
-
+        DatabaseClassesDataContext db = new DatabaseClassesDataContext();
         [WebMethod]
         public object GetRowLan(string lan)
         {
-            DatabaseClassesDataContext db = new DatabaseClassesDataContext();
+           
             return db.web_vangia_configs.Where(o => o.laguage_word_vg == int.Parse(lan));
         }
         [WebMethod]
         public object GetLoaiCongTrinh(int id)
         {
-            DatabaseClassesDataContext db = new DatabaseClassesDataContext();
+           
             return db.tblMath_vangias.Where(o => o.TypeMath == id);
         }
-        //[WebMethod]
-        //public object GetLoaiMatTien()
-        //{
-        //    DatabaseClassesDataContext db = new DatabaseClassesDataContext();
-        //    return db.tblMath_vangias.Where(o => o.TypeMath == 2);
-        //}
-        //[WebMethod]
-        //public object GetMucDauTu()
-        //{
-        //    DatabaseClassesDataContext db = new DatabaseClassesDataContext();
-        //    return db.tblMath_vangias.Where(o => o.TypeMath == 3);
-        //}
-        //[WebMethod]
-        //public object GetLoaiMong()
-        //{
-        //    DatabaseClassesDataContext db = new DatabaseClassesDataContext();
-        //    return db.tblMath_vangias.Where(o => o.TypeMath == 4);
-        //}
-        //[WebMethod]
-        //public object GetKieuMai()
-        //{
-        //    DatabaseClassesDataContext db = new DatabaseClassesDataContext();
-        //    return db.tblMath_vangias.Where(o => o.TypeMath == 5);
-        //}
-        //[WebMethod]
-        //public object GetLoGioi()
-        //{
-        //    DatabaseClassesDataContext db = new DatabaseClassesDataContext();
-        //    return db.tblMath_vangias.Where(o => o.TypeMath == 6);
-        //}
-        //[WebMethod]
-        //public object GetTangHam()
-        //{
-        //    DatabaseClassesDataContext db = new DatabaseClassesDataContext();
-        //    return db.tblMath_vangias.Where(o => o.TypeMath == 7);
-        //}
+        [WebMethod]
+        public object GetLoaiMatTien()
+        {
+           
+            return db.tblMath_vangias.Where(o => o.TypeMath == 2);
+        }
+        [WebMethod]
+        public object GetMucDauTu()
+        {
+          
+            return db.tblMath_vangias.Where(o => o.TypeMath == 3);
+        }
+        [WebMethod]
+        public object GetLoaiMong()
+        {
+           
+            return db.tblMath_vangias.Where(o => o.TypeMath == 4);
+        }
+        [WebMethod]
+        public object GetKieuMai()
+        {
+           
+            return db.tblMath_vangias.Where(o => o.TypeMath == 5);
+        }
+        [WebMethod]
+        public object GetLoGioi()
+        {
+            
+            return db.tblMath_vangias.Where(o => o.TypeMath == 6);
+        }
+        [WebMethod]
+        public object GetTangHam()
+        {
+         
+            return db.tblMath_vangias.Where(o => o.TypeMath == 7);
+        }
     }
 }

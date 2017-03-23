@@ -64,6 +64,7 @@
     <Content Include="AllEmployee.aspx" />
     <Content Include="Blog.aspx" />
     <Content Include="blog.html" />
+    <Content Include="css\animate.css" />
     <Content Include="css\kunena.20-min.css" />
     <Content Include="css\kunena.forum-min.css" />
     <Content Include="css\kunena.responsive-min.css" />
@@ -132,6 +133,8 @@
     <Content Include="img\VGconstruction.jpg" />
     <Content Include="img\VGLogo.jpg" />
     <Content Include="img\windows.jpg" />
+    <Content Include="js\jquery.lettering.js" />
+    <Content Include="js\jquery.textillate.js" />
     <Content Include="js\jssor.slider-21.1.6.min.js" />
     <Content Include="js\jssor.slider-22.2.11.debug.js" />
     <Content Include="js\jssor.slider-22.2.11.min.js" />

@@ -160,6 +160,11 @@
 .textonslider{
        position: absolute;
     z-index: 2;
-    font-size: 35px;
-    padding: 25px;
+    font-size: 25px;
+    color:#ffffff;
+
+}
+.cusTextSlider{
+     color:#ffffff;
+      font-size: 25px;
 }

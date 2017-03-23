@@ -157,3 +157,14 @@
     margin-left: 60px;
     padding-right: 30px;
 }*/
+.textonslider{
+       position: absolute;
+    z-index: 2;
+    font-size: 25px;
+    color:#ffffff;
+
+}
+.cusTextSlider{
+     color:#ffffff;
+      font-size: 25px;
+}

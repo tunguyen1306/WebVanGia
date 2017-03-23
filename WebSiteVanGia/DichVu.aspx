@@ -45,33 +45,10 @@
     </div>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="Content_MaintopRow" runat="server">
-    <%-- <div class="maintop-row">
-         <div class="moduletable best_projects">
-        <div class="module_container">
-            <div class="mod-newsflash-adv custom2 mod-newsflash-adv__best_projects cols-3" id="module_143">
-              
-
-                <div class="clearfix"></div>
-
-            </div>
-        </div>
-    </div>
-    </div>--%>
+   
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="Content_ContentRow" runat="server">
-    <%--     <div class="maintop-row">
-         <div class="moduletable best_projects">
-        <div class="module_container">
-            <div class="mod-newsflash-adv custom2 mod-newsflash-adv__best_projects cols-3" id="module_143">
-              
-
-                <div class="clearfix"></div>
-
-            </div>
-        </div>
-    </div>
-    </div>--%>
-    <%--style="padding-top: 10px; padding-bottom: 90px;"--%>
+  
     <div class="video-rowdv" id="video-row">
         <div class="row-container visible visible-first">
             <div class="container">
@@ -86,33 +63,36 @@
                             <div class="mod-newsflash-adv mod-newsflash-adv__testimonials cols-3" id="module_143">
 
                                 <div class="row-fluid">
-                                    <article class="span4 item item_num0 item__module  " style="height: 225px !important; padding-left: 0;" id="item_115">
+                                    <article class="span4 item item_num0 item__module  " style="height: 200px !important; padding-left: 0;" id="item_115">
                                         <!-- Intro Image -->
                                        
                                         <asp:Repeater ID="repSlide1" runat="server" DataSourceID="dsSlider" OnItemDataBound="repSlide1_ItemDataBound">
                                             <ItemTemplate>
                                                  
-                                                <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden; visibility: hidden;">
+                                                <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 500px; height: 300px; overflow: hidden; visibility: hidden;">
                                                     <!-- Loading Screen -->
                                                  
-                                                   <a href="DetailSlider.aspx?id=<%# Eval("vangia_id_project") %>">      <div data-u="loading" style="position: absolute; top: 0px; left: 0px; background-color: rgba(0,0,0,0.7);">
+                                                     
+                                                        <div data-u="loading" style="position: absolute; top: 0px; left: 0px; background-color: rgba(0,0,0,0.7);">
                                                         <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
                                                         <div style="position: absolute; display: block; background: url('img/loading.gif') no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
                                                     </div>
-                                                   <div class="textonslider"><%# Eval("vangia_name_project") %></div>
-                                                    <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden;">
+                                                     
+
+                                                    <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 500px; height: 300px; overflow: hidden;">
                                                         <asp:Repeater ID="rpPicture" runat="server">
                                                             <ItemTemplate>
                                                                 <div>
                                                                     <img data-u="image" src="<%#ConfigurationManager.AppSettings["domainvg"]+Eval("originalFilepath").ToString().Split('_')[0] +"/"+Eval("originalFilepath").ToString().Replace("_1","_3")%>" />
-                                                                    <div data-u="thumb"> </div>
+                                                                    <div data-u="thumb"> <a href="DetailSlider.aspx?id=<%# Eval("vangia_id_project") %>">  
+                                                        <div class="textonslider "><%# Eval("vangia_name_project") %></div>   </a> </div>
                                                                 </div>
 
                                                             </ItemTemplate>
                                                         </asp:Repeater>
                                                     </div>
                                                     <!-- Thumbnail Navigator -->
-                                                    <div data-u="thumbnavigator" class="jssort09-600-45" style="position: absolute; bottom: 0px; left: 0px; width: 600px; height: 45px;">
+                                                    <div data-u="thumbnavigator" class="jssort09-600-45" style="position: absolute; bottom: 0px; left: 0px; width: 500px; height: 45px;">
                                                         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; filter: alpha(opacity=40.0); opacity: 0.4;"></div>
                                                         <!-- Thumbnail Item Skin Begin -->
                                                         <div data-u="slides" style="cursor: default;">
@@ -129,7 +109,7 @@
                                                     <!-- Arrow Navigator -->
                                                     <span data-u="arrowleft" class="jssora05l" style="top: 0px; left: 8px; width: 40px; height: 40px;" data-autocenter="2"></span>
                                                     <span data-u="arrowright" class="jssora05r" style="top: 0px; right: 8px; width: 40px; height: 40px;" data-autocenter="2"></span>
-                                                </a>  
+                                             
 
                                                 </div>
                                                      
@@ -141,63 +121,71 @@
 
                                         <div class="clearfix"></div>
                                     </article>
-                                    <article class="span4 item item_num1 item__module  " id="item_116" style="height: 225px !important; padding-left: 0;">
+                                    <article class="span4 item item_num1 item__module  " id="item_116" style="height: 200px !important; padding-left: 0;">
                                         <!-- Intro Image -->
                                         <asp:Repeater ID="Repeater1" runat="server" OnItemDataBound="Repeater1_ItemDataBound" DataSourceID="dsSlider2">
                                             <ItemTemplate>
-                                                <div id="jssor_3" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden; visibility: hidden;">
-                                                    <!-- Loading Screen -->
-                                                    <div data-u="loading" style="position: absolute; top: 0px; left: 0px; background-color: rgba(0,0,0,0.7);">
-                                                        <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-                                                        <div style="position: absolute; display: block; background: url('img/loading.gif') no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-                                                    </div>
-                                                     <div class="textonslider"><%# Eval("vangia_name_project") %></div>
-                                                    <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden;">
-                                                        <asp:Repeater ID="rpPicture1" runat="server">
-                                                            <ItemTemplate>
-                                                                <div>
-                                                                    <img data-u="image" src="<%#ConfigurationManager.AppSettings["domainvg"]+Eval("originalFilepath").ToString().Split('_')[0] +"/"+Eval("originalFilepath").ToString().Replace("_1","_3")%>" />
+                                         
+    <div id="jssor_3" style="position:relative;margin:0 auto;top:0px;left:0px;width:500px;height:300px;overflow:hidden;visibility:hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" style="position:absolute;top:0px;left:0px;background-color:rgba(0,0,0,0.7);">
+            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+            <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+        </div>
+        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:600px;height:300px;overflow:hidden;">
+             <asp:Repeater ID="rpPicture1" runat="server">
+                                                        <ItemTemplate>
+            <div>
+                <img data-u="image" src="<%#ConfigurationManager.AppSettings["domainvg"]+Eval("originalFilepath").ToString().Split('_')[0] +"/"+Eval("originalFilepath").ToString().Replace("_1","_3")%>" />
+              
+                
+                <div data-u="caption" data-t="1" data-3d="1" style="position:absolute;top:-50px;left:125px;width:350px;height:30px;z-index:0;background-color:rgba(235,81,0,0.5);font-size:20px;color:#ffffff;line-height:30px;text-align:center;">
+                    <a class="cusTextSlider" href="DetailSlider.aspx?id=<%# Eval("vangia_id_project") %>">  
+                                                        <%# Eval("vangia_name_project") %>   </a>
 
-                                                                </div>
-
-                                                            </ItemTemplate>
-                                                        </asp:Repeater>
-
-
-                                                    </div>
-                                                    <!-- Bullet Navigator -->
-                                                    <div data-u="navigator" class="jssorb01" style="bottom: 16px; right: 16px;">
-                                                        <div data-u="prototype" style="width: 12px; height: 12px;"></div>
-                                                    </div>
-                                                    <!-- Arrow Navigator -->
-                                                    <span data-u="arrowleft" class="jssora05l" style="top: 0px; left: 8px; width: 40px; height: 40px;" data-autocenter="2"></span>
-                                                    <span data-u="arrowright" class="jssora05r" style="top: 0px; right: 8px; width: 40px; height: 40px;" data-autocenter="2"></span>
-                                                </div>
-                                                <!-- #endregion Jssor Slider End -->
+                </div>
+            </div>
+          
+        </ItemTemplate>  
+</asp:Repeater>
+        </div>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb01" style="bottom:16px;right:16px;">
+            <div data-u="prototype" style="width:12px;height:12px;"></div>
+        </div>
+        <!-- Arrow Navigator -->
+        <span data-u="arrowleft" class="jssora02l" style="top:0px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
+        <span data-u="arrowright" class="jssora02r" style="top:0px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
+    </div>
+    <!-- #endregion Jssor Slider End -->
                                             </ItemTemplate>
                                         </asp:Repeater>
 
 
                                         <div class="clearfix"></div>
                                     </article>
-                                    <article class="span4 item item_num2 item__module  " id="item_117" style="height: 225px !important; padding-left: 0;">
+                                    <article class="span4 item item_num2 item__module  " id="item_117" style="height: 200px !important; padding-left: 0;">
                                         <!-- Intro Image -->
                                         <asp:Repeater ID="Repeater2" OnItemDataBound="Repeater2_ItemDataBound" runat="server" DataSourceID="dsSlider3">
                                             <ItemTemplate>
-                                                <div id="jssor_4" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden; visibility: hidden;">
+                                                <div id="jssor_4" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 500px; height: 300px; overflow: hidden; visibility: hidden;">
                                                     <!-- Loading Screen -->
                                                     <div data-u="loading" style="position: absolute; top: 0px; left: 0px; background-color: rgba(0,0,0,0.7);">
                                                         <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
                                                         <div style="position: absolute; display: block; background: url('img/loading.gif') no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
                                                     </div>
-                                                     <div class="textonslider"><%# Eval("vangia_name_project") %></div>
-                                                    <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden;">
+                                                    
+                                                    <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 500px; height: 300px; overflow: hidden;">
                                                         <a data-u="any" href="http://www.jssor.com" style="display: none">Simple Fade Slideshow</a>
                                                         <asp:Repeater ID="rpPicture2" runat="server">
                                                             <ItemTemplate>
                                                                 <div>
                                                                     <img data-u="image" src="<%#ConfigurationManager.AppSettings["domainvg"]+Eval("originalFilepath").ToString().Split('_')[0] +"/"+Eval("originalFilepath").ToString().Replace("_1","_3")%>" />
+                                                                     <div data-u="loading" data-t="1" data-3d="1" style="position:absolute;top:-50px;left:125px;width:350px;height:30px;z-index:0;background-color:rgba(235,81,0,0.5);font-size:20px;color:#ffffff;line-height:30px;text-align:center;">
+                    <a class="cusTextSlider" href="DetailSlider.aspx?id=<%# Eval("vangia_id_project") %>">  
+                                                        <%# Eval("vangia_name_project") %>   </a>
 
+                </div>
                                                                 </div>
 
                                                             </ItemTemplate>
@@ -230,14 +218,16 @@
                                                 <div data-u="loading" class="jssorl-oval" style="position: absolute; top: 0px; left: 0px; text-align: center; background-color: rgba(0,0,0,0.7);">
                                                     <img style="margin-top: -19.0px; position: relative; top: 50%; width: 38px; height: 38px;" src="img/oval.svg" />
                                                 </div>
-                                                 <div class="textonslider"><%# Eval("vangia_name_project") %></div>
+                                                
                                                 <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1500px; height: 600px; overflow: hidden;">
                                                    
                                                     <asp:Repeater ID="rpPicture3" runat="server">
                                                         <ItemTemplate>
                                                             <div>
                                                                 <img data-u="image" src="<%#ConfigurationManager.AppSettings["domainvg"]+Eval("originalFilepath").ToString().Split('_')[0] +"/"+Eval("originalFilepath").ToString().Replace("_1","_4")%>" />
-                                                               
+                                                               <div style="position:absolute;top:15px;left:15px;width:500px;height:40px;z-index:0;font-size:30px;color:#ffffff;line-height:40px;"> <a class="cusTextSlider" href="DetailSlider.aspx?id=<%# Eval("vangia_id_project") %>">  
+                                                        <%# Eval("vangia_name_project") %>   </a></div>
+
                                                             </div>
 
 
@@ -270,7 +260,7 @@
         </div>
     </div>
     <asp:HiddenField runat="server" ID="hdSlide1" />
-    <asp:SqlDataSource ID="dsPicture" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand=" select * from tblSysPicture  where advert_id=@vangia_id_project">
+    <asp:SqlDataSource ID="dsPicture" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand=" select * from tblSysPicture left join web_vangia_project on web_vangia_project.vangia_id_project=tblSysPicture.advert_id  where advert_id=@vangia_id_project">
         <SelectParameters>
 
             <asp:ControlParameter ControlID="hdSlide1" DefaultValue="0" Name="vangia_id_project" PropertyName="Value" />
@@ -613,61 +603,60 @@
         }
     </style>
 
-
-    <script type="text/javascript">
+<script type="text/javascript">
         jQuery(document).ready(function ($) {
 
-            try {
-                var jssor_3_SlideshowTransitions = [
-                              { $Duration: 1200, x: 0.2, y: -0.1, $Delay: 20, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 260, $Easing: { $Left: $Jease$.$InWave, $Top: $Jease$.$InWave, $Clip: $Jease$.$OutQuad }, $Outside: true, $Round: { $Left: 1.3, $Top: 2.5 } },
-                              { $Duration: 1500, x: 0.3, y: -0.3, $Delay: 20, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.1, 0.9], $Top: [0.1, 0.9] }, $SlideOut: true, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 260, $Easing: { $Left: $Jease$.$InJump, $Top: $Jease$.$InJump, $Clip: $Jease$.$OutQuad }, $Outside: true, $Round: { $Left: 0.8, $Top: 2.5 } },
-                              { $Duration: 1500, x: 0.2, y: -0.1, $Delay: 20, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 260, $Easing: { $Left: $Jease$.$InWave, $Top: $Jease$.$InWave, $Clip: $Jease$.$OutQuad }, $Outside: true, $Round: { $Left: 0.8, $Top: 2.5 } },
-                              { $Duration: 1500, x: 0.3, y: -0.3, $Delay: 80, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Easing: { $Left: $Jease$.$InJump, $Top: $Jease$.$InJump, $Clip: $Jease$.$OutQuad }, $Outside: true, $Round: { $Left: 0.8, $Top: 2.5 } },
-                              { $Duration: 1800, x: 1, y: 0.2, $Delay: 30, $Cols: 10, $Rows: 5, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $SlideOut: true, $Reverse: true, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 2050, $Easing: { $Left: $Jease$.$InOutSine, $Top: $Jease$.$OutWave, $Clip: $Jease$.$InOutQuad }, $Outside: true, $Round: { $Top: 1.3 } },
-                              { $Duration: 1000, $Delay: 30, $Cols: 8, $Rows: 4, $Clip: 15, $SlideOut: true, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 2049, $Easing: $Jease$.$OutQuad },
-                              { $Duration: 1000, $Delay: 80, $Cols: 8, $Rows: 4, $Clip: 15, $SlideOut: true, $Easing: $Jease$.$OutQuad },
-                              { $Duration: 1000, y: -1, $Cols: 12, $Formation: $JssorSlideshowFormations$.$FormationStraight, $ChessMode: { $Column: 12 } },
-                              { $Duration: 1000, x: -0.2, $Delay: 40, $Cols: 12, $SlideOut: true, $Formation: $JssorSlideshowFormations$.$FormationStraight, $Assembly: 260, $Easing: { $Left: $Jease$.$InOutExpo, $Opacity: $Jease$.$InOutQuad }, $Opacity: 2, $Outside: true, $Round: { $Top: 0.5 } },
-                              { $Duration: 2000, y: -1, $Delay: 60, $Cols: 15, $SlideOut: true, $Formation: $JssorSlideshowFormations$.$FormationStraight, $Easing: $Jease$.$OutJump, $Round: { $Top: 1.5 } }
-                ];
+            var jssor_3_SlideoTransitions = [
+              [{b:0,d:600,y:-290,e:{y:27}}],
+              [{b:0,d:1000,y:185},{b:1000,d:500,o:-1},{b:1500,d:500,o:1},{b:2000,d:1500,r:360},{b:3500,d:1000,rX:30},{b:4500,d:500,rX:-30},{b:5000,d:1000,rY:30},{b:6000,d:500,rY:-30},{b:6500,d:500,sX:1},{b:7000,d:500,sX:-1},{b:7500,d:500,sY:1},{b:8000,d:500,sY:-1},{b:8500,d:500,kX:30},{b:9000,d:500,kX:-30},{b:9500,d:500,kY:30},{b:10000,d:500,kY:-30},{b:10500,d:500,c:{x:87.50,t:-87.50}},{b:11000,d:500,c:{x:-87.50,t:87.50}}],
+              [{b:0,d:600,x:410,e:{x:27}}],
+              [{b:-1,d:1,o:-1},{b:0,d:600,o:1,e:{o:5}}],
+              [{b:-1,d:1,c:{x:175.0,t:-175.0}},{b:0,d:800,c:{x:-175.0,t:175.0},e:{c:{x:7,t:7}}}],
+              [{b:-1,d:1,o:-1},{b:0,d:600,x:-570,o:1,e:{x:6}}],
+              [{b:-1,d:1,o:-1,r:-180},{b:0,d:800,o:1,r:180,e:{r:7}}],
+              [{b:0,d:1000,y:80,e:{y:24}},{b:1000,d:1100,x:570,y:170,o:-1,r:30,sX:9,sY:9,e:{x:2,y:6,r:1,sX:5,sY:5}}],
+              [{b:2000,d:600,rY:30}],
+              [{b:0,d:500,x:-105},{b:500,d:500,x:230},{b:1000,d:500,y:-120},{b:1500,d:500,x:-70,y:120},{b:2600,d:500,y:-80},{b:3100,d:900,y:160,e:{y:24}}],
+              [{b:0,d:1000,o:-0.4,rX:2,rY:1},{b:1000,d:1000,rY:1},{b:2000,d:1000,rX:-1},{b:3000,d:1000,rY:-1},{b:4000,d:1000,o:0.4,rX:-1,rY:-1}]
+            ];
 
-                var jssor_3_options = {
-                    $AutoPlay: true,
-                    $SlideshowOptions: {
-                        $Class: $JssorSlideshowRunner$,
-                        $Transitions: jssor_3_SlideshowTransitions,
-                        $TransitionsOrder: 1
-                    },
-                    $ArrowNavigatorOptions: {
-                        $Class: $JssorArrowNavigator$
-                    },
-                    $BulletNavigatorOptions: {
-                        $Class: $JssorBulletNavigator$
-                    }
-                };
+            var jssor_3_options = {
+              $AutoPlay: true,
+              $Idle: 2000,
+              $CaptionSliderOptions: {
+                $Class: $JssorCaptionSlideo$,
+                $Transitions: jssor_3_SlideoTransitions,
+                $Breaks: [
+                  [{d:2000,b:1000}]
+                ]
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$
+              }
+            };
 
-                var jssor_3_slider = new $JssorSlider$("jssor_3", jssor_3_options);
+            var jssor_3_slider = new $JssorSlider$("jssor_3", jssor_3_options);
 
-                /*responsive code begin*/
-                /*you can remove responsive code if you don't want the slider scales while window resizing*/
-                function ScaleSlider() {
-                    var refSize = jssor_3_slider.$Elmt.parentNode.clientWidth;
-                    if (refSize) {
-                        refSize = Math.min(refSize, 700);
-                        jssor_3_slider.$ScaleWidth(refSize);
-                    }
-                    else {
-                        window.setTimeout(ScaleSlider, 30);
-                    }
+            /*responsive code begin*/
+            /*remove responsive code if you don't want the slider scales while window resizing*/
+            function ScaleSlider() {
+                var refSize = jssor_3_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 600);
+                    jssor_3_slider.$ScaleWidth(refSize);
                 }
-                ScaleSlider();
-                $(window).bind("load", ScaleSlider);
-                $(window).bind("resize", ScaleSlider);
-                $(window).bind("orientationchange", ScaleSlider);
-                /*responsive code end*/
-            } catch (e) {
-
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
             }
+            ScaleSlider();
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            /*responsive code end*/
         });
     </script>
     <style>
@@ -682,92 +671,51 @@
         .jssorb01 {
             position: absolute;
         }
+        .jssorb01 div, .jssorb01 div:hover, .jssorb01 .av {
+            position: absolute;
+            /* size of bullet elment */
+            width: 12px;
+            height: 12px;
+            filter: alpha(opacity=70);
+            opacity: .7;
+            overflow: hidden;
+            cursor: pointer;
+            border: #000 1px solid;
+        }
+        .jssorb01 div { background-color: gray; }
+        .jssorb01 div:hover, .jssorb01 .av:hover { background-color: #d3d3d3; }
+        .jssorb01 .av { background-color: #fff; }
+        .jssorb01 .dn, .jssorb01 .dn:hover { background-color: #555555; }
 
-            .jssorb01 div, .jssorb01 div:hover, .jssorb01 .av {
-                position: absolute;
-                /* size of bullet elment */
-                width: 12px;
-                height: 12px;
-                filter: alpha(opacity=70);
-                opacity: .7;
-                overflow: hidden;
-                cursor: pointer;
-                border: #000 1px solid;
-            }
-
-            .jssorb01 div {
-                background-color: gray;
-            }
-
-                .jssorb01 div:hover, .jssorb01 .av:hover {
-                    background-color: #d3d3d3;
-                }
-
-            .jssorb01 .av {
-                background-color: #fff;
-            }
-
-            .jssorb01 .dn, .jssorb01 .dn:hover {
-                background-color: #555555;
-            }
-
-        /* jssor slider arrow navigator skin 05 css */
+        /* jssor slider arrow navigator skin 02 css */
         /*
-        .jssora05l                  (normal)
-        .jssora05r                  (normal)
-        .jssora05l:hover            (normal mouseover)
-        .jssora05r:hover            (normal mouseover)
-        .jssora05l.jssora05ldn      (mousedown)
-        .jssora05r.jssora05rdn      (mousedown)
-        .jssora05l.jssora05lds      (disabled)
-        .jssora05r.jssora05rds      (disabled)
+        .jssora02l                  (normal)
+        .jssora02r                  (normal)
+        .jssora02l:hover            (normal mouseover)
+        .jssora02r:hover            (normal mouseover)
+        .jssora02l.jssora02ldn      (mousedown)
+        .jssora02r.jssora02rdn      (mousedown)
+        .jssora02l.jssora02lds      (disabled)
+        .jssora02r.jssora02rds      (disabled)
         */
-        .jssora05l, .jssora05r {
+        .jssora02l, .jssora02r {
             display: block;
             position: absolute;
             /* size of arrow element */
-            width: 40px;
-            height: 40px;
+            width: 55px;
+            height: 55px;
             cursor: pointer;
-            background: url('img/a17.png') no-repeat;
+            background: url('img/a02.png') no-repeat;
             overflow: hidden;
         }
-
-        .jssora05l {
-            background-position: -10px -40px;
-        }
-
-        .jssora05r {
-            background-position: -70px -40px;
-        }
-
-        .jssora05l:hover {
-            background-position: -130px -40px;
-        }
-
-        .jssora05r:hover {
-            background-position: -190px -40px;
-        }
-
-        .jssora05l.jssora05ldn {
-            background-position: -250px -40px;
-        }
-
-        .jssora05r.jssora05rdn {
-            background-position: -310px -40px;
-        }
-
-        .jssora05l.jssora05lds {
-            background-position: -10px -40px;
-            opacity: .3;
-            pointer-events: none;
-        }
-
-        .jssora05r.jssora05rds {
-            background-position: -70px -40px;
-            opacity: .3;
-            pointer-events: none;
-        }
+        .jssora02l { background-position: -3px -33px; }
+        .jssora02r { background-position: -63px -33px; }
+        .jssora02l:hover { background-position: -123px -33px; }
+        .jssora02r:hover { background-position: -183px -33px; }
+        .jssora02l.jssora02ldn { background-position: -3px -33px; }
+        .jssora02r.jssora02rdn { background-position: -63px -33px; }
+        .jssora02l.jssora02lds { background-position: -3px -33px; opacity: .3; pointer-events: none; }
+        .jssora02r.jssora02rds { background-position: -63px -33px; opacity: .3; pointer-events: none; }
     </style>
 
     <script type="text/javascript">
@@ -926,7 +874,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 600px;
+            width: 500px;
             height: 45px;
         }
 
