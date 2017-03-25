@@ -117,13 +117,11 @@
                 </asp:SqlDataSource>
                
 
-
-
-
-                <script type="text/javascript">
+            
+<%--                <script type="text/javascript">
         jQuery(document).ready(function ($) {
 
-            var jssor_2_options = {
+            var jssor_11_options = {
               $AutoPlay: true,
               $Idle: 0,
               $AutoPlaySteps: 4,
@@ -134,15 +132,15 @@
               $Cols: 7
             };
 
-            var jssor_2_slider = new $JssorSlider$("jssor_2", jssor_2_options);
+            var jssor_11_slider = new $JssorSlider$("jssor_11", jssor_11_options);
 
             /*responsive code begin*/
             /*remove responsive code if you don't want the slider scales while window resizing*/
             function ScaleSlider() {
-                var refSize = jssor_2_slider.$Elmt.parentNode.clientWidth;
+                var refSize = jssor_11_slider.$Elmt.parentNode.clientWidth;
                 if (refSize) {
                     refSize = Math.min(refSize, 809);
-                    jssor_2_slider.$ScaleWidth(refSize);
+                    jssor_11_slider.$ScaleWidth(refSize);
                 }
                 else {
                     window.setTimeout(ScaleSlider, 30);
@@ -153,11 +151,12 @@
             $(window).bind("resize", ScaleSlider);
             $(window).bind("orientationchange", ScaleSlider);
             /*responsive code end*/
-        });
+        });--%>
     </script>
     <style></style>
-    <div id="jssor_2" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:100px;overflow:hidden;visibility:hidden;">
-        <!-- Loading Screen -->
+
+       <div id="jssor_11" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:100px;overflow:hidden;visibility:hidden;">
+       
         <div data-u="loading" style="position:absolute;top:0px;left:0px;background-color:rgba(0,0,0,0.7);">
             <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
             <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
@@ -173,7 +172,6 @@
                         </asp:Repeater>
         </div>
     </div>
-    <!-- #endregion Jssor Slider End -->
             </div>
         </div>
         <%-- Footer--%>
@@ -187,28 +185,7 @@
         <div id="demo1" style="top: 50px; font-weight: bold; font-size: 20px; color: #fff; padding: 10px; position: fixed; right: 0;">
             Hot Line: 0988 115 130 - 0866 811 816
         </div>
-       <%-- <script>
-            var colors = ["#ff3322", "blue", "red", "green", "yellow"];
-
-           
-            jQuery(document).ready(function ($) {
-                $('#demo1').textEffect({
-                    effect: 'dropdown', // the type of the text aniamtion. fade, glow, jumble, slide, dropdown and random (default) 
-                    effectSpeed: 150, // the speed in ms at which new letters begin to animate. 
-                    completionSpeed: 2000, // the speed in ms of the text aniamtion. 
-                    jumbleColor: colors // the color of the jumbled letters. 
-                });
-               
-
-                //$('#demo1').html(function (i, text) {
-                //    return $.map(text.split(' '), function (word) {
-                //        return '<span style="color:'
-                //            + colors[Math.floor(Math.random() * colors.length)]
-                //            + '">' + word + '</span>';
-                //    }).join(' ');
-                //});
-            });
-        </script>--%>
+      
 
         <script src="js/jquery.BlackAndWhite.min.js"></script>
         <script src="js/jquery.fancybox.pack.js"></script>

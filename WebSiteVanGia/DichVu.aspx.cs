@@ -21,7 +21,7 @@ namespace WebSiteVanGia
             if (dv != null)
             {
                 Repeater rp = e.Item.FindControl("rpPicture") as Repeater;
-                hdSlide1.Value = dv.Row["vangia_id_project"].ToString();
+                hdSlide.Value = dv.Row["vangia_id_project"].ToString();
                 DataTable dt = (dsPicture.Select(DataSourceSelectArguments.Empty) as DataView).ToTable();
                 rp.DataSource = dt;
                 rp.DataBind();
@@ -35,7 +35,7 @@ namespace WebSiteVanGia
             {
                 Repeater rp = e.Item.FindControl("rpPicture1") as Repeater;
                 hdSlide1.Value = dv.Row["vangia_id_project"].ToString();
-                DataTable dt = (dsPicture.Select(DataSourceSelectArguments.Empty) as DataView).ToTable();
+                DataTable dt = (dsPicture1.Select(DataSourceSelectArguments.Empty) as DataView).ToTable();
                 rp.DataSource = dt;
                 rp.DataBind();
 
@@ -47,8 +47,8 @@ namespace WebSiteVanGia
             if (dv != null)
             {
                 Repeater rp = e.Item.FindControl("rpPicture2") as Repeater;
-                hdSlide1.Value = dv.Row["vangia_id_project"].ToString();
-                DataTable dt = (dsPicture.Select(DataSourceSelectArguments.Empty) as DataView).ToTable();
+                hdSlide2.Value = dv.Row["vangia_id_project"].ToString();
+                DataTable dt = (dsPicture2.Select(DataSourceSelectArguments.Empty) as DataView).ToTable();
                 rp.DataSource = dt;
                 rp.DataBind();
 
@@ -60,8 +60,8 @@ namespace WebSiteVanGia
             if (dv != null)
             {
                 Repeater rp = e.Item.FindControl("rpPicture3") as Repeater;
-                hdSlide1.Value = dv.Row["vangia_id_project"].ToString();
-                DataTable dt = (dsPicture.Select(DataSourceSelectArguments.Empty) as DataView).ToTable();
+                hdSlide3.Value = dv.Row["vangia_id_project"].ToString();
+                DataTable dt = (dsPicture3.Select(DataSourceSelectArguments.Empty) as DataView).ToTable();
                 rp.DataSource = dt;
                 rp.DataBind();
 

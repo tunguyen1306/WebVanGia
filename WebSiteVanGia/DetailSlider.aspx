@@ -1,13 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="DetailSlider.aspx.cs" Inherits="WebSiteVanGia.DetailSlider" %>
 
-<%@ Register Src="~/ctr/ctr_post_fb_project.ascx" TagPrefix="uc1" TagName="ctr_post_fb_project" %>
 <%@ Register Src="~/ctr/ctr_toprow.ascx" TagPrefix="uc1" TagName="ctr_toprow" %>
 <%@ Register Src="~/ctr/ctr_footer.ascx" TagPrefix="uc1" TagName="ctr_footer" %>
+<%@ Register Src="~/ctr/ctr_post_fb_slider.ascx" TagPrefix="uc1" TagName="ctr_post_fb_slider" %>
+
 
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ct_post_fb" runat="server">
-    <uc1:ctr_post_fb_project runat="server" ID="ctr_post_fb_project" />
+    <uc1:ctr_post_fb_slider runat="server" id="ctr_post_fb_slider" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Content_TopRow" runat="server">
     <uc1:ctr_toprow runat="server" ID="ctr_toprow" />

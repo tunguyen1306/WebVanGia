@@ -76,13 +76,13 @@ namespace WebSiteVanGia {
         protected global::System.Web.UI.WebControls.Repeater Repeater3;
         
         /// <summary>
-        /// hdSlide1 control.
+        /// hdSlide control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hdSlide1;
+        protected global::System.Web.UI.WebControls.HiddenField hdSlide;
         
         /// <summary>
         /// dsPicture control.
@@ -92,6 +92,60 @@ namespace WebSiteVanGia {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource dsPicture;
+        
+        /// <summary>
+        /// hdSlide1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdSlide1;
+        
+        /// <summary>
+        /// dsPicture1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource dsPicture1;
+        
+        /// <summary>
+        /// hdSlide2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdSlide2;
+        
+        /// <summary>
+        /// dsPicture2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource dsPicture2;
+        
+        /// <summary>
+        /// hdSlide3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdSlide3;
+        
+        /// <summary>
+        /// dsPicture3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource dsPicture3;
         
         /// <summary>
         /// dsProject control.
