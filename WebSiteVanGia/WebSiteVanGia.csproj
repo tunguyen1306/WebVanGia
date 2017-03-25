@@ -68,6 +68,7 @@
     <Content Include="css\kunena.20-min.css" />
     <Content Include="css\kunena.forum-min.css" />
     <Content Include="css\kunena.responsive-min.css" />
+    <Content Include="ctr\ctr_post_fb_slider.ascx" />
     <Content Include="DetailBlog.aspx" />
     <Content Include="DetailBlog.html" />
     <Content Include="DetailSlider.aspx" />
@@ -360,6 +361,13 @@
     </Compile>
     <Compile Include="Blog.aspx.designer.cs">
       <DependentUpon>Blog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ctr\ctr_post_fb_slider.ascx.cs">
+      <DependentUpon>ctr_post_fb_slider.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ctr\ctr_post_fb_slider.ascx.designer.cs">
+      <DependentUpon>ctr_post_fb_slider.ascx</DependentUpon>
     </Compile>
     <Compile Include="DetailBlog.aspx.cs">
       <DependentUpon>DetailBlog.aspx</DependentUpon>
