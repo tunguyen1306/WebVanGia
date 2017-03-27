@@ -4,8 +4,8 @@ Container
 div.metro_gallery {
     font-family: Arial;
     font-size: 11px;
-    margin: 20px;
-    background: url(../images/loading.gif) no-repeat 50% 40%;
+    margin: -30px;
+    background: url(../img/loading.gif) no-repeat 50% 40%;
     min-height: 100px;
     -webkit-perspective: 1000px;
        -moz-perspective: 1000px;
@@ -224,12 +224,12 @@ div.tile > a.prev {
 div.tile > a.prev,
 div.metro_lightbox > a.prev {
     left: -24px;
-    background: url('../images/back.png');
+    background: url('../img/back.png');
 }
 div.tile > a.next,
 div.metro_lightbox > a.next {
     right: -24px;
-    background: url('../images/next.png');
+    background: url('../img/next.png');
 }
 div.tile:hover > a,
 div.metro_lightbox:hover > a {
@@ -333,7 +333,7 @@ div.metro_lightbox {
     top: -100%;
     left: 50%;
     z-index: 30;
-    background: url('../images/loader.gif') no-repeat 50% 50% #FFFFFF;
+    background: url('../img/loader.gif') no-repeat 50% 50% #FFFFFF;
     border: 5px solid #000000;
     -webkit-transition: all 0.7s cubic-bezier(0, 1, 1, 1.2);
        -moz-transition: all 0.7s cubic-bezier(0, 1, 1, 1.2);
@@ -363,7 +363,7 @@ div.metro_lightbox div.caption {
     left: 0px;
     right: 0px;
     bottom: -40px;
-    background: url('../images/caption_bg.png');
+    background: url('../img/caption_bg.png');
     background: rgba(0, 0, 0, 0.5);
     color: #FFFFFF;
     height: 20px;

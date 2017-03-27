@@ -216,6 +216,77 @@
                                 </ul>
 
                             </footer>
+                            <script src="content/js/demo.js"></script>
+                            <script src="content/js/hammer.js"></script>
+                            <script src="content/js/jquery.js"></script>
+                            <script src="content/js/masonry.pkgd.min.js"></script>
+                            <script src="content/js/metro_gallery.min.js"></script>
+                            <link href="content/demo.css" rel="stylesheet" />
+                            <link href="content/css/demo.css" rel="stylesheet" />
+                            <link href="content/css/metro_gallery.css" rel="stylesheet" />
+                        
+                             <div id="main">
+            <div class="metro_gallery flip vertical lightbox" style="width:990px;">
+                <div class="tile tile_1x1 blue">
+                    <img src="content/img/rooney.jpg" data-caption="Rooney" />
+                    <img src="content/img/tshirt.jpg" data-caption="ManUtd" />
+                </div>
+                <div class="tile tile_1x1 darkred">
+                    <img src="content/img/king.jpg" data-caption="ManUtd" />
+                </div>
+                <div class="tile tile_1x2 orange">
+                    <img src="content/img/giggs.jpg" data-caption="Giggs" />
+                    <img src="content/img/beckham.jpg" data-caption="Beckham" />
+                </div>
+                <div class="tile tile_2x1 red">
+                    <img src="content/img/ferguson.jpg" data-caption="Ferguson" />
+                    <img src="content/img/rio.jpg" data-caption="ferdinand" />
+                </div>
+                <div class="tile tile_2x2 purple">
+                    <img src="content/img/king.jpg" data-caption="ManUtd" />
+                    <img src="content/img/tshirt.jpg" data-caption="ManUtd" />
+                </div>
+                <div class="tile tile_1x1 darkred">
+                    <img src="content/img/rooney.jpg" data-caption="Rooney" />
+                </div>
+                <div class="tile tile_1x1 grey">
+                    <img src="content/img/tshirt.jpg" data-caption="ManUtd" />
+                    <img src="content/img/ronaldo.jpg" data-caption="Ronaldo" />
+                </div>
+                <div class="tile tile_2x1 orange">
+                    <img src="content/img/paper.jpg" data-caption="ManUtd" />
+                    <img src="content/img/ferguson.jpg" data-caption="Ferguson" />
+                </div>
+                <div class="tile tile_3x3 green">
+                    <img src="content/img/king.jpg" data-caption="ManUtd" />
+                    <img src="content/img/rooney.jpg" data-caption="Rooney" />
+                    <img src="content/img/tshirt.jpg" data-caption="ManUtd" />
+                </div>
+                <div class="tile tile_2x1 purple">
+                    <img src="content/img/rio.jpg" data-caption="ferdinand" />
+                    <img src="content/img/paper.jpg" data-caption="ManUtd" />
+                </div>
+                <div class="tile tile_2x3 yellow">
+                    <img src="content/img/group.jpg" data-caption="Group" />
+                    <img src="content/img/manutd_logo.jpg" data-caption="ManUtd" />
+                </div>
+                <div class="tile tile_4x2 darkblue">
+                    <img src="content/img/ferguson.jpg" data-caption="Ferguson" />
+                    <img src="content/img/paper.jpg" data-caption="ManUtd" />
+                    <img src="content/img/rio.jpg" data-caption="ferdinand" />
+                </div>
+                <div class="tile tile_3x1 darkred">
+                    <img src="content/img/champ.jpg" data-caption="EPL Champion" />
+                    <img src="content/img/cloth.jpg" data-caption="ManUtd" />
+                </div>
+                <div class="tile tile_3x1 darkgreen">
+                    <img src="content/img/wallpaper.jpg" data-caption="ManUtd" />
+                    <img src="content/img/champ.jpg" data-caption="EPL Champion" />
+                </div>
+            </div>
+        </div>
+
+                            <script src="content/demo.js"></script>
                         </section>
 
 

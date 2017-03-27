@@ -1,9 +1,9 @@
 body {
-    margin: 0px;
+    margin: 0px -111px -18px -59px;
     padding-bottom: 50px;
     font-size: 100%;
     background: #EEEEEE;
-    background-image: url('bg.png');
+    background-image: url('../content/img/bg.png');
     background-attachment: fixed;
 }
 

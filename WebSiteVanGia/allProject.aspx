@@ -15,7 +15,7 @@
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="Content_ContentRow" runat="server">
 
-  <%--  <div style="padding-top: 10px; padding-bottom: 90px;" id="video-row">
+    <%--  <div style="padding-top: 10px; padding-bottom: 90px;" id="video-row">
         <div class="row-container visible visible-first">
             <div class="container">
                 <div id="bottom" class="row">
@@ -131,7 +131,7 @@
             </div>
         </div>
     </div>--%>
-    <div class="row-container visible visible-first" style="background-color:#ffffff;">
+    <div class="row-container visible visible-first" style="background-color: #ffffff;">
         <div class="container">
             <div class="content-inner row">
 
@@ -144,33 +144,27 @@
                             <header class="page_header">
                                 <h2 class="visible-first visible"><span class="item_title_part0 item_title_part_odd item_title_part_first_half item_title_part_first">
                                     <asp:Literal ID="lbrShow" runat="server"></asp:Literal><img src="img/VGconstruction.jpg" width="20%" /></span>
-                                    <a class="btn register" style="padding: 10px;margin: 10px 0;background: #54acc9 !important;font: 400 14px/14px 'Ubuntu Condensed', sans-serif; color: #ffffff;" href="plan.aspx" target="_self"><span>Chi phí dự kiến</span></a>
+                                    <a class="btn register" style="padding: 10px; margin: 10px 0; background: #54acc9 !important; font: 400 14px/14px 'Ubuntu Condensed', sans-serif; color: #ffffff;" href="plan.aspx" target="_self"><span>Chi phí dự kiến</span></a>
                                 </h2>
-                               
+
                             </header>
-                          
-                         
-                            <%-- <div class="category_desc">
-        <div class="clr"></div>
-  </div>--%>
-                            <!-- Filter -->
+
+
+
                             <ul class="gallery items-row cols-3 hover_false grid loaded" id="isotopeContainer">
                                 <asp:ListView ID="lvShow" runat="server" DataSourceID="dsProject">
                                     <ItemTemplate>
                                         <li class="gallery-item mix mix_all gallery-grid   firstItem" style="display: inline-block; text-align: center; opacity: 1;">
-                                            <!-- Image  -->
+
                                             <figure class="item_img img-intro img-intro__none cusitem_img">
                                                 <a href="/DetailProject.aspx?id=<%#Eval("vangia_id_project") %>">
 
                                                     <img src="<%#ConfigurationManager.AppSettings["domainvg"]+Eval("originalFilepath").ToString().Split('_')[0]+"/"+Eval("originalFilepath") %>" alt="" style="width: 288px; height: 192px !important;">
-                                                    <%--  <span class="lazy_preloader_inner" style="width: 170px; padding-top: 100%;"></span>--%>
-
-
                                                 </a>
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                                             </figure>
-                                            <!--  title/author -->
+
                                             <div class="item_header cusitem_header">
                                                 <h4 class="item_title visible-first">
                                                     <a href="/DetailProject.aspx?id=<%#Eval("vangia_id_project") %>">
@@ -180,12 +174,11 @@
                                                 </h4>
 
                                             </div>
-                                            <!-- Introtext -->
+
                                             <div class="item_introtext">
-                                                <%-- <%#Eval("vangia_name_project") %>   --%>
                                             </div>
 
-                                            <!-- info BOTTOM -->
+
                                             <div class="clearfix"></div>
                                         </li>
 
@@ -224,75 +217,205 @@
                             <link href="content/demo.css" rel="stylesheet" />
                             <link href="content/css/demo.css" rel="stylesheet" />
                             <link href="content/css/metro_gallery.css" rel="stylesheet" />
-                        
-                             <div id="main">
-            <div class="metro_gallery flip vertical lightbox" style="width:990px;">
-                <div class="tile tile_1x1 blue">
-                    <img src="content/img/rooney.jpg" data-caption="Rooney" />
-                    <img src="content/img/tshirt.jpg" data-caption="ManUtd" />
-                </div>
-                <div class="tile tile_1x1 darkred">
-                    <img src="content/img/king.jpg" data-caption="ManUtd" />
-                </div>
-                <div class="tile tile_1x2 orange">
-                    <img src="content/img/giggs.jpg" data-caption="Giggs" />
-                    <img src="content/img/beckham.jpg" data-caption="Beckham" />
-                </div>
-                <div class="tile tile_2x1 red">
-                    <img src="content/img/ferguson.jpg" data-caption="Ferguson" />
-                    <img src="content/img/rio.jpg" data-caption="ferdinand" />
-                </div>
-                <div class="tile tile_2x2 purple">
-                    <img src="content/img/king.jpg" data-caption="ManUtd" />
-                    <img src="content/img/tshirt.jpg" data-caption="ManUtd" />
-                </div>
-                <div class="tile tile_1x1 darkred">
-                    <img src="content/img/rooney.jpg" data-caption="Rooney" />
-                </div>
-                <div class="tile tile_1x1 grey">
-                    <img src="content/img/tshirt.jpg" data-caption="ManUtd" />
-                    <img src="content/img/ronaldo.jpg" data-caption="Ronaldo" />
-                </div>
-                <div class="tile tile_2x1 orange">
-                    <img src="content/img/paper.jpg" data-caption="ManUtd" />
-                    <img src="content/img/ferguson.jpg" data-caption="Ferguson" />
-                </div>
-                <div class="tile tile_3x3 green">
-                    <img src="content/img/king.jpg" data-caption="ManUtd" />
-                    <img src="content/img/rooney.jpg" data-caption="Rooney" />
-                    <img src="content/img/tshirt.jpg" data-caption="ManUtd" />
-                </div>
-                <div class="tile tile_2x1 purple">
-                    <img src="content/img/rio.jpg" data-caption="ferdinand" />
-                    <img src="content/img/paper.jpg" data-caption="ManUtd" />
-                </div>
-                <div class="tile tile_2x3 yellow">
-                    <img src="content/img/group.jpg" data-caption="Group" />
-                    <img src="content/img/manutd_logo.jpg" data-caption="ManUtd" />
-                </div>
-                <div class="tile tile_4x2 darkblue">
-                    <img src="content/img/ferguson.jpg" data-caption="Ferguson" />
-                    <img src="content/img/paper.jpg" data-caption="ManUtd" />
-                    <img src="content/img/rio.jpg" data-caption="ferdinand" />
-                </div>
-                <div class="tile tile_3x1 darkred">
-                    <img src="content/img/champ.jpg" data-caption="EPL Champion" />
-                    <img src="content/img/cloth.jpg" data-caption="ManUtd" />
-                </div>
-                <div class="tile tile_3x1 darkgreen">
-                    <img src="content/img/wallpaper.jpg" data-caption="ManUtd" />
-                    <img src="content/img/champ.jpg" data-caption="EPL Champion" />
-                </div>
-            </div>
-        </div>
+
+
 
                             <script src="content/demo.js"></script>
+
+
+
                         </section>
 
 
 
                     </main>
+
+                    <div id="main">
+                        <div class="metro_gallery flip vertical lightbox" style="width: 100%;">
+
+                            <asp:Repeater ID="repSlide" runat="server" DataSourceID="dsSlider" OnItemDataBound="repSlide_ItemDataBound">
+                                <ItemTemplate>
+                                    <div class="tile tile_1x1 blue">
+                                        <asp:Repeater ID="rpPicture" runat="server">
+                                            <ItemTemplate>
+
+                                                <img src="<%#ConfigurationManager.AppSettings["domainvg"]+Eval("originalFilepath").ToString().Split('_')[0] +"/"+Eval("originalFilepath")%>" data-caption=" <%# Eval("vangia_name_project") %> " />
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+
+
+                                    </div>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                            <asp:SqlDataSource ID="dsSlider" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand="SELECT * FROM    (SELECT ROW_NUMBER () OVER (ORDER BY web_vangia_project.vangia_id_project desc) AS RowNum,* FROM web_vangia_project where   (vangia_status_project = 1) and vangia_typeid_project=1 ) sub	WHERE RowNum = 1">
+                                <SelectParameters>
+                                    <asp:CookieParameter CookieName="lang" DefaultValue="2" Name="vangia_language_project" />
+                                </SelectParameters>
+                            </asp:SqlDataSource>
+                            <asp:HiddenField runat="server" ID="hdSlide" />
+                            <asp:SqlDataSource ID="dsPicture" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand=" select * from tblSysPicture left join web_vangia_project on web_vangia_project.vangia_id_project=tblSysPicture.advert_id  where advert_id=@vangia_id_project">
+                                <SelectParameters>
+
+                                    <asp:ControlParameter ControlID="hdSlide" DefaultValue="0" Name="vangia_id_project" PropertyName="Value" />
+                                </SelectParameters>
+
+                            </asp:SqlDataSource>
+
+<asp:Repeater ID="repSlide1" runat="server" DataSourceID="dsSlider1" OnItemDataBound="repSlide1_ItemDataBound">
+                                <ItemTemplate>
+                                    <div class="tile tile_1x1 darkred">
+                                        <asp:Repeater ID="rpPicture1" runat="server">
+                                            <ItemTemplate>
+
+                                                <img src="<%#ConfigurationManager.AppSettings["domainvg"]+Eval("originalFilepath").ToString().Split('_')[0] +"/"+Eval("originalFilepath")%>" data-caption=" <%# Eval("vangia_name_project") %> " />
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+
+
+                                    </div>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                            <asp:SqlDataSource ID="dsSlider1" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand="SELECT * FROM    (SELECT ROW_NUMBER () OVER (ORDER BY web_vangia_project.vangia_id_project desc) AS RowNum,* FROM web_vangia_project where   (vangia_status_project = 1) and vangia_typeid_project=1 ) sub	WHERE RowNum = 2">
+                                <SelectParameters>
+                                    <asp:CookieParameter CookieName="lang" DefaultValue="2" Name="vangia_language_project" />
+                                </SelectParameters>
+                            </asp:SqlDataSource>
+                            <asp:HiddenField runat="server" ID="hdSlide1" />
+                            <asp:SqlDataSource ID="dsPicture1" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand=" select * from tblSysPicture left join web_vangia_project on web_vangia_project.vangia_id_project=tblSysPicture.advert_id  where advert_id=@vangia_id_project">
+                                <SelectParameters>
+
+                                    <asp:ControlParameter ControlID="hdSlide1" DefaultValue="0" Name="vangia_id_project" PropertyName="Value" />
+                                </SelectParameters>
+
+                            </asp:SqlDataSource>
+
+<asp:Repeater ID="repSlide2" runat="server" DataSourceID="dsSlider2" OnItemDataBound="repSlide2_ItemDataBound">
+                                <ItemTemplate>
+                                    <div class="tile tile_1x2 orange">
+                                        <asp:Repeater ID="rpPicture2" runat="server">
+                                            <ItemTemplate>
+
+                                                <img src="<%#ConfigurationManager.AppSettings["domainvg"]+Eval("originalFilepath").ToString().Split('_')[0] +"/"+Eval("originalFilepath")%>" data-caption=" <%# Eval("vangia_name_project") %> " />
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+
+
+                                    </div>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                            <asp:SqlDataSource ID="dsSlider2" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand="SELECT * FROM    (SELECT ROW_NUMBER () OVER (ORDER BY web_vangia_project.vangia_id_project desc) AS RowNum,* FROM web_vangia_project where   (vangia_status_project = 1) and vangia_typeid_project=1 ) sub	WHERE RowNum = 3">
+                                <SelectParameters>
+                                    <asp:CookieParameter CookieName="lang" DefaultValue="2" Name="vangia_language_project" />
+                                </SelectParameters>
+                            </asp:SqlDataSource>
+                            <asp:HiddenField runat="server" ID="hdSlide2" />
+                            <asp:SqlDataSource ID="dsPicture2" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand=" select * from tblSysPicture left join web_vangia_project on web_vangia_project.vangia_id_project=tblSysPicture.advert_id  where advert_id=@vangia_id_project">
+                                <SelectParameters>
+
+                                    <asp:ControlParameter ControlID="hdSlide2" DefaultValue="0" Name="vangia_id_project" PropertyName="Value" />
+                                </SelectParameters>
+
+                            </asp:SqlDataSource>
+                            <asp:Repeater ID="repSlide3" runat="server" DataSourceID="dsSlider3" OnItemDataBound="repSlide3_ItemDataBound">
+                                <ItemTemplate>
+                                    <div class="tile tile_2x1 red">
+                                        <asp:Repeater ID="rpPicture3" runat="server">
+                                            <ItemTemplate>
+
+                                                <img src="<%#ConfigurationManager.AppSettings["domainvg"]+Eval("originalFilepath").ToString().Split('_')[0] +"/"+Eval("originalFilepath")%>" data-caption=" <%# Eval("vangia_name_project") %> " />
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+
+
+                                    </div>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                            <asp:SqlDataSource ID="dsSlider3" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand="SELECT * FROM    (SELECT ROW_NUMBER () OVER (ORDER BY web_vangia_project.vangia_id_project desc) AS RowNum,* FROM web_vangia_project where   (vangia_status_project = 1) and vangia_typeid_project=1 ) sub	WHERE RowNum = 4">
+                                <SelectParameters>
+                                    <asp:CookieParameter CookieName="lang" DefaultValue="2" Name="vangia_language_project" />
+                                </SelectParameters>
+                            </asp:SqlDataSource>
+                            <asp:HiddenField runat="server" ID="hdSlide3" />
+                            <asp:SqlDataSource ID="dsPicture3" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand=" select * from tblSysPicture left join web_vangia_project on web_vangia_project.vangia_id_project=tblSysPicture.advert_id  where advert_id=@vangia_id_project">
+                                <SelectParameters>
+
+                                    <asp:ControlParameter ControlID="hdSlide3" DefaultValue="0" Name="vangia_id_project" PropertyName="Value" />
+                                </SelectParameters>
+
+                            </asp:SqlDataSource>
+<asp:Repeater ID="repSlide4" runat="server" DataSourceID="dsSlider4" OnItemDataBound="repSlide4_ItemDataBound">
+                                <ItemTemplate>
+                                    <div class="tile tile_2x2 purple">
+                                        <asp:Repeater ID="rpPicture4" runat="server">
+                                            <ItemTemplate>
+
+                                                <img src="<%#ConfigurationManager.AppSettings["domainvg"]+Eval("originalFilepath").ToString().Split('_')[0] +"/"+Eval("originalFilepath")%>" data-caption=" <%# Eval("vangia_name_project") %> " />
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+
+
+                                    </div>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                            <asp:SqlDataSource ID="dsSlider4" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand="SELECT * FROM    (SELECT ROW_NUMBER () OVER (ORDER BY web_vangia_project.vangia_id_project desc) AS RowNum,* FROM web_vangia_project where   (vangia_status_project = 1) and vangia_typeid_project=1 ) sub	WHERE RowNum = 5">
+                                <SelectParameters>
+                                    <asp:CookieParameter CookieName="lang" DefaultValue="2" Name="vangia_language_project" />
+                                </SelectParameters>
+                            </asp:SqlDataSource>
+                            <asp:HiddenField runat="server" ID="hdSlide4" />
+                            <asp:SqlDataSource ID="dsPicture4" runat="server" ConnectionString="<%$ ConnectionStrings:VanGiaConnectString %>" SelectCommand=" select * from tblSysPicture left join web_vangia_project on web_vangia_project.vangia_id_project=tblSysPicture.advert_id  where advert_id=@vangia_id_project">
+                                <SelectParameters>
+
+                                    <asp:ControlParameter ControlID="hdSlide4" DefaultValue="0" Name="vangia_id_project" PropertyName="Value" />
+                                </SelectParameters>
+
+                            </asp:SqlDataSource>
+                          
+                         
+                            <div class="tile tile_1x1 darkred">
+                                <img src="content/img/rooney.jpg" data-caption="Rooney" />
+                            </div>
+                            <div class="tile tile_1x1 grey">
+                                <img src="content/img/tshirt.jpg" data-caption="ManUtd" />
+                                <img src="content/img/ronaldo.jpg" data-caption="Ronaldo" />
+                            </div>
+                            <div class="tile tile_2x1 orange">
+                                <img src="content/img/paper.jpg" data-caption="ManUtd" />
+                                <img src="content/img/ferguson.jpg" data-caption="Ferguson" />
+                            </div>
+                            <div class="tile tile_3x3 green">
+                                <img src="content/img/king.jpg" data-caption="ManUtd" />
+                                <img src="content/img/rooney.jpg" data-caption="Rooney" />
+                                <img src="content/img/tshirt.jpg" data-caption="ManUtd" />
+                            </div>
+                            <div class="tile tile_2x1 purple">
+                                <img src="content/img/rio.jpg" data-caption="ferdinand" />
+                                <img src="content/img/paper.jpg" data-caption="ManUtd" />
+                            </div>
+                            <div class="tile tile_2x3 yellow">
+                                <img src="img/09.jpg" data-caption="Group" />
+                                <img src="content/img/manutd_logo.jpg" data-caption="ManUtd" />
+                            </div>
+                            <div class="tile tile_4x2 darkblue">
+                                <img src="content/img/ferguson.jpg" data-caption="Ferguson" />
+                                <img src="content/img/paper.jpg" data-caption="ManUtd" />
+                                <img src="content/img/rio.jpg" data-caption="ferdinand" />
+                            </div>
+                            <div class="tile tile_3x1 darkred">
+                                <img src="content/img/champ.jpg" data-caption="EPL Champion" />
+                                <img src="content/img/cloth.jpg" data-caption="ManUtd" />
+                            </div>
+                            <div class="tile tile_3x1 darkgreen">
+                                <img src="content/img/wallpaper.jpg" data-caption="ManUtd" />
+                                <img src="content/img/champ.jpg" data-caption="EPL Champion" />
+                            </div>
+                        </div>
+                    </div>
+
+
+
                 </div>
+
             </div>
         </div>
     </div>
@@ -306,7 +429,7 @@
 
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="Content_MainBottomRow" runat="server">
-   <%-- <div style="background-position: 50% -7.5px;" id="mainbottom-row" data-stellar-background-ratio="0.5">
+    <%-- <div style="background-position: 50% -7.5px;" id="mainbottom-row" data-stellar-background-ratio="0.5">
         <div class="row-container visible-first visible">
             <div class="container">
                 <div id="mainbottom" class="row">
@@ -403,5 +526,5 @@
     </asp:SqlDataSource>--%>
 </asp:Content>
 <asp:Content ID="Content7" ContentPlaceHolderID="ContentFooter" runat="server">
-   <%-- <uc1:ctr_footer runat="server" ID="ctr_footer" />--%>
+    <%-- <uc1:ctr_footer runat="server" ID="ctr_footer" />--%>
 </asp:Content>

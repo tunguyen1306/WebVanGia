@@ -1,17 +1,17 @@
-$(document).ready(function() {
-    $("#setting_switch").on("click", function(e) {
+jQuery(document).ready(function () {
+    jQuery("#setting_switch").on("click", function (e) {
         e.preventDefault();
         e.stopPropagation();
 
-        $(this).toggleClass("active");
-        $("#settings").toggleClass("active");
+        jQuery(this).toggleClass("active");
+        jQuery("#settings").toggleClass("active");
     });
 
-    $(document).on("click", function(e) {
-        $("#settings").removeClass("active");
+    jQuery(document).on("click", function (e) {
+        jQuery("#settings").removeClass("active");
     });
 
-    $("#settings").on("click", function(e) {
+    jQuery("#settings").on("click", function (e) {
         e.stopPropagation();
     });
 });

@@ -1,5 +1,5 @@
-$(document).ready(function() {
-    $('#gallery_setting_apply').click(applySettings);
+jQuery(document).ready(function() {
+    jQuery('#gallery_setting_apply').click(applySettings);
 });
 
 
@@ -21,7 +21,7 @@ function toggleLightbox(checked) {
 
 function changeDirection(direction) {
     Metro_Gallery._tiles.each(function(index) {
-        var tile      = $(this);
+        var tile      = jQuery(this);
         var container = tile.parent();
         var scroller  = tile.find('.scroller');
         var images    = scroller.children('img');
@@ -52,7 +52,7 @@ function changeColour(colour) {
     } else {
         Metro_Gallery._tiles.each(function() {
             var random_colour = colour_array[Math.floor(Math.random() * (colour_array.length - 1))];
-            $(this).addClass(random_colour);
+            jQuery(this).addClass(random_colour);
         });
     }
 }
@@ -64,8 +64,8 @@ function changeWidth(column) {
         Metro_Gallery._containers.width('auto');
     }
 
-    $('.metro_gallery').each(function() {
-        $(this).data('msnry').layout();
+    jQuery('.metro_gallery').each(function() {
+        jQuery(this).data('msnry').layout();
     });
 }
 
@@ -77,7 +77,7 @@ function changeAnimation(animation) {
 
         Metro_Gallery._tiles.removeClass('loaded').addClass('animating');
         Metro_Gallery._tiles.each(function(index) {
-            var tile = $(this);
+            var tile = jQuery(this);
 
             setTimeout(function() {
                 tile.addClass('loaded');
@@ -96,9 +96,9 @@ function changeAnimation(animation) {
 }
 
 function applySettings() {
-    var base_size = validateInt($('#base_size'), 100, 40, false);
-    var gutter    = validateInt($('#gutter'), 10, 0, true);
-    var scale     = validateFloat($('#scale'), 1.4);
+    var base_size = validateInt(jQuery('#base_size'), 100, 40, false);
+    var gutter    = validateInt(jQuery('#gutter'), 10, 0, true);
+    var scale     = validateFloat(jQuery('#scale'), 1.4);
 
     Metro_Gallery.setOptions({
         base_size: base_size,
@@ -107,19 +107,19 @@ function applySettings() {
     });
 
     Metro_Gallery._containers.each(function() {
-        var msnry = $(this).data('msnry');
+        var msnry = jQuery(this).data('msnry');
         if (msnry) {
             msnry.destroy();
         }
     });
 
-    $('style').remove();
+    jQuery('style').remove();
     Metro_Gallery._buildStyles();
 
     var column_width = Metro_Gallery._configs.base_size + Metro_Gallery._configs.gutter;
 
     Metro_Gallery._containers.each(function() {
-        var container  = $(this);
+        var container  = jQuery(this);
 
         var msnry = new Masonry(container.get(0), {
             itemSelector :      '.tile',
@@ -128,12 +128,12 @@ function applySettings() {
         });
         container.data('msnry', msnry);
     });
-    $('#column_num').change();
+    jQuery('#column_num').change();
 }
 
 
 var validateInt = function(element, default_value, min, allow_zero) {
-    var value = parseInt($.trim(element.val()), 10);
+    var value = parseInt(jQuery.trim(element.val()), 10);
 
     if (isNaN(value) || (!allow_zero && value <= 0)) {
         value = default_value;
@@ -147,7 +147,7 @@ var validateInt = function(element, default_value, min, allow_zero) {
 };
 
 var validateFloat = function(element, default_value) {
-    var value = parseFloat($.trim(element.val()));
+    var value = parseFloat(jQuery.trim(element.val()));
 
     if (isNaN(value) || value < 1) {
         value = default_value;

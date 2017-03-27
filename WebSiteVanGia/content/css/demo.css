@@ -1,9 +1,9 @@
 /* Demo */
 #main {
-    padding: 20px;
+    padding: 40px;
 }
 #main.loading {
-    background: url('../images/loading.gif') no-repeat 50% 40px;
+    background: url('../img/loading.gif') no-repeat 50% 40px;
 }
 #main.loading .metro_gallery {
     opacity: 0;
