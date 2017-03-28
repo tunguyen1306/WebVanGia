@@ -20,7 +20,9 @@ function toggleLightbox(checked) {
 }
 
 function changeDirection(direction) {
-    Metro_Gallery._tiles.each(function(index) {
+    
+    Metro_Gallery._tiles.each(function (index) {
+     
         var tile      = jQuery(this);
         var container = tile.parent();
         var scroller  = tile.find('.scroller');

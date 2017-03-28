@@ -4,7 +4,7 @@ Container
 div.metro_gallery {
     font-family: Arial;
     font-size: 11px;
-    margin: -30px;
+    margin: 0px;
     background: url(../img/loading.gif) no-repeat 50% 40%;
     min-height: 100px;
     -webkit-perspective: 1000px;

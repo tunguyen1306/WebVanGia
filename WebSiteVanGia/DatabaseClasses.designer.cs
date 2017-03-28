@@ -96,9 +96,6 @@ namespace WebSiteVanGia
     partial void Insertstore_cate(store_cate instance);
     partial void Updatestore_cate(store_cate instance);
     partial void Deletestore_cate(store_cate instance);
-    partial void Insertweb_vangia_project(web_vangia_project instance);
-    partial void Updateweb_vangia_project(web_vangia_project instance);
-    partial void Deleteweb_vangia_project(web_vangia_project instance);
     partial void Insertstore_com_type(store_com_type instance);
     partial void Updatestore_com_type(store_com_type instance);
     partial void Deletestore_com_type(store_com_type instance);
@@ -264,6 +261,9 @@ namespace WebSiteVanGia
     partial void InserttblSysPicture(tblSysPicture instance);
     partial void UpdatetblSysPicture(tblSysPicture instance);
     partial void DeletetblSysPicture(tblSysPicture instance);
+    partial void Insertweb_vangia_project(web_vangia_project instance);
+    partial void Updateweb_vangia_project(web_vangia_project instance);
+    partial void Deleteweb_vangia_project(web_vangia_project instance);
     #endregion
 		
 		public DatabaseClassesDataContext() : 
@@ -501,14 +501,6 @@ namespace WebSiteVanGia
 			get
 			{
 				return this.GetTable<store_cate>();
-			}
-		}
-		
-		public System.Data.Linq.Table<web_vangia_project> web_vangia_projects
-		{
-			get
-			{
-				return this.GetTable<web_vangia_project>();
 			}
 		}
 		
@@ -1101,6 +1093,14 @@ namespace WebSiteVanGia
 			get
 			{
 				return this.GetTable<tblSysPicture>();
+			}
+		}
+		
+		public System.Data.Linq.Table<web_vangia_project> web_vangia_projects
+		{
+			get
+			{
+				return this.GetTable<web_vangia_project>();
 			}
 		}
 	}
@@ -5720,308 +5720,6 @@ namespace WebSiteVanGia
 					this._store_cate_img = value;
 					this.SendPropertyChanged("store_cate_img");
 					this.Onstore_cate_imgChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.web_vangia_project")]
-	public partial class web_vangia_project : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _vangia_id_project;
-		
-		private string _vangia_img1_project;
-		
-		private string _vangia_img2_project;
-		
-		private string _vangia_img3_project;
-		
-		private string _vangia_img_project;
-		
-		private string _vangia_content_project;
-		
-		private string _vangia_name_project;
-		
-		private string _vangia_time_project;
-		
-		private System.Nullable<int> _vangia_status_project;
-		
-		private System.Nullable<int> _vangia_order_project;
-		
-		private System.Nullable<int> _vangia_language_project;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onvangia_id_projectChanging(int value);
-    partial void Onvangia_id_projectChanged();
-    partial void Onvangia_img1_projectChanging(string value);
-    partial void Onvangia_img1_projectChanged();
-    partial void Onvangia_img2_projectChanging(string value);
-    partial void Onvangia_img2_projectChanged();
-    partial void Onvangia_img3_projectChanging(string value);
-    partial void Onvangia_img3_projectChanged();
-    partial void Onvangia_img_projectChanging(string value);
-    partial void Onvangia_img_projectChanged();
-    partial void Onvangia_content_projectChanging(string value);
-    partial void Onvangia_content_projectChanged();
-    partial void Onvangia_name_projectChanging(string value);
-    partial void Onvangia_name_projectChanged();
-    partial void Onvangia_time_projectChanging(string value);
-    partial void Onvangia_time_projectChanged();
-    partial void Onvangia_status_projectChanging(System.Nullable<int> value);
-    partial void Onvangia_status_projectChanged();
-    partial void Onvangia_order_projectChanging(System.Nullable<int> value);
-    partial void Onvangia_order_projectChanged();
-    partial void Onvangia_language_projectChanging(System.Nullable<int> value);
-    partial void Onvangia_language_projectChanged();
-    #endregion
-		
-		public web_vangia_project()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_id_project", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int vangia_id_project
-		{
-			get
-			{
-				return this._vangia_id_project;
-			}
-			set
-			{
-				if ((this._vangia_id_project != value))
-				{
-					this.Onvangia_id_projectChanging(value);
-					this.SendPropertyChanging();
-					this._vangia_id_project = value;
-					this.SendPropertyChanged("vangia_id_project");
-					this.Onvangia_id_projectChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_img1_project", DbType="NText", UpdateCheck=UpdateCheck.Never)]
-		public string vangia_img1_project
-		{
-			get
-			{
-				return this._vangia_img1_project;
-			}
-			set
-			{
-				if ((this._vangia_img1_project != value))
-				{
-					this.Onvangia_img1_projectChanging(value);
-					this.SendPropertyChanging();
-					this._vangia_img1_project = value;
-					this.SendPropertyChanged("vangia_img1_project");
-					this.Onvangia_img1_projectChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_img2_project", DbType="NText", UpdateCheck=UpdateCheck.Never)]
-		public string vangia_img2_project
-		{
-			get
-			{
-				return this._vangia_img2_project;
-			}
-			set
-			{
-				if ((this._vangia_img2_project != value))
-				{
-					this.Onvangia_img2_projectChanging(value);
-					this.SendPropertyChanging();
-					this._vangia_img2_project = value;
-					this.SendPropertyChanged("vangia_img2_project");
-					this.Onvangia_img2_projectChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_img3_project", DbType="NText", UpdateCheck=UpdateCheck.Never)]
-		public string vangia_img3_project
-		{
-			get
-			{
-				return this._vangia_img3_project;
-			}
-			set
-			{
-				if ((this._vangia_img3_project != value))
-				{
-					this.Onvangia_img3_projectChanging(value);
-					this.SendPropertyChanging();
-					this._vangia_img3_project = value;
-					this.SendPropertyChanged("vangia_img3_project");
-					this.Onvangia_img3_projectChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_img_project", DbType="NText", UpdateCheck=UpdateCheck.Never)]
-		public string vangia_img_project
-		{
-			get
-			{
-				return this._vangia_img_project;
-			}
-			set
-			{
-				if ((this._vangia_img_project != value))
-				{
-					this.Onvangia_img_projectChanging(value);
-					this.SendPropertyChanging();
-					this._vangia_img_project = value;
-					this.SendPropertyChanged("vangia_img_project");
-					this.Onvangia_img_projectChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_content_project", DbType="NText", UpdateCheck=UpdateCheck.Never)]
-		public string vangia_content_project
-		{
-			get
-			{
-				return this._vangia_content_project;
-			}
-			set
-			{
-				if ((this._vangia_content_project != value))
-				{
-					this.Onvangia_content_projectChanging(value);
-					this.SendPropertyChanging();
-					this._vangia_content_project = value;
-					this.SendPropertyChanged("vangia_content_project");
-					this.Onvangia_content_projectChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_name_project", DbType="NText", UpdateCheck=UpdateCheck.Never)]
-		public string vangia_name_project
-		{
-			get
-			{
-				return this._vangia_name_project;
-			}
-			set
-			{
-				if ((this._vangia_name_project != value))
-				{
-					this.Onvangia_name_projectChanging(value);
-					this.SendPropertyChanging();
-					this._vangia_name_project = value;
-					this.SendPropertyChanged("vangia_name_project");
-					this.Onvangia_name_projectChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_time_project", DbType="NVarChar(200)")]
-		public string vangia_time_project
-		{
-			get
-			{
-				return this._vangia_time_project;
-			}
-			set
-			{
-				if ((this._vangia_time_project != value))
-				{
-					this.Onvangia_time_projectChanging(value);
-					this.SendPropertyChanging();
-					this._vangia_time_project = value;
-					this.SendPropertyChanged("vangia_time_project");
-					this.Onvangia_time_projectChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_status_project", DbType="Int")]
-		public System.Nullable<int> vangia_status_project
-		{
-			get
-			{
-				return this._vangia_status_project;
-			}
-			set
-			{
-				if ((this._vangia_status_project != value))
-				{
-					this.Onvangia_status_projectChanging(value);
-					this.SendPropertyChanging();
-					this._vangia_status_project = value;
-					this.SendPropertyChanged("vangia_status_project");
-					this.Onvangia_status_projectChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_order_project", DbType="Int")]
-		public System.Nullable<int> vangia_order_project
-		{
-			get
-			{
-				return this._vangia_order_project;
-			}
-			set
-			{
-				if ((this._vangia_order_project != value))
-				{
-					this.Onvangia_order_projectChanging(value);
-					this.SendPropertyChanging();
-					this._vangia_order_project = value;
-					this.SendPropertyChanged("vangia_order_project");
-					this.Onvangia_order_projectChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_language_project", DbType="Int")]
-		public System.Nullable<int> vangia_language_project
-		{
-			get
-			{
-				return this._vangia_language_project;
-			}
-			set
-			{
-				if ((this._vangia_language_project != value))
-				{
-					this.Onvangia_language_projectChanging(value);
-					this.SendPropertyChanging();
-					this._vangia_language_project = value;
-					this.SendPropertyChanged("vangia_language_project");
-					this.Onvangia_language_projectChanged();
 				}
 			}
 		}
@@ -18993,6 +18691,548 @@ namespace WebSiteVanGia
 					this._shortdescription = value;
 					this.SendPropertyChanged("shortdescription");
 					this.OnshortdescriptionChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.web_vangia_project")]
+	public partial class web_vangia_project : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _vangia_id_project;
+		
+		private string _vangia_img1_project;
+		
+		private string _vangia_img2_project;
+		
+		private string _vangia_img3_project;
+		
+		private string _vangia_img_project;
+		
+		private string _vangia_content_project;
+		
+		private string _vangia_name_project;
+		
+		private string _vangia_time_project;
+		
+		private System.Nullable<int> _vangia_status_project;
+		
+		private System.Nullable<int> _vangia_order_project;
+		
+		private System.Nullable<int> _vangia_language_project;
+		
+		private string _vangia_tomtat_project;
+		
+		private System.Nullable<int> _vangia_typeid_project;
+		
+		private string _vangia_img4_project;
+		
+		private string _vangia_img5_project;
+		
+		private string _vangia_img6_project;
+		
+		private string _vangia_img7_project;
+		
+		private string _vangia_img8_project;
+		
+		private string _vangia_img9_project;
+		
+		private string _vangia_vanban_project;
+		
+		private string _vangia_link_video_project;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Onvangia_id_projectChanging(int value);
+    partial void Onvangia_id_projectChanged();
+    partial void Onvangia_img1_projectChanging(string value);
+    partial void Onvangia_img1_projectChanged();
+    partial void Onvangia_img2_projectChanging(string value);
+    partial void Onvangia_img2_projectChanged();
+    partial void Onvangia_img3_projectChanging(string value);
+    partial void Onvangia_img3_projectChanged();
+    partial void Onvangia_img_projectChanging(string value);
+    partial void Onvangia_img_projectChanged();
+    partial void Onvangia_content_projectChanging(string value);
+    partial void Onvangia_content_projectChanged();
+    partial void Onvangia_name_projectChanging(string value);
+    partial void Onvangia_name_projectChanged();
+    partial void Onvangia_time_projectChanging(string value);
+    partial void Onvangia_time_projectChanged();
+    partial void Onvangia_status_projectChanging(System.Nullable<int> value);
+    partial void Onvangia_status_projectChanged();
+    partial void Onvangia_order_projectChanging(System.Nullable<int> value);
+    partial void Onvangia_order_projectChanged();
+    partial void Onvangia_language_projectChanging(System.Nullable<int> value);
+    partial void Onvangia_language_projectChanged();
+    partial void Onvangia_tomtat_projectChanging(string value);
+    partial void Onvangia_tomtat_projectChanged();
+    partial void Onvangia_typeid_projectChanging(System.Nullable<int> value);
+    partial void Onvangia_typeid_projectChanged();
+    partial void Onvangia_img4_projectChanging(string value);
+    partial void Onvangia_img4_projectChanged();
+    partial void Onvangia_img5_projectChanging(string value);
+    partial void Onvangia_img5_projectChanged();
+    partial void Onvangia_img6_projectChanging(string value);
+    partial void Onvangia_img6_projectChanged();
+    partial void Onvangia_img7_projectChanging(string value);
+    partial void Onvangia_img7_projectChanged();
+    partial void Onvangia_img8_projectChanging(string value);
+    partial void Onvangia_img8_projectChanged();
+    partial void Onvangia_img9_projectChanging(string value);
+    partial void Onvangia_img9_projectChanged();
+    partial void Onvangia_vanban_projectChanging(string value);
+    partial void Onvangia_vanban_projectChanged();
+    partial void Onvangia_link_video_projectChanging(string value);
+    partial void Onvangia_link_video_projectChanged();
+    #endregion
+		
+		public web_vangia_project()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_id_project", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int vangia_id_project
+		{
+			get
+			{
+				return this._vangia_id_project;
+			}
+			set
+			{
+				if ((this._vangia_id_project != value))
+				{
+					this.Onvangia_id_projectChanging(value);
+					this.SendPropertyChanging();
+					this._vangia_id_project = value;
+					this.SendPropertyChanged("vangia_id_project");
+					this.Onvangia_id_projectChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_img1_project", DbType="NText", UpdateCheck=UpdateCheck.Never)]
+		public string vangia_img1_project
+		{
+			get
+			{
+				return this._vangia_img1_project;
+			}
+			set
+			{
+				if ((this._vangia_img1_project != value))
+				{
+					this.Onvangia_img1_projectChanging(value);
+					this.SendPropertyChanging();
+					this._vangia_img1_project = value;
+					this.SendPropertyChanged("vangia_img1_project");
+					this.Onvangia_img1_projectChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_img2_project", DbType="NText", UpdateCheck=UpdateCheck.Never)]
+		public string vangia_img2_project
+		{
+			get
+			{
+				return this._vangia_img2_project;
+			}
+			set
+			{
+				if ((this._vangia_img2_project != value))
+				{
+					this.Onvangia_img2_projectChanging(value);
+					this.SendPropertyChanging();
+					this._vangia_img2_project = value;
+					this.SendPropertyChanged("vangia_img2_project");
+					this.Onvangia_img2_projectChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_img3_project", DbType="NText", UpdateCheck=UpdateCheck.Never)]
+		public string vangia_img3_project
+		{
+			get
+			{
+				return this._vangia_img3_project;
+			}
+			set
+			{
+				if ((this._vangia_img3_project != value))
+				{
+					this.Onvangia_img3_projectChanging(value);
+					this.SendPropertyChanging();
+					this._vangia_img3_project = value;
+					this.SendPropertyChanged("vangia_img3_project");
+					this.Onvangia_img3_projectChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_img_project", DbType="NText", UpdateCheck=UpdateCheck.Never)]
+		public string vangia_img_project
+		{
+			get
+			{
+				return this._vangia_img_project;
+			}
+			set
+			{
+				if ((this._vangia_img_project != value))
+				{
+					this.Onvangia_img_projectChanging(value);
+					this.SendPropertyChanging();
+					this._vangia_img_project = value;
+					this.SendPropertyChanged("vangia_img_project");
+					this.Onvangia_img_projectChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_content_project", DbType="NText", UpdateCheck=UpdateCheck.Never)]
+		public string vangia_content_project
+		{
+			get
+			{
+				return this._vangia_content_project;
+			}
+			set
+			{
+				if ((this._vangia_content_project != value))
+				{
+					this.Onvangia_content_projectChanging(value);
+					this.SendPropertyChanging();
+					this._vangia_content_project = value;
+					this.SendPropertyChanged("vangia_content_project");
+					this.Onvangia_content_projectChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_name_project", DbType="NText", UpdateCheck=UpdateCheck.Never)]
+		public string vangia_name_project
+		{
+			get
+			{
+				return this._vangia_name_project;
+			}
+			set
+			{
+				if ((this._vangia_name_project != value))
+				{
+					this.Onvangia_name_projectChanging(value);
+					this.SendPropertyChanging();
+					this._vangia_name_project = value;
+					this.SendPropertyChanged("vangia_name_project");
+					this.Onvangia_name_projectChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_time_project", DbType="NVarChar(200)")]
+		public string vangia_time_project
+		{
+			get
+			{
+				return this._vangia_time_project;
+			}
+			set
+			{
+				if ((this._vangia_time_project != value))
+				{
+					this.Onvangia_time_projectChanging(value);
+					this.SendPropertyChanging();
+					this._vangia_time_project = value;
+					this.SendPropertyChanged("vangia_time_project");
+					this.Onvangia_time_projectChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_status_project", DbType="Int")]
+		public System.Nullable<int> vangia_status_project
+		{
+			get
+			{
+				return this._vangia_status_project;
+			}
+			set
+			{
+				if ((this._vangia_status_project != value))
+				{
+					this.Onvangia_status_projectChanging(value);
+					this.SendPropertyChanging();
+					this._vangia_status_project = value;
+					this.SendPropertyChanged("vangia_status_project");
+					this.Onvangia_status_projectChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_order_project", DbType="Int")]
+		public System.Nullable<int> vangia_order_project
+		{
+			get
+			{
+				return this._vangia_order_project;
+			}
+			set
+			{
+				if ((this._vangia_order_project != value))
+				{
+					this.Onvangia_order_projectChanging(value);
+					this.SendPropertyChanging();
+					this._vangia_order_project = value;
+					this.SendPropertyChanged("vangia_order_project");
+					this.Onvangia_order_projectChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_language_project", DbType="Int")]
+		public System.Nullable<int> vangia_language_project
+		{
+			get
+			{
+				return this._vangia_language_project;
+			}
+			set
+			{
+				if ((this._vangia_language_project != value))
+				{
+					this.Onvangia_language_projectChanging(value);
+					this.SendPropertyChanging();
+					this._vangia_language_project = value;
+					this.SendPropertyChanged("vangia_language_project");
+					this.Onvangia_language_projectChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_tomtat_project", DbType="NText", UpdateCheck=UpdateCheck.Never)]
+		public string vangia_tomtat_project
+		{
+			get
+			{
+				return this._vangia_tomtat_project;
+			}
+			set
+			{
+				if ((this._vangia_tomtat_project != value))
+				{
+					this.Onvangia_tomtat_projectChanging(value);
+					this.SendPropertyChanging();
+					this._vangia_tomtat_project = value;
+					this.SendPropertyChanged("vangia_tomtat_project");
+					this.Onvangia_tomtat_projectChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_typeid_project", DbType="Int")]
+		public System.Nullable<int> vangia_typeid_project
+		{
+			get
+			{
+				return this._vangia_typeid_project;
+			}
+			set
+			{
+				if ((this._vangia_typeid_project != value))
+				{
+					this.Onvangia_typeid_projectChanging(value);
+					this.SendPropertyChanging();
+					this._vangia_typeid_project = value;
+					this.SendPropertyChanged("vangia_typeid_project");
+					this.Onvangia_typeid_projectChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_img4_project", DbType="NText", UpdateCheck=UpdateCheck.Never)]
+		public string vangia_img4_project
+		{
+			get
+			{
+				return this._vangia_img4_project;
+			}
+			set
+			{
+				if ((this._vangia_img4_project != value))
+				{
+					this.Onvangia_img4_projectChanging(value);
+					this.SendPropertyChanging();
+					this._vangia_img4_project = value;
+					this.SendPropertyChanged("vangia_img4_project");
+					this.Onvangia_img4_projectChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_img5_project", DbType="NText", UpdateCheck=UpdateCheck.Never)]
+		public string vangia_img5_project
+		{
+			get
+			{
+				return this._vangia_img5_project;
+			}
+			set
+			{
+				if ((this._vangia_img5_project != value))
+				{
+					this.Onvangia_img5_projectChanging(value);
+					this.SendPropertyChanging();
+					this._vangia_img5_project = value;
+					this.SendPropertyChanged("vangia_img5_project");
+					this.Onvangia_img5_projectChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_img6_project", DbType="NText", UpdateCheck=UpdateCheck.Never)]
+		public string vangia_img6_project
+		{
+			get
+			{
+				return this._vangia_img6_project;
+			}
+			set
+			{
+				if ((this._vangia_img6_project != value))
+				{
+					this.Onvangia_img6_projectChanging(value);
+					this.SendPropertyChanging();
+					this._vangia_img6_project = value;
+					this.SendPropertyChanged("vangia_img6_project");
+					this.Onvangia_img6_projectChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_img7_project", DbType="NText", UpdateCheck=UpdateCheck.Never)]
+		public string vangia_img7_project
+		{
+			get
+			{
+				return this._vangia_img7_project;
+			}
+			set
+			{
+				if ((this._vangia_img7_project != value))
+				{
+					this.Onvangia_img7_projectChanging(value);
+					this.SendPropertyChanging();
+					this._vangia_img7_project = value;
+					this.SendPropertyChanged("vangia_img7_project");
+					this.Onvangia_img7_projectChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_img8_project", DbType="NText", UpdateCheck=UpdateCheck.Never)]
+		public string vangia_img8_project
+		{
+			get
+			{
+				return this._vangia_img8_project;
+			}
+			set
+			{
+				if ((this._vangia_img8_project != value))
+				{
+					this.Onvangia_img8_projectChanging(value);
+					this.SendPropertyChanging();
+					this._vangia_img8_project = value;
+					this.SendPropertyChanged("vangia_img8_project");
+					this.Onvangia_img8_projectChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_img9_project", DbType="NText", UpdateCheck=UpdateCheck.Never)]
+		public string vangia_img9_project
+		{
+			get
+			{
+				return this._vangia_img9_project;
+			}
+			set
+			{
+				if ((this._vangia_img9_project != value))
+				{
+					this.Onvangia_img9_projectChanging(value);
+					this.SendPropertyChanging();
+					this._vangia_img9_project = value;
+					this.SendPropertyChanged("vangia_img9_project");
+					this.Onvangia_img9_projectChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_vanban_project", DbType="NVarChar(200)")]
+		public string vangia_vanban_project
+		{
+			get
+			{
+				return this._vangia_vanban_project;
+			}
+			set
+			{
+				if ((this._vangia_vanban_project != value))
+				{
+					this.Onvangia_vanban_projectChanging(value);
+					this.SendPropertyChanging();
+					this._vangia_vanban_project = value;
+					this.SendPropertyChanged("vangia_vanban_project");
+					this.Onvangia_vanban_projectChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vangia_link_video_project", DbType="NVarChar(MAX)")]
+		public string vangia_link_video_project
+		{
+			get
+			{
+				return this._vangia_link_video_project;
+			}
+			set
+			{
+				if ((this._vangia_link_video_project != value))
+				{
+					this.Onvangia_link_video_projectChanging(value);
+					this.SendPropertyChanging();
+					this._vangia_link_video_project = value;
+					this.SendPropertyChanged("vangia_link_video_project");
+					this.Onvangia_link_video_projectChanged();
 				}
 			}
 		}

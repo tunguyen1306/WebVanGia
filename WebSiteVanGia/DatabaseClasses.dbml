@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="nhvanxol_vangia" Class="DatabaseClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=103.28.39.103;Initial Catalog=nhvanxol_vangia;User ID=nhvanxol_vangia" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="VanGiaConnectString" Provider="System.Data.SqlClient" />
+  <Connection Mode="WebSettings" ConnectionString="Data Source=NGUYENTANTU\SQLEXPRESS;Initial Catalog=nhvanxol_vangia;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="VanGiaConnectString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.ctr_in_form" Member="ctr_in_forms">
     <Type Name="ctr_in_form">
       <Column Name="id_ctr" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -266,21 +266,6 @@
       <Column Name="store_cate_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="store_cate_key" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
       <Column Name="store_cate_img" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.web_vangia_project" Member="web_vangia_projects">
-    <Type Name="web_vangia_project">
-      <Column Name="vangia_id_project" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="vangia_img1_project" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="vangia_img2_project" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="vangia_img3_project" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="vangia_img_project" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="vangia_content_project" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="vangia_name_project" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="vangia_time_project" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="vangia_status_project" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="vangia_order_project" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="vangia_language_project" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.store_com_type" Member="store_com_types">
@@ -1055,6 +1040,31 @@
       <Column Name="description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="cms_sql_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="shortdescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.web_vangia_project" Member="web_vangia_projects">
+    <Type Name="web_vangia_project">
+      <Column Name="vangia_id_project" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="vangia_img1_project" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="vangia_img2_project" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="vangia_img3_project" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="vangia_img_project" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="vangia_content_project" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="vangia_name_project" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="vangia_time_project" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="vangia_status_project" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vangia_order_project" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vangia_language_project" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vangia_tomtat_project" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="vangia_typeid_project" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vangia_img4_project" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="vangia_img5_project" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="vangia_img6_project" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="vangia_img7_project" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="vangia_img8_project" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="vangia_img9_project" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="vangia_vanban_project" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="vangia_link_video_project" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

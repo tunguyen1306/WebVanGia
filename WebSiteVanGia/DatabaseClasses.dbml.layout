@@ -158,12 +158,6 @@
         <elementListCompartment Id="290fccee-6487-4290-9b7d-019d22902d16" absoluteBounds="6.765, 16.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="cebf3215-133f-454a-9b2a-4b0a60b1cd41" absoluteBounds="15.75, 9.75, 2, 2.9247054036458309">
-      <DataClassMoniker Name="/DatabaseClassesDataContext/web_vangia_project" />
-      <nestedChildShapes>
-        <elementListCompartment Id="f00fd34c-9023-44ed-bb0b-da661b1635db" absoluteBounds="15.765, 10.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
     <classShape Id="6a8013dc-a8f8-4787-8dbf-486a6ecdb6e3" absoluteBounds="15.75, 13.75, 2, 1.1939925130208344">
       <DataClassMoniker Name="/DatabaseClassesDataContext/store_com_type" />
       <nestedChildShapes>
@@ -606,6 +600,12 @@
       <DataClassMoniker Name="/DatabaseClassesDataContext/tblSysPicture" />
       <nestedChildShapes>
         <elementListCompartment Id="00c470c0-04af-4c02-921e-e909a0b46cd5" absoluteBounds="7.015, 25.335, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6ef5c720-00cf-4329-b204-06a1bfee79b4" absoluteBounds="15.5, 9.25, 2, 4.8477197265625">
+      <DataClassMoniker Name="/DatabaseClassesDataContext/web_vangia_project" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bf154150-5f98-4fe4-a716-85d20c7b7d3e" absoluteBounds="15.515, 9.71, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

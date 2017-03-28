@@ -22,6 +22,15 @@ namespace WebSiteVanGia {
         protected global::WebSiteVanGia.ctr.ctr_toprow ctr_toprow;
         
         /// <summary>
+        /// lbrShow control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal lbrShow;
+        
+        /// <summary>
         /// dsProject control.
         /// </summary>
         /// <remarks>
