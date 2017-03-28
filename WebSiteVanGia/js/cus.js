@@ -80,8 +80,7 @@ jQuery(function ($) {
     });
     //load lan end
 
-  
-
+ 
 });
 
 

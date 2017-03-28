@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
+using WebSiteVanGia.Model;
 
 namespace WebSiteVanGia
 {
@@ -64,6 +65,24 @@ namespace WebSiteVanGia
         {
          
             return db.tblMath_vangias.Where(o => o.TypeMath == 7);
+        }
+        [WebMethod]
+        public object GetListProject(int currentPage=1)
+        {
+            int pageSize = 20;
+            var listPic = (from data in db.tblSysPictures select data).ToList();
+            var Query =( from data in db.web_vangia_projects
+                        join datapic in db.tblSysPictures on data.vangia_id_project equals datapic.advert_id
+                        where datapic.position == 1
+                        select new AllModel
+                        {
+                            tblWebProject = data,
+                            tblSysPicture = datapic,
+                            ListSysPicture = listPic
+                        }).Skip((currentPage - 1) * pageSize).Take(pageSize).ToList();
+
+
+            return Query;
         }
     }
 }

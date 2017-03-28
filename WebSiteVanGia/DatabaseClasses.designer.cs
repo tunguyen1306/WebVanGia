@@ -261,6 +261,9 @@ namespace WebSiteVanGia
     partial void InserttblMath_vangia(tblMath_vangia instance);
     partial void UpdatetblMath_vangia(tblMath_vangia instance);
     partial void DeletetblMath_vangia(tblMath_vangia instance);
+    partial void InserttblSysPicture(tblSysPicture instance);
+    partial void UpdatetblSysPicture(tblSysPicture instance);
+    partial void DeletetblSysPicture(tblSysPicture instance);
     #endregion
 		
 		public DatabaseClassesDataContext() : 
@@ -1090,6 +1093,14 @@ namespace WebSiteVanGia
 			get
 			{
 				return this.GetTable<tblMath_vangia>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tblSysPicture> tblSysPictures
+		{
+			get
+			{
+				return this.GetTable<tblSysPicture>();
 			}
 		}
 	}
@@ -18536,6 +18547,452 @@ namespace WebSiteVanGia
 					this._TypeMath = value;
 					this.SendPropertyChanged("TypeMath");
 					this.OnTypeMathChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tblSysPicture")]
+	public partial class tblSysPicture : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _picture_id;
+		
+		private System.Nullable<int> _advert_id;
+		
+		private string _originalFilepath;
+		
+		private System.Nullable<byte> _position;
+		
+		private System.Nullable<System.DateTime> _converted;
+		
+		private string _convertedFilename;
+		
+		private System.Nullable<bool> _tocheck;
+		
+		private System.Nullable<bool> _isvalidated;
+		
+		private string _convertedFilename90;
+		
+		private string _convertedFilename180;
+		
+		private string _convertedFilename270;
+		
+		private System.Nullable<byte> _angleType;
+		
+		private System.Nullable<byte> _type_id;
+		
+		private string _title;
+		
+		private string _description;
+		
+		private System.Nullable<int> _cms_sql_id;
+		
+		private string _shortdescription;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Onpicture_idChanging(int value);
+    partial void Onpicture_idChanged();
+    partial void Onadvert_idChanging(System.Nullable<int> value);
+    partial void Onadvert_idChanged();
+    partial void OnoriginalFilepathChanging(string value);
+    partial void OnoriginalFilepathChanged();
+    partial void OnpositionChanging(System.Nullable<byte> value);
+    partial void OnpositionChanged();
+    partial void OnconvertedChanging(System.Nullable<System.DateTime> value);
+    partial void OnconvertedChanged();
+    partial void OnconvertedFilenameChanging(string value);
+    partial void OnconvertedFilenameChanged();
+    partial void OntocheckChanging(System.Nullable<bool> value);
+    partial void OntocheckChanged();
+    partial void OnisvalidatedChanging(System.Nullable<bool> value);
+    partial void OnisvalidatedChanged();
+    partial void OnconvertedFilename90Changing(string value);
+    partial void OnconvertedFilename90Changed();
+    partial void OnconvertedFilename180Changing(string value);
+    partial void OnconvertedFilename180Changed();
+    partial void OnconvertedFilename270Changing(string value);
+    partial void OnconvertedFilename270Changed();
+    partial void OnangleTypeChanging(System.Nullable<byte> value);
+    partial void OnangleTypeChanged();
+    partial void Ontype_idChanging(System.Nullable<byte> value);
+    partial void Ontype_idChanged();
+    partial void OntitleChanging(string value);
+    partial void OntitleChanged();
+    partial void OndescriptionChanging(string value);
+    partial void OndescriptionChanged();
+    partial void Oncms_sql_idChanging(System.Nullable<int> value);
+    partial void Oncms_sql_idChanged();
+    partial void OnshortdescriptionChanging(string value);
+    partial void OnshortdescriptionChanged();
+    #endregion
+		
+		public tblSysPicture()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_picture_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int picture_id
+		{
+			get
+			{
+				return this._picture_id;
+			}
+			set
+			{
+				if ((this._picture_id != value))
+				{
+					this.Onpicture_idChanging(value);
+					this.SendPropertyChanging();
+					this._picture_id = value;
+					this.SendPropertyChanged("picture_id");
+					this.Onpicture_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_advert_id", DbType="Int")]
+		public System.Nullable<int> advert_id
+		{
+			get
+			{
+				return this._advert_id;
+			}
+			set
+			{
+				if ((this._advert_id != value))
+				{
+					this.Onadvert_idChanging(value);
+					this.SendPropertyChanging();
+					this._advert_id = value;
+					this.SendPropertyChanged("advert_id");
+					this.Onadvert_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_originalFilepath", DbType="VarChar(255)")]
+		public string originalFilepath
+		{
+			get
+			{
+				return this._originalFilepath;
+			}
+			set
+			{
+				if ((this._originalFilepath != value))
+				{
+					this.OnoriginalFilepathChanging(value);
+					this.SendPropertyChanging();
+					this._originalFilepath = value;
+					this.SendPropertyChanged("originalFilepath");
+					this.OnoriginalFilepathChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_position", DbType="TinyInt")]
+		public System.Nullable<byte> position
+		{
+			get
+			{
+				return this._position;
+			}
+			set
+			{
+				if ((this._position != value))
+				{
+					this.OnpositionChanging(value);
+					this.SendPropertyChanging();
+					this._position = value;
+					this.SendPropertyChanged("position");
+					this.OnpositionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_converted", DbType="DateTime")]
+		public System.Nullable<System.DateTime> converted
+		{
+			get
+			{
+				return this._converted;
+			}
+			set
+			{
+				if ((this._converted != value))
+				{
+					this.OnconvertedChanging(value);
+					this.SendPropertyChanging();
+					this._converted = value;
+					this.SendPropertyChanged("converted");
+					this.OnconvertedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_convertedFilename", DbType="VarChar(50)")]
+		public string convertedFilename
+		{
+			get
+			{
+				return this._convertedFilename;
+			}
+			set
+			{
+				if ((this._convertedFilename != value))
+				{
+					this.OnconvertedFilenameChanging(value);
+					this.SendPropertyChanging();
+					this._convertedFilename = value;
+					this.SendPropertyChanged("convertedFilename");
+					this.OnconvertedFilenameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tocheck", DbType="Bit")]
+		public System.Nullable<bool> tocheck
+		{
+			get
+			{
+				return this._tocheck;
+			}
+			set
+			{
+				if ((this._tocheck != value))
+				{
+					this.OntocheckChanging(value);
+					this.SendPropertyChanging();
+					this._tocheck = value;
+					this.SendPropertyChanged("tocheck");
+					this.OntocheckChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_isvalidated", DbType="Bit")]
+		public System.Nullable<bool> isvalidated
+		{
+			get
+			{
+				return this._isvalidated;
+			}
+			set
+			{
+				if ((this._isvalidated != value))
+				{
+					this.OnisvalidatedChanging(value);
+					this.SendPropertyChanging();
+					this._isvalidated = value;
+					this.SendPropertyChanged("isvalidated");
+					this.OnisvalidatedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_convertedFilename90", DbType="VarChar(50)")]
+		public string convertedFilename90
+		{
+			get
+			{
+				return this._convertedFilename90;
+			}
+			set
+			{
+				if ((this._convertedFilename90 != value))
+				{
+					this.OnconvertedFilename90Changing(value);
+					this.SendPropertyChanging();
+					this._convertedFilename90 = value;
+					this.SendPropertyChanged("convertedFilename90");
+					this.OnconvertedFilename90Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_convertedFilename180", DbType="VarChar(50)")]
+		public string convertedFilename180
+		{
+			get
+			{
+				return this._convertedFilename180;
+			}
+			set
+			{
+				if ((this._convertedFilename180 != value))
+				{
+					this.OnconvertedFilename180Changing(value);
+					this.SendPropertyChanging();
+					this._convertedFilename180 = value;
+					this.SendPropertyChanged("convertedFilename180");
+					this.OnconvertedFilename180Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_convertedFilename270", DbType="VarChar(50)")]
+		public string convertedFilename270
+		{
+			get
+			{
+				return this._convertedFilename270;
+			}
+			set
+			{
+				if ((this._convertedFilename270 != value))
+				{
+					this.OnconvertedFilename270Changing(value);
+					this.SendPropertyChanging();
+					this._convertedFilename270 = value;
+					this.SendPropertyChanged("convertedFilename270");
+					this.OnconvertedFilename270Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_angleType", DbType="TinyInt")]
+		public System.Nullable<byte> angleType
+		{
+			get
+			{
+				return this._angleType;
+			}
+			set
+			{
+				if ((this._angleType != value))
+				{
+					this.OnangleTypeChanging(value);
+					this.SendPropertyChanging();
+					this._angleType = value;
+					this.SendPropertyChanged("angleType");
+					this.OnangleTypeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_type_id", DbType="TinyInt")]
+		public System.Nullable<byte> type_id
+		{
+			get
+			{
+				return this._type_id;
+			}
+			set
+			{
+				if ((this._type_id != value))
+				{
+					this.Ontype_idChanging(value);
+					this.SendPropertyChanging();
+					this._type_id = value;
+					this.SendPropertyChanged("type_id");
+					this.Ontype_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_title", DbType="NVarChar(MAX)")]
+		public string title
+		{
+			get
+			{
+				return this._title;
+			}
+			set
+			{
+				if ((this._title != value))
+				{
+					this.OntitleChanging(value);
+					this.SendPropertyChanging();
+					this._title = value;
+					this.SendPropertyChanged("title");
+					this.OntitleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_description", DbType="NVarChar(MAX)")]
+		public string description
+		{
+			get
+			{
+				return this._description;
+			}
+			set
+			{
+				if ((this._description != value))
+				{
+					this.OndescriptionChanging(value);
+					this.SendPropertyChanging();
+					this._description = value;
+					this.SendPropertyChanged("description");
+					this.OndescriptionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cms_sql_id", DbType="Int")]
+		public System.Nullable<int> cms_sql_id
+		{
+			get
+			{
+				return this._cms_sql_id;
+			}
+			set
+			{
+				if ((this._cms_sql_id != value))
+				{
+					this.Oncms_sql_idChanging(value);
+					this.SendPropertyChanging();
+					this._cms_sql_id = value;
+					this.SendPropertyChanged("cms_sql_id");
+					this.Oncms_sql_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_shortdescription", DbType="NVarChar(MAX)")]
+		public string shortdescription
+		{
+			get
+			{
+				return this._shortdescription;
+			}
+			set
+			{
+				if ((this._shortdescription != value))
+				{
+					this.OnshortdescriptionChanging(value);
+					this.SendPropertyChanging();
+					this._shortdescription = value;
+					this.SendPropertyChanged("shortdescription");
+					this.OnshortdescriptionChanged();
 				}
 			}
 		}

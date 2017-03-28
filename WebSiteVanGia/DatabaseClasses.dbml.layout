@@ -602,5 +602,11 @@
         <elementListCompartment Id="dbc637f0-080d-4ff0-bb47-2479971ca860" absoluteBounds="6.89, 5.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="cd859ec3-2ef7-433f-8b57-b301b6d43b34" absoluteBounds="7, 24.875, 2, 4.0785139973958326">
+      <DataClassMoniker Name="/DatabaseClassesDataContext/tblSysPicture" />
+      <nestedChildShapes>
+        <elementListCompartment Id="00c470c0-04af-4c02-921e-e909a0b46cd5" absoluteBounds="7.015, 25.335, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

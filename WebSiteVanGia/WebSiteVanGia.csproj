@@ -66,6 +66,7 @@
     <Content Include="blog.html" />
     <Content Include="content\css\demo.css" />
     <Content Include="content\css\metro_gallery.css" />
+    <Content Include="content\css\style.css" />
     <Content Include="content\img\back.png" />
     <Content Include="content\img\beckham.jpg" />
     <Content Include="content\img\bg.png" />
@@ -87,6 +88,8 @@
     <Content Include="content\img\wallpaper.jpg" />
     <Content Include="content\js\demo.js" />
     <Content Include="content\js\hammer.js" />
+    <Content Include="content\js\jquery-1.7.1.min.js" />
+    <Content Include="content\js\jquery.isotope.min.js" />
     <Content Include="content\js\jquery.js" />
     <Content Include="content\js\masonry.pkgd.min.js" />
     <Content Include="content\js\metro_gallery.min.js" />
@@ -419,6 +422,7 @@
     <Compile Include="DichVu.aspx.designer.cs">
       <DependentUpon>DichVu.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Model\AllModel.cs" />
     <Compile Include="plan.aspx.cs">
       <DependentUpon>plan.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
