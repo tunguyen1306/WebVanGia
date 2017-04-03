@@ -564,32 +564,32 @@
                             var ii = i + 1;
                             //var $newItems = $('<div class="shifty-item h'+i+'"><img src="http://admin1.trafashion.com/fileupload/62/62_3LybKNC0ZUCzdHScHNo0RQ_1.jpg" /></div>');
                             //$('#container').isotope('insert', $newItems);
-                            var tile_1x1 = "tile_1x1 blue";
-                            var tile_1x2 = "tile_1x2 orange";
-                            var tile_2x1 = "tile_2x1 red";
-                            var tile_2x2 = "tile_2x2 purple";
+                            var tile_1x1 = "tile_1x1 ";
+                            var tile_1x2 = "tile_1x2 ";
+                            var tile_2x1 = "tile_2x1 ";
+                            var tile_2x2 = "tile_2x2 ";
                             var tile_2x3 = "tile_2x3 ";
                             var tile_4x2 = "tile_4x2 ";
                             var tile_3x3 = "tile_3x3";
-                            var tile_3x1 = "tile_3x1 darkgreen";
+                            var tile_3x1 = "tile_3x1";
                             var tile_6x6 = "tile_6x6 ";
                             if (ii == 1) {
-                                count = tile_3x3 + " green";
+                                count = tile_3x3 + " grey";
                             }
                             if (ii == 2) {
-                                count = tile_3x3 + " darkblue";
+                                count = tile_3x3 + " grey";
                             }
                             if (ii == 3) {
-                                count = tile_3x3 + " yellow";
+                                count = tile_3x3 + " grey";
                             }
                             if (ii == 4) {
-                                count = tile_3x3 + " blue";
+                                count = tile_3x3 + " grey";
                             }
                             if (ii == 5) {
-                                count = tile_6x6 + " red";
+                                count = tile_6x6 + " grey";
                             }
                             if (ii == 6) {
-                                count = tile_3x3 + " darkgreen";
+                                count = tile_3x3 + " grey";
                             }
                             if (ii == 7) {
                                 count = tile_3x3;
@@ -639,14 +639,17 @@
                                 
                             $.each(o.ListSysPicture, function (i, p) {
                                 var urlImgchi = url + imgName.split("_")[0] + "/";
-                                t += "<img src=\"" + urlImgchi + p.originalFilepath + "\" data-caption=\"" + o.tblWebProject.vangia_name_project + "\" />";
+                                var trUrl = '/DetailProject.aspx?id=' + o.tblWebProject.vangia_id_project;
+                              
+                                t += "<img src=\"" + urlImgchi + p.originalFilepath + "\" data-caption=\"" + o.tblWebProject.vangia_name_project + "\" rel=\"" + trUrl + " \" />";
+
                             });
                           
-
+                          
 
                             t += "</div>";
 
-                        
+                 
                                
 
                         });
@@ -679,13 +682,19 @@
                                         Metro_Gallery._css3SupportDetect(); $(document[_0x56c1[8]])[_0x56c1[23]](_0x56c1[22]); Metro_Gallery._cache_elements(); Metro_Gallery._buildStyles(); Metro_Gallery._build();
                                     }, _start: function () {
                                         if (Metro_Gallery[_0x56c1[24]]) { return; };
-                                        var _0x5ed1x9 = Metro_Gallery[_0x56c1[26]][_0x56c1[25]] + Metro_Gallery[_0x56c1[26]][_0x56c1[27]]; var _0x5ed1xa = Metro_Gallery[_0x56c1[29]][_0x56c1[28]](0); var _0x5ed1xb = _0x5ed1xa[_0x56c1[33]](_0x56c1[32])[_0x56c1[31]](_0x56c1[30]); $(_0x5ed1xb)[_0x56c1[42]](function (_0x5ed1xc, _0x5ed1xd) { if (_0x5ed1xd[_0x56c1[35]](_0x56c1[34]) !== -1) { var _0x5ed1xe = _0x5ed1xd[_0x56c1[38]](/tile_/, _0x56c1[37])[_0x56c1[36]](0, 1); var _0x5ed1xf = parseInt(_0x5ed1xa[_0x56c1[40]](_0x56c1[39]), 10); var _0x5ed1x10 = (_0x5ed1xa[_0x56c1[41]]() + 2 * _0x5ed1xf - 2 * _0x5ed1xf * _0x5ed1xe) / _0x5ed1xe; _0x5ed1x9 = _0x5ed1x10 + 2 * _0x5ed1xf; return false; }; }); Metro_Gallery[_0x56c1[52]][_0x56c1[42]](function () { var _0x5ed1x11 = $(this); var _0x5ed1x12 = [_0x56c1[43], _0x56c1[37]]; if (!_0x5ed1x11[_0x56c1[45]](_0x56c1[44]) && !_0x5ed1x11[_0x56c1[45]](_0x56c1[46])) { _0x5ed1x11[_0x56c1[23]](_0x56c1[44]); }; var _0x5ed1x13 = new Masonry(_0x5ed1x11[_0x56c1[47]](0), { itemSelector: _0x56c1[48], columnWidth: _0x5ed1x9, transitionDuration: _0x56c1[49] }); _0x5ed1x11[_0x56c1[51]](_0x56c1[50], _0x5ed1x13); }); Metro_Gallery[_0x56c1[29]][_0x56c1[42]](function (_0x5ed1xc) { var _0x5ed1x14 = $(this); setTimeout(function () { if (Metro_Gallery[_0x56c1[11]]) { Metro_Gallery._transitionEnd(_0x5ed1x14, function (_0x5ed1x15, _0x5ed1x6) { _0x5ed1x6[_0x56c1[55]](_0x56c1[54]); })[_0x56c1[23]](_0x56c1[53]); } else { var _0x5ed1x11 = _0x5ed1x14[_0x56c1[57]](_0x56c1[56]); if (_0x5ed1x11[_0x56c1[45]](_0x56c1[58]) || _0x5ed1x11[_0x56c1[45]](_0x56c1[59]) || _0x5ed1x11[_0x56c1[45]](_0x56c1[60])) { _0x5ed1x14[_0x56c1[62]]({ opacity: 1 }, 200, _0x56c1[61], function () { _0x5ed1x14[_0x56c1[23]](_0x56c1[22]); }); } else { _0x5ed1x14[_0x56c1[23]](_0x56c1[22]); }; }; }, _0x5ed1xc * 100); _0x5ed1x14[_0x56c1[67]](Metro_Gallery[_0x56c1[64]][_0x56c1[66]])[_0x56c1[65]](Metro_Gallery[_0x56c1[64]][_0x56c1[63]]); }); Metro_Gallery[_0x56c1[69]][_0x56c1[42]](function (_0x5ed1xc) { $(this)[_0x56c1[51]](_0x56c1[68], _0x5ed1xc); }); $(document)[_0x56c1[71]](Metro_Gallery[_0x56c1[64]][_0x56c1[70]]); if (typeof Hammer !== _0x56c1[72]) { try { var _0x5ed1x16 = Hammer(document[_0x56c1[8]], { swipe_velocity: 0.2 })[_0x56c1[21]](_0x56c1[73], Metro_Gallery[_0x56c1[64]][_0x56c1[74]]); var _0x5ed1x16 = Hammer(document[_0x56c1[8]], { swipe_velocity: 0.2 })[_0x56c1[21]](_0x56c1[75], Metro_Gallery[_0x56c1[64]][_0x56c1[76]]); } catch (e) { }; }; if (Metro_Gallery[_0x56c1[77]]) { setTimeout(function () { Metro_Gallery._startFlip(); }, (Metro_Gallery[_0x56c1[29]][_0x56c1[17]] - 1) * 100 + 200); }; Metro_Gallery[_0x56c1[24]] = true;
+                                        var _0x5ed1x9 = Metro_Gallery[_0x56c1[26]][_0x56c1[25]] + Metro_Gallery[_0x56c1[26]][_0x56c1[27]];
+                                        var _0x5ed1xa = Metro_Gallery[_0x56c1[29]][_0x56c1[28]](0);
+                                        var _0x5ed1xb = _0x5ed1xa[_0x56c1[33]](_0x56c1[32])[_0x56c1[31]](_0x56c1[30]); $(_0x5ed1xb)[_0x56c1[42]](function (_0x5ed1xc, _0x5ed1xd) { if (_0x5ed1xd[_0x56c1[35]](_0x56c1[34]) !== -1) { var _0x5ed1xe = _0x5ed1xd[_0x56c1[38]](/tile_/, _0x56c1[37])[_0x56c1[36]](0, 1); var _0x5ed1xf = parseInt(_0x5ed1xa[_0x56c1[40]](_0x56c1[39]), 10); var _0x5ed1x10 = (_0x5ed1xa[_0x56c1[41]]() + 2 * _0x5ed1xf - 2 * _0x5ed1xf * _0x5ed1xe) / _0x5ed1xe; _0x5ed1x9 = _0x5ed1x10 + 2 * _0x5ed1xf; return false; }; }); Metro_Gallery[_0x56c1[52]][_0x56c1[42]](function () { var _0x5ed1x11 = $(this); var _0x5ed1x12 = [_0x56c1[43], _0x56c1[37]]; if (!_0x5ed1x11[_0x56c1[45]](_0x56c1[44]) && !_0x5ed1x11[_0x56c1[45]](_0x56c1[46])) { _0x5ed1x11[_0x56c1[23]](_0x56c1[44]); }; var _0x5ed1x13 = new Masonry(_0x5ed1x11[_0x56c1[47]](0), { itemSelector: _0x56c1[48], columnWidth: _0x5ed1x9, transitionDuration: _0x56c1[49] }); _0x5ed1x11[_0x56c1[51]](_0x56c1[50], _0x5ed1x13); }); Metro_Gallery[_0x56c1[29]][_0x56c1[42]](function (_0x5ed1xc) { var _0x5ed1x14 = $(this); setTimeout(function () { if (Metro_Gallery[_0x56c1[11]]) { Metro_Gallery._transitionEnd(_0x5ed1x14, function (_0x5ed1x15, _0x5ed1x6) { _0x5ed1x6[_0x56c1[55]](_0x56c1[54]); })[_0x56c1[23]](_0x56c1[53]); } else { var _0x5ed1x11 = _0x5ed1x14[_0x56c1[57]](_0x56c1[56]); if (_0x5ed1x11[_0x56c1[45]](_0x56c1[58]) || _0x5ed1x11[_0x56c1[45]](_0x56c1[59]) || _0x5ed1x11[_0x56c1[45]](_0x56c1[60])) { _0x5ed1x14[_0x56c1[62]]({ opacity: 1 }, 200, _0x56c1[61], function () { _0x5ed1x14[_0x56c1[23]](_0x56c1[22]); }); } else { _0x5ed1x14[_0x56c1[23]](_0x56c1[22]); }; }; }, _0x5ed1xc * 100); _0x5ed1x14[_0x56c1[67]](Metro_Gallery[_0x56c1[64]][_0x56c1[66]])[_0x56c1[65]](Metro_Gallery[_0x56c1[64]][_0x56c1[63]]); }); Metro_Gallery[_0x56c1[69]][_0x56c1[42]](function (_0x5ed1xc) { $(this)[_0x56c1[51]](_0x56c1[68], _0x5ed1xc); }); $(document)[_0x56c1[71]](Metro_Gallery[_0x56c1[64]][_0x56c1[70]]); if (typeof Hammer !== _0x56c1[72]) { try { var _0x5ed1x16 = Hammer(document[_0x56c1[8]], { swipe_velocity: 0.2 })[_0x56c1[21]](_0x56c1[73], Metro_Gallery[_0x56c1[64]][_0x56c1[74]]); var _0x5ed1x16 = Hammer(document[_0x56c1[8]], { swipe_velocity: 0.2 })[_0x56c1[21]](_0x56c1[75], Metro_Gallery[_0x56c1[64]][_0x56c1[76]]); } catch (e) { }; }; if (Metro_Gallery[_0x56c1[77]]) { setTimeout(function () { Metro_Gallery._startFlip(); }, (Metro_Gallery[_0x56c1[29]][_0x56c1[17]] - 1) * 100 + 200); }; Metro_Gallery[_0x56c1[24]] = true;
                                     }, _cache_elements: function () {
                                         this[_0x56c1[29]] = $(_0x56c1[78]);
-                                        this[_0x56c1[52]] = $(_0x56c1[56]); this[_0x56c1[69]] = $(_0x56c1[78])[_0x56c1[80]](_0x56c1[79]);
+                                        this[_0x56c1[52]] = $(_0x56c1[56]);
+                                        this[_0x56c1[69]] = $(_0x56c1[78])[_0x56c1[80]](_0x56c1[79]);
                                     }, _buildStyles: function () {
                                         var _0x5ed1x17 = _0x56c1[37];
-                                        var _0x5ed1x18 = _0x56c1[81]; var _0x5ed1x19 = (Metro_Gallery[_0x56c1[26]][_0x56c1[60]] - 1) * Metro_Gallery[_0x56c1[26]][_0x56c1[25]]; _0x5ed1x17 += _0x56c1[82]; _0x5ed1x17 += _0x56c1[83] + Metro_Gallery[_0x56c1[26]][_0x56c1[27]] / 2 + _0x56c1[84]; _0x5ed1x17 += _0x56c1[85]; for (var _0x5ed1x1a = 1; _0x5ed1x1a <= 10; _0x5ed1x1a++) { for (y = 1; y <= 10; y++) { var _0x5ed1x1b = _0x5ed1x1a * Metro_Gallery[_0x56c1[26]][_0x56c1[25]] + (_0x5ed1x1a - 1) * Metro_Gallery[_0x56c1[26]][_0x56c1[27]]; var _0x5ed1x1c = y * Metro_Gallery[_0x56c1[26]][_0x56c1[25]] + (y - 1) * Metro_Gallery[_0x56c1[26]][_0x56c1[27]]; _0x5ed1x17 += _0x56c1[86] + _0x5ed1x1a + _0x56c1[87] + y + _0x56c1[88] + _0x5ed1x18; _0x5ed1x17 += _0x56c1[89] + _0x5ed1x1b + _0x56c1[84] + _0x5ed1x18; _0x5ed1x17 += _0x56c1[90] + _0x5ed1x1c + _0x56c1[84] + _0x5ed1x18; _0x5ed1x17 += _0x56c1[85] + _0x5ed1x18; _0x5ed1x17 += _0x56c1[86] + _0x5ed1x1a + _0x56c1[87] + y + _0x56c1[91] + _0x5ed1x18; _0x5ed1x17 += _0x56c1[89] + (_0x5ed1x1b + _0x5ed1x19) + _0x56c1[84] + _0x5ed1x18; _0x5ed1x17 += _0x56c1[90] + (_0x5ed1x1c * (_0x5ed1x1b + _0x5ed1x19) / _0x5ed1x1b) + _0x56c1[84] + _0x5ed1x18; _0x5ed1x17 += _0x56c1[92] + (Metro_Gallery[_0x56c1[26]][_0x56c1[27]] / 2 - parseInt((((_0x5ed1x1c * (_0x5ed1x1b + _0x5ed1x19) / _0x5ed1x1b) - _0x5ed1x1c) / 2), 10)) + _0x56c1[84] + _0x5ed1x18; _0x5ed1x17 += _0x56c1[93] + (Metro_Gallery[_0x56c1[26]][_0x56c1[27]] / 2 - parseInt((_0x5ed1x19 / 2), 10)) + _0x56c1[84] + _0x5ed1x18; _0x5ed1x17 += _0x56c1[85] + _0x5ed1x18; }; }; $(_0x56c1[96] + _0x5ed1x17 + _0x56c1[97])[_0x56c1[95]]($(_0x56c1[94]));
+                                        var _0x5ed1x18 = _0x56c1[81];
+                                        var _0x5ed1x19 = (Metro_Gallery[_0x56c1[26]][_0x56c1[60]] - 1) * Metro_Gallery[_0x56c1[26]][_0x56c1[25]];
+                                        _0x5ed1x17 += _0x56c1[82]; _0x5ed1x17 += _0x56c1[83] + Metro_Gallery[_0x56c1[26]][_0x56c1[27]] / 2 + _0x56c1[84];
+                                        _0x5ed1x17 += _0x56c1[85]; for (var _0x5ed1x1a = 1; _0x5ed1x1a <= 10; _0x5ed1x1a++) { for (y = 1; y <= 10; y++) { var _0x5ed1x1b = _0x5ed1x1a * Metro_Gallery[_0x56c1[26]][_0x56c1[25]] + (_0x5ed1x1a - 1) * Metro_Gallery[_0x56c1[26]][_0x56c1[27]]; var _0x5ed1x1c = y * Metro_Gallery[_0x56c1[26]][_0x56c1[25]] + (y - 1) * Metro_Gallery[_0x56c1[26]][_0x56c1[27]]; _0x5ed1x17 += _0x56c1[86] + _0x5ed1x1a + _0x56c1[87] + y + _0x56c1[88] + _0x5ed1x18; _0x5ed1x17 += _0x56c1[89] + _0x5ed1x1b + _0x56c1[84] + _0x5ed1x18; _0x5ed1x17 += _0x56c1[90] + _0x5ed1x1c + _0x56c1[84] + _0x5ed1x18; _0x5ed1x17 += _0x56c1[85] + _0x5ed1x18; _0x5ed1x17 += _0x56c1[86] + _0x5ed1x1a + _0x56c1[87] + y + _0x56c1[91] + _0x5ed1x18; _0x5ed1x17 += _0x56c1[89] + (_0x5ed1x1b + _0x5ed1x19) + _0x56c1[84] + _0x5ed1x18; _0x5ed1x17 += _0x56c1[90] + (_0x5ed1x1c * (_0x5ed1x1b + _0x5ed1x19) / _0x5ed1x1b) + _0x56c1[84] + _0x5ed1x18; _0x5ed1x17 += _0x56c1[92] + (Metro_Gallery[_0x56c1[26]][_0x56c1[27]] / 2 - parseInt((((_0x5ed1x1c * (_0x5ed1x1b + _0x5ed1x19) / _0x5ed1x1b) - _0x5ed1x1c) / 2), 10)) + _0x56c1[84] + _0x5ed1x18; _0x5ed1x17 += _0x56c1[93] + (Metro_Gallery[_0x56c1[26]][_0x56c1[27]] / 2 - parseInt((_0x5ed1x19 / 2), 10)) + _0x56c1[84] + _0x5ed1x18; _0x5ed1x17 += _0x56c1[85] + _0x5ed1x18; }; }; $(_0x56c1[96] + _0x5ed1x17 + _0x56c1[97])[_0x56c1[95]]($(_0x56c1[94]));
                                     }, _build: function () {
                                         Metro_Gallery[_0x56c1[29]][_0x56c1[42]](function (_0x5ed1xc) {
                                             var _0x5ed1x14 = $(this);
@@ -745,11 +754,31 @@
                             $(document)[_0x56c1[178]](Metro_Gallery._init);
                             setTimeout(Metro_Gallery._start, 5000);
                             $(window)[_0x56c1[179]](Metro_Gallery._start);
+
+
+                            $(document).on('click', '.caption.loaded .caption', function () {
+                                //console.log($(this).parent('div').find('img').eq(0))
+                               // console.log($(this).parent('div').eq(0).find('img').eq(0).attr('rel'));
+                                location.href = $(this).parent('div').eq(0).find('img').eq(0).attr('rel');
+
+                            }); 
+
+                            //setInterval(function () {
+                            //    $('.caption.loaded .caption').each(function () {
+                            //        console.log($(this).attr('rel'));
+                            //        var decoded = $(this).html($(this).attr('rel')).text();
+                            //        $(this).html(decoded)
+                            //        console.log(decoded);
+
+                            //    });
+                            //}, 500);
+                         
                             //$.each(,function () {
                             //});
+                           
                             
                         }
-                        
+                       
                        
                         //    var $container = $('#container');
 
