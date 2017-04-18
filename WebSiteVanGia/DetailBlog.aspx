@@ -73,7 +73,8 @@
                                             </dl>
                                         </div>--%>
                                         <div class="item_img img-full img-full__none item-image">
-                                            <img src="<%#ConfigurationManager.AppSettings["domainvg"]+Eval("img_blog_tra").ToString().Split('_')[0]+"/"+Eval("img_blog_tra") %>" alt="" />
+                                            <img width="100%" src="<%#ConfigurationManager.AppSettings["domainvg"]+Eval("img_blog_tra").ToString().Split('_')[0]+"/"+Eval("img_blog_tra") %>" alt="" />
+                                            <iframe width="100%" height="600" src="https://www.youtube.com/embed/<%#Eval("video_blog_tra") %>" frameborder="0" allowfullscreen></iframe>
                                         </div>
 
                                         <div class="item_fulltext">
